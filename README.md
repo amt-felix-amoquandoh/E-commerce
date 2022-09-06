@@ -1,1 +1,1 @@
-# E-commerce - shopping card where a user can at itmes to cart
+# E-commerce - shopping cart app component made to enable a user to add itmes to cart
