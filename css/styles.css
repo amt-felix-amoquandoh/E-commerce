@@ -52,7 +52,7 @@ p{
     align-items: center;
     justify-content: space-between;
     padding: 0px 80px;
-    background: rgba(189, 189, 189, 0.347);
+    background: rgba(147, 147, 147, 0.718);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
 
@@ -114,3 +114,29 @@ p{
     }
 
 } */
+
+/* Cover section Styling */
+.cover{
+    background-image: url("../img/aboutus/cover1.png") ;
+    background-color: rgba(147, 147, 147, 0.507);
+    height: 80vh;
+    width: 100%;
+    background-position: top 25% right -3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 100px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.cover h4{
+    padding-bottom: 15px;
+}
+
+.cover h1{
+    color: rgb(172, 98, 0);
+}
+
+.cover button{
+    
+}
