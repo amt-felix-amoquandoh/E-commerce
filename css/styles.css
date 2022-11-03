@@ -52,8 +52,12 @@ p{
     align-items: center;
     justify-content: space-between;
     padding: 0px 80px;
-    background: rgba(147, 147, 147, 0.718);
+    background: rgba(147, 147, 147, 0.462);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 .navItems{
@@ -130,13 +134,36 @@ p{
 }
 
 .cover h4{
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 .cover h1{
     color: rgb(172, 98, 0);
 }
 
+.cover h2, h5{
+    color: rgba(7, 5, 5, 0.924);
+    font-weight: bolder;
+}
+
 .cover button{
-    
+    background-image: url("../img/icons/button.png");
+    background-color: rgba(0, 0, 0, 0.841);
+    color: rgb(241, 142, 13);
+    border: none;
+    padding: 14px 80px 14px 65px;
+    border-radius: 5px;
+    font-size: 25px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.cover button:hover{
+    background-color: bisque;
+}
+
+.feature .featureBox{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
 }
