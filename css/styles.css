@@ -51,12 +51,34 @@ p{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 80px;
-    background: rgba(189, 189, 189, 0.517);
+    padding: 0px 80px;
+    background: rgba(189, 189, 189, 0.347);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.navItems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navItems li{
+    list-style: none;
+    padding: 0 20px;
+    margin-top: 5px;
+}
+
+.navItems li a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1a1a1a;
 }
 
 .navBrandImage{
-    height: 10rem;
+    height: 12rem;
+    margin-top: -50px;
+    margin-bottom: -45px;
     width: auto;
 }
 
