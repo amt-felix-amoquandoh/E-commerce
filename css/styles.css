@@ -162,8 +162,37 @@ p{
     background-color: bisque;
 }
 
+.feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
 .feature .featureBox{
     width: 180px;
     text-align: center;
     padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 3px double rgba(177, 167, 154, 0.616);
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+.feature .featureBox:hover{    
+    box-shadow: 5px 5px 54px rgba(132, 130, 121, 0.591);    
+}
+
+.feature .featureBox img{
+   width: 100%;
+}
+
+.feature .featureBox h5{
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: teal;  
+    background-color: rgba(223, 123, 181, 0.593); 
+    margin-top: 10px; 
+    display: inline-block;
 }
