@@ -66,6 +66,8 @@ p{
     list-style: none;
     padding: 0 20px;
     margin-top: 5px;
+    position: relative;
+   
 }
 
 .navItems li a{
@@ -75,14 +77,40 @@ p{
     color: #1a1a1a;
 }
 
+.navItems li a:hover, .navItems li a.active{
+    color: rgb(172, 98, 0);
+}
+
+.navItems li a.active::after{
+    content: "";
+    width: 30%;
+    height: 4px;
+    background: rgb(172, 98, 0);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
 .navBrandImage{
     height: 12rem;
-    margin-top: -50px;
+    margin-top: -46px;
     margin-bottom: -45px;
     width: auto;
 }
 
 .shopIcon{
-    height: 2.2rem;
+    height: 2rem;
     width: auto;
+    margin-top: -4px;
 }
+
+/* @media only screen and (max-width: 600px ){
+    .header{
+        font-size: 0.2rem;
+        padding: 0;
+    }
+    .navBrandImage{
+        margin-left: -30px;
+    }
+
+} */
