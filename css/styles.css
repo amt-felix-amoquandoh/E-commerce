@@ -46,6 +46,15 @@ p{
     margin: 40px 0;
 }
 
+/* header styling */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: rgba(181, 181, 181, 0.865);
+}
+
 .navBrandImage{
     height: 10rem;
     width: auto;
