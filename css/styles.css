@@ -45,3 +45,13 @@ p{
 .section-m1{
     margin: 40px 0;
 }
+
+.navBrandImage{
+    height: 10rem;
+    width: auto;
+}
+
+.shopIcon{
+    height: 2.2rem;
+    width: auto;
+}
