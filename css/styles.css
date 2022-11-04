@@ -39,7 +39,7 @@ p{
 }
 
 button.basic{
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 600;
   padding: 15px 30px;
   color: #000;
@@ -50,6 +50,18 @@ button.basic{
   outline: none;
   transition: 0.3s;
 }
+
+button.white{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 12px 18px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.3s;
+  }
 
 .section-p1{
     padding: 40px 80px;
@@ -349,19 +361,52 @@ button.basic{
     color: whitesmoke;
  }
 
+ .proBanner{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+ }
+
  .proBanner .promoBox{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
-    background-image: url("../img/page-backgrounds/banner1.jpg");
-    width: 580px;
+    min-width: 650px;
     height: 50vh;
     background-size: cover;
     background-position: center;
     margin: 60px 0;
+    padding: 30px;
  }
+
+ .promo{
+    background-image: url("../img/page-backgrounds/banner1.jpg");
+ }
+
+ .promo1{
+    background-image: url("../img/page-backgrounds/bannerTry.jpg"); 
+ }
+
+ .proBanner h4{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+ }
+
+ .proBanner h2{
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+ }
+
+
+ .proBanner .promoBox:hover button{
+    background: teal;
+    border: 1px solid teal;
+ }
+
 
    
 
