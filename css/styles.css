@@ -121,16 +121,17 @@ p{
 
 /* Cover section Styling */
 .cover{
-    background-image: url("../img/aboutus/cover1.png") ;
-    background-color: rgba(147, 147, 147, 0.507);
+    background-image: url("../img/page-backgrounds/clem-onojeghuo-CJtNSIOicD0-unsplash.jpg") ;
+    background-color: #080d09;
     height: 80vh;
     width: 100%;
-    background-position: top 25% right -3;
+    background-position: top 25% right 0;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     padding: 150px 100px;
     display: flex;
     align-items: flex-start;
+    color: #AE0203;
 }
 
 .cover h4{
@@ -139,19 +140,24 @@ p{
 
 .cover h1{
     color: rgb(172, 98, 0);
+    font-weight: bolder;
 }
 
 .cover h2, h5{
-    color: rgba(7, 5, 5, 0.924);
+    color: rgb(177, 167, 154);
     font-weight: bolder;
+}
+
+.cover h5{
+    margin-bottom: 20px;
 }
 
 .cover button{
     background-image: url("../img/icons/button.png");
-    background-color: rgba(0, 0, 0, 0.841);
+    background-color: #AE0203;
     color: rgb(241, 142, 13);
     border: none;
-    padding: 14px 80px 14px 65px;
+    padding: 14px 60px 14px 45px;
     border-radius: 5px;
     font-size: 25px;
     background-repeat: no-repeat;
@@ -187,7 +193,7 @@ p{
    width: 100%;
 }
 
-.feature .featureBox h5{
+.feature .featureBox h6{
     padding: 9px 8px 6px 8px;
     line-height: 1;
     border-radius: 4px;
@@ -195,4 +201,24 @@ p{
     background-color: rgba(223, 123, 181, 0.593); 
     margin-top: 10px; 
     display: inline-block;
+}
+
+.feature .featureBox:nth-child(2) h6{
+    background-color: lightgreen;
+}
+
+.feature .featureBox:nth-child(3) h6{
+    background-color: lightskyblue;
+}
+
+.feature .featureBox:nth-child(4) h6{
+    background-color: lightsalmon;
+}
+
+.feature .featureBox:nth-child(5) h6{
+    background-color: lightsteelblue;
+}
+
+.feature .featureBox:nth-child(6) h6{
+    background-color: lightpink;
 }
