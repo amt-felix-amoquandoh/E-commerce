@@ -325,6 +325,11 @@ button.white{
     bottom: 28px;
     right: 28px;   
  }
+
+ .products .product .proCart:hover{
+      background-color: rgba(0, 128, 128, 0.639);
+      color: white;
+ }
  
  /* Banner styles */
  .banner{
@@ -338,7 +343,7 @@ button.white{
     height: 40vh;
     background-size: cover;
     background-position: center;
-    margin: 60px 0;
+    margin: 30px 0;
  }
 
  .banner h4{
@@ -408,6 +413,49 @@ button.white{
  }
 
 
+ .productBanners{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: -100px;
+ }
+
+ .productBanners .bannerBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 50px;    
+    padding: 20px;
+ }
+
+ .productBanner1{
+    background-image: url("../img/page-backgrounds/alt.jpg"); 
+ }
+ .productBanner2{
+    background-image: url("../img/page-backgrounds/banner.jpg"); 
+ }
+ .productBanner3{
+    background-image: url("../img/page-backgrounds/banner5.jpg"); 
+ }
+
+ .productBanners h2{
+    color: #fff;
+    font-weight: 900;
+    font-size: 2.8rem;
+ }
+
+ 
+ .productBanners h3{
+    color: #ff3f3f;
+    font-weight: 800;
+    font-size: 1.8rem;
+ }
    
 
 
