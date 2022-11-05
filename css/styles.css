@@ -91,6 +91,11 @@ button.white{
     justify-content: center;
 }
 
+.mobileNav{
+    display: none;
+    align-items: center;
+}
+
 .navItems li{
     list-style: none;
     padding: 0 20px;
@@ -124,6 +129,7 @@ button.white{
     height: 12rem;
     margin-top: -46px;
     margin-bottom: -45px;
+    margin-left: -50px;
     width: auto;
 }
 
@@ -518,6 +524,37 @@ button.white{
  }
 
  /* footer styling */
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+}
+
+footer h4{
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+}
+
+footer a{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgba(8, 8, 51, 0.708);
+    margin-bottom: 10px;
+}
+
  .footBrandImage{
     height: 5rem;
     width: auto;
@@ -533,33 +570,70 @@ button.white{
     width: auto;
 }
 
-
-
- /* .mediaIcons{
-  height: 40px;
-  width: auto;
-  margin: 2px 8px;
+footer .socialSection{
+    margin-top: 20px;
 }
 
-.btnGoogle, .btnFacebook{
- font-weight: bolder;
-  display: flex;
-  color: azure;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid grey;
-  padding: 8px 0;
-  border-radius: 8px;
-  width: 60%;
- 
+footer .socialSection ion-icon{
+    color: #464649;
+    padding-right: 4px;
+    cursor: pointer;
+    font-size: 28px;
 }
 
-.btnFacebook{
-  background-color: rgb(59, 89, 153);
+footer .socialSection ion-icon:hover, footer a:hover{
+    color: teal;
 }
 
-.btnGoogle{
-  background-color: #3a8fe4;
+footer .copyright{
+    width: 100%;
+    text-align: center;
 }
- */
+
+
+
+/* Media queries for standar devices */
+/* Tablet view */
+@media (max-width: 830px){
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .navItems{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #464649;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+    }
+
+    .navBrandImage{
+        margin-left: -100px;
+        height: 9.6rem;
+       
+    }
+
+    .navItems li{
+        margin-bottom: 25px;
+    }
+
+    .mobileNav{
+        display: flex;
+        align-items: center;
+        margin-right: -55px;
+    }
+
+    .mobileNav ion-icon{
+        color: black;
+        margin-left: 10px;
+    }
+}
 

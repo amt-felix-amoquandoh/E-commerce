@@ -1,3 +1,22 @@
+ const mobileMenu = document.getElementById("mobileMenu");
+ const navMenuItems = document.getElementById("navItems");
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Get the video
 var video = document.getElementById("myVideo");
 
