@@ -9,6 +9,7 @@
         navMenuItems.classList.add("active");
         mobileMenu.style.display = "none";
         shopICon.style.display = "none";
+        navMenuClose.style.display = "flex"; 
     })    
  }
 

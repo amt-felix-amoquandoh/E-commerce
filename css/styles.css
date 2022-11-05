@@ -140,6 +140,10 @@ button.white{
     transition: 0.3s ease-out;
 }
 
+.mobileMenuClose{
+    display: none;
+}
+
 /* @media only screen and (max-width: 600px ){
     .header{
         font-size: 0.2rem;
@@ -653,5 +657,54 @@ footer .copyright{
         color: #222;
         margin-top: -12px;
     }
+
+    .cover{
+        height: 70vh;        
+        background-image: none;
+        padding: 0px 20px;  
+        position: relative;            
+    }
+      
+      .cover:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.4;
+        background-image: url('../img/page-backgrounds/clem-onojeghuo-CJtNSIOicD0-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-position: top 40% right 30%;
+        background-size: cover;
+      }
+
+    .coverContent{
+        margin-top: 50px;  
+        position: relative; 
+        padding: 0;     
+    }
+
+    .coverContent h3{
+        color: #f50303;
+        font-weight: bold;
+    }
+
+    .coverContent h2{
+        font-size: 2.1rem;
+        color: rgb(228, 221, 212);
+    }
+    .coverContent h5{
+        color: rgb(228, 221, 212);
+        font-size: 1.2rem;
+    }
+    .cover button{
+        padding: 10px 50px 10px 35px;        
+    }
+
+
+
+   
 }
 
