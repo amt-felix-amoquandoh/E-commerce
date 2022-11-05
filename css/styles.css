@@ -517,3 +517,49 @@ button.white{
     
  }
 
+ /* footer styling */
+ .footBrandImage{
+    height: 5rem;
+    width: auto;
+ }
+
+ .installbrands{
+    display: inline-block;
+    
+ }
+
+.installBrandImage{
+    height: 6.5rem;
+    width: auto;
+}
+
+
+
+ /* .mediaIcons{
+  height: 40px;
+  width: auto;
+  margin: 2px 8px;
+}
+
+.btnGoogle, .btnFacebook{
+ font-weight: bolder;
+  display: flex;
+  color: azure;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid grey;
+  padding: 8px 0;
+  border-radius: 8px;
+  width: 60%;
+ 
+}
+
+.btnFacebook{
+  background-color: rgb(59, 89, 153);
+}
+
+.btnGoogle{
+  background-color: #3a8fe4;
+}
+ */
+
