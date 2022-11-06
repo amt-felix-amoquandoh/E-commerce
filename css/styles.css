@@ -535,6 +535,14 @@ footer{
     justify-content: space-between;
 }
 
+.footerBrandImage{
+    height: 12rem;
+    margin-top: -46px;
+    margin-bottom: -45px;
+    margin-left: -50px;
+    width: auto;
+}
+
 footer .col{
   display: flex;
   flex-direction: column;
@@ -544,7 +552,7 @@ footer .col{
 
 footer h4{
     font-size: 1.5rem;
-    padding-bottom: 20px;
+    
 }
 
 footer p{
@@ -561,7 +569,15 @@ footer a{
 }
 
  .footBrandImage{
-    height: 5rem;
+    height: 4rem;
+    width: auto;
+ }
+
+ .footerBrandImage{
+    height: 12rem;
+    margin-top: -46px;
+    margin-bottom: -45px;
+    margin-left: -50px;
     width: auto;
  }
 
@@ -601,9 +617,15 @@ footer .copyright{
 /* Tablet view */
 @media (max-width: 830px){
     body{
-        margin: 0;
+        min-width: 100vw;
         padding: 0;
+        margin: 0;
     }
+    
+    .section-p1{
+        padding: 40px 30px;
+    }
+
     
     .navItems{
         display: flex;
@@ -617,7 +639,7 @@ footer .copyright{
         width: 300px;
         background-color: rgb(147, 147, 147);
         box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
-        padding: 80px 0 0 10px;
+        padding: 80px 0 0 16px;
         transition: 0.3s;
     }
 
@@ -630,7 +652,7 @@ footer .copyright{
     }    
 
     .navBrandImage{
-        margin-left: -100px;
+        
         height: 9.6rem;
        
     }
@@ -642,7 +664,7 @@ footer .copyright{
     .mobileNav{
         display: flex;
         align-items: center;
-        margin-right: -55px;
+        margin-right: -45px;
     }
 
     .mobileNav ion-icon{
@@ -662,7 +684,9 @@ footer .copyright{
         height: 70vh;        
         background-image: none;
         padding: 0px 20px;  
-        position: relative;            
+        position: relative; 
+        min-width: 100vw; 
+        margin: auto 0;         
     }
       
       .cover:before {
@@ -671,7 +695,7 @@ footer .copyright{
         position: absolute;
         left: 0;
         top: 0;
-        width: 100%;
+        min-width: 100%;
         height: 100%;
         opacity: 0.4;
         background-image: url('../img/page-backgrounds/clem-onojeghuo-CJtNSIOicD0-unsplash.jpg');
@@ -706,7 +730,91 @@ footer .copyright{
     .feature{
         justify-content: center;
     }
+ 
+    .feature .featureBox{
+        margin: 15px 15px;         
+    }
 
-   
+    .products .productsBox {
+        justify-content: center;       
+    }
+
+    .products .product {
+        margin: 20px;
+    }
+
+    .products .product img {
+        height: 18rem;        
+    }
+
+    .products .product .description h5 {
+        margin: 5px;
+        color: rgb(75, 73, 73);
+        line-height: 25px;
+    }
+
+    .products .product .description span {
+        background-color: grey;
+        padding: 8px 8px;
+        font-weight: bold;
+        color: white;
+        font-size: 18px;
+        margin: 0px 5px;
+    }
+
+    .banner {
+        height: 20vh;        
+    }
+
+    footer{
+        padding: 0;
+    }
+
+    .proBanner .promoBox {
+        min-width: 100%;
+        height: 30vh;
+        margin-top: -20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .productBanners {
+        padding: 0 30px;
+    }
+
+    .productBanners .bannerBox {
+    width: 28%;    
+    }
+
+    .newsletter .signUpFrom {
+        width: 70%;
+    }
+
+    .footerBrandImage{
+        display: none;
+    }
+
+    footer .col {
+       margin: 0 50px;
+    }
+
+   .installBrandImage{
+    height: 5.5rem;
+    margin: -20px;
 }
 
+footer .socialSection ion-icon{
+    color: #202020;
+    display: inline-block;
+       
+    font-size: 24px;
+}
+
+}
+
+
+@media (max-width: 470px){
+   .header{
+    padding: 10px 30px;
+   }
+}
