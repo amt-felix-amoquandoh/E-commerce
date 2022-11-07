@@ -664,6 +664,12 @@ footer .copyright{
     margin-bottom: -5px;
 }
 
+/* Single Products */
+.productDetails .singleProductImg{
+    width: 40%;
+    margin-right: 50px;
+}
+
 
 
 
