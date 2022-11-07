@@ -650,7 +650,6 @@ footer .copyright{
     padding-top: 40px; 
     padding-left: 30px;
     padding-right: 30px; 
-    width: max-content;
     text-align: center; 
 }
 
@@ -1066,5 +1065,17 @@ footer .socialSection ion-icon{
   .newsletter .signUpFrom{
     width: 100%;
   }
+
+  /*  */
+  .shopCover h2{
+
+    font-size: 2rem;
+    
+}
+
+.shopCover h5{
+    color: rgb(24, 24, 24);
+    font-size: 0.8rem;
+}
 
 }
