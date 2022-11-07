@@ -816,10 +816,7 @@ footer .socialSection ion-icon{
 }
 
 
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2){
+@media (max-device-width: 480px){
    .header{
     padding-top: 10px;
     padding-bottom: 10px;
@@ -897,3 +894,10 @@ footer .socialSection ion-icon{
   }
 
 }
+/* 
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2){
+    
+  } */
