@@ -71,6 +71,9 @@ button.white{
     margin: 40px 0;
 }
 
+
+/* Homepage Styles */
+
 /* header styling */
 .header{
     display: flex;
@@ -129,6 +132,7 @@ button.white{
     height: 12rem;
     margin-top: -46px;
     margin-bottom: -45px;
+    margin-left: -50px;
     width: auto;
 }
 
@@ -142,18 +146,7 @@ button.white{
 .mobileMenuClose{
     display: none;
 }
-
-/* @media only screen and (max-width: 600px ){
-    .header{
-        font-size: 0.2rem;
-        padding: 0;
-    }
-    .navBrandImage{
-        margin-left: -30px;
-    }
-
-} */
-
+ 
 /* Cover section Styling */
 .cover{
     background-image: url("../img/page-backgrounds/clem-onojeghuo-CJtNSIOicD0-unsplash.jpg") ;
@@ -611,6 +604,35 @@ footer .copyright{
 }
 
 
+/* Shop page Styles */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Media queries for standar devices */
 /* Tablet view */
@@ -894,10 +916,3 @@ footer .socialSection ion-icon{
   }
 
 }
-/* 
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 2){
-    
-  } */
