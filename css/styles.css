@@ -720,8 +720,7 @@ footer .copyright{
    line-height: 35px;
 }
 
-.productDetails .singleProductImg{
-    width: 40%;
+.productDetails .singleProductImgs{
     margin-right: 50px;
     box-shadow:
   3.1px 2.6px 3.6px rgba(0, 0, 0, 0.028),
@@ -749,8 +748,15 @@ footer .copyright{
   100px 100px 80px rgba(0, 0, 0, 0.07)
 }
 
-#mainImg{
-  height: 12rem;
+#mainProduct{
+    box-shadow:
+    0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    0px 12.5px 10px rgba(0, 0, 0, 0.035),
+    0px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    0px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    0px 100px 80px rgba(0, 0, 0, 0.07)
+  
 }
 
 
@@ -1077,6 +1083,26 @@ footer .socialSection ion-icon{
 
 .shopCoverContent{   
     padding: 10px;     
+}
+
+.productDetails{
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+}
+
+.productDetails .singleProductImgs{
+   width: 100%;
+   margin-right: 0px;
+   
+}
+
+#mainProduct{
+    height: 400px;
+}
+
+.productDetails .productDesc{
+    width: 100%;
 }
 
 }
