@@ -352,7 +352,7 @@ button.white{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url("../img/page-backgrounds/rep.jpg");
+    background-image: url("../img/page-backgrounds/banner3.jpg");
     width: 100%;
     height: 40vh;
     background-size: cover;
@@ -829,6 +829,40 @@ footer .copyright{
     font-size: 2rem;
 }
 
+/* appointment page styling */
+.appointCover{
+    height: 40vh;   
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 14px;
+    background-color: rgba(34, 34, 34, 0.453);
+    background-image: url('../img/page-backgrounds/rep.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.appointCoverContent{   
+    background-color: #e9d0bb98; 
+    padding-top: 40px; 
+    padding-left: 30px;
+    padding-right: 30px; 
+    text-align: center; 
+}
+
+.appointCover h2{
+    color: darkblue;
+    font-size: 3.8rem;
+    font-weight: bold;
+}
+
+.appointCover h5{
+    color: rgb(24, 24, 24);
+    font-size: 2rem;
+}
 
 
 
