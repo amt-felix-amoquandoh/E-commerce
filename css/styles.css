@@ -759,6 +759,41 @@ footer .copyright{
   
 }
 
+/* About us page styling */
+.aboutCover{
+    height: 40vh;   
+    color: #AE0203; 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 14px;
+    background-color: rgba(34, 34, 34, 0.453);
+    background-image: url('../img/page-backgrounds/shop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.aboutCoverContent{   
+    background-color: #9e9e9e98; 
+    padding-top: 40px; 
+    padding-left: 30px;
+    padding-right: 30px; 
+    text-align: center; 
+}
+
+.aboutCover h2{
+    color: rgb(181, 29, 29);
+    font-size: 3.8rem;
+    font-weight: bold;
+}
+
+.aboutCover h5{
+    color: rgb(24, 24, 24);
+    font-size: 2rem;
+}
 
 
 
