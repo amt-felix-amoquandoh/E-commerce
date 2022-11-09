@@ -1171,18 +1171,27 @@ footer .socialSection ion-icon{
   }
 
   /*  */
-  .shopCover h2{
+  .shopCover h2,
+  .appointCover h2,
+  .aboutCover h2,
+  .ordersCover h2{
     margin-bottom: -10px;
     font-size: 1.5rem;
     
 }
 
-.shopCover h5{
+.shopCover h5,
+  .appointCover h5,
+  .aboutCover h5,
+  .ordersCover h5{
     color: rgb(24, 24, 24);
     font-size: 0.8rem;
 }
 
-.shopCoverContent{   
+.shopCoverContent,
+  .appointCoverContent,
+  .aboutCoverContent,
+  .ordersCoverContent{   
     padding: 10px;     
 }
 
