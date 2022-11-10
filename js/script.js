@@ -1,7 +1,8 @@
  const mobileMenu = document.getElementById("mobileMenu");
  const navMenuItems = document.getElementById("navItems");
  const navMenuClose = document.getElementById("mobileMenuClose");
- const shopICon = document.querySelector(".shopIcon");
+ const shopICon = document.querySelector(".mobileNav");
+ const shopBagde = document.querySelector(".cartBox")
 
 
  if (mobileMenu) {
@@ -9,6 +10,7 @@
         navMenuItems.classList.add("active");
         mobileMenu.style.display = "none";
         shopICon.style.display = "none";
+        shopBagde.style.display = "none";
         navMenuClose.style.display = "flex"; 
     })    
  }

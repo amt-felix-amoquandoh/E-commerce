@@ -38,9 +38,16 @@
           <li><a href="./shop.html" class="active">Shop</a></li>
           <li><a href="./aboutus.html">About Us</a></li>
           <li>
-            <a href="./orders.html">
-              <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
-            </a>
+            <div class="cartBox">
+              <a href="./orders.html">
+                <div>
+                  <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
+                </div>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  9
+                  <span class="visually-hidden">Cart Items</span>
+              </a>
+            </div>
           </li>
           <a href="#">
             <ion-icon
@@ -53,8 +60,13 @@
         </ul>
       </div>
       <div id="mobile" class="mobileNav">
-        <a href="./orders.html">
-          <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
+        <a class="mobileCart" href="./orders.html">
+          <div>
+            <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
+          </div>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            9
+            <span class="visually-hidden">Cart Items</span>
         </a>
         <ion-icon
           id="mobileMenu"
