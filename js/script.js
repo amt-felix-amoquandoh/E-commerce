@@ -3,8 +3,8 @@
  const navMenuClose = document.getElementById("mobileMenuClose");
  const shopICon = document.querySelector(".mobileNav");
  const shopBagde = document.querySelector(".cartBox");
- const addToCart = document.querySelector(".proCart");
- const removeFromCart = document.querySelector(".takeOut");
+ const addToCart = document.getElementById("proCart");
+ const removeFromCart = document.getElementById("takeOut");
 
 // Mobile and Tablet NAvbar implementation//
  if (mobileMenu) {
@@ -47,11 +47,11 @@ smallerImage[3].onclick = function(){
 
 // Addd to Cart Implementation below//
 addToCart.addEventListener("click", () => {
-
+     console.log("fuuuuuuuuuk")
 })
 
 removeFromCart.addEventListener("click", () => {
-  
+  console.log("meeeeeeeeeeeeee")
 })
 
 
