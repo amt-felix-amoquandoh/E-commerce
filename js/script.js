@@ -2,9 +2,11 @@
  const navMenuItems = document.getElementById("navItems");
  const navMenuClose = document.getElementById("mobileMenuClose");
  const shopICon = document.querySelector(".mobileNav");
- const shopBagde = document.querySelector(".cartBox")
+ const shopBagde = document.querySelector(".cartBox");
+ const addToCart = document.querySelector(".proCart");
+ const removeFromCart = document.querySelector(".takeOut");
 
-
+// Mobile and Tablet NAvbar implementation//
  if (mobileMenu) {
     mobileMenu.addEventListener("click", () => {
         navMenuItems.classList.add("active");
@@ -43,6 +45,14 @@ smallerImage[3].onclick = function(){
 }
 
 
+// Addd to Cart Implementation below//
+addToCart.addEventListener("click", () => {
+
+})
+
+removeFromCart.addEventListener("click", () => {
+  
+})
 
 
 
@@ -56,19 +66,8 @@ smallerImage[3].onclick = function(){
 
 
 
-// Get the video
-var video = document.getElementById("myVideo");
 
-// Get the button
-var btn = document.getElementById("myBtn");
 
-// Pause and play the video, and change the button text
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
-  }
-}
+
+
+
