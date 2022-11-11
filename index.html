@@ -43,7 +43,7 @@
                 <div>
                   <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
                 </div>
-                <span id="cartItems" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                   
                   <span class="visually-hidden">Cart Items</span>
               </a>
@@ -64,7 +64,7 @@
           <div>
             <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
           </div>
-          <span id="cartItems" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
             
             <span class="visually-hidden">Cart Items</span>
         </a>
@@ -165,7 +165,7 @@
         <div class="product">
           <img src="./img/cart/homeCart/5.jpg" alt="" />
           <div class="description">
-            <span>Classic Fit Suit</span>
+            <span id="itemName">Classic Fit Suit</span>
             <h5>Classic, best suits man with a fuller build</h5>
             <div class="stars">
               <ion-icon name="star"></ion-icon>
@@ -176,10 +176,10 @@
             </div>
             <h4>Ghc 899</h4>
           </div>
-          <a href="#"
+          <a onclick="addItemToCart (itemName)"
             ><ion-icon name="cart-outline" class="proCart"></ion-icon
           ></a>
-          <a href="#"
+          <a onclick="takeFromCart (item)"
             ><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon
           ></a>
         </div>
@@ -187,7 +187,7 @@
         <div class="product">
           <img src="./img/cart/homeCart/2.webp" alt="" />
           <div class="description">
-            <span>Slim Fit Suit</span>
+            <span id="itemName">Slim Fit Suit</span>
             <h5>Contoured to the body, slim but has some room for comfort</h5>
             <div class="stars">
               <ion-icon name="star"></ion-icon>
@@ -198,10 +198,10 @@
             </div>
             <h4>Ghc 899</h4>
           </div>
-          <a href="#"
+          <a onclick="addItemToCart (itemName)"
             ><ion-icon name="cart-outline" class="proCart"></ion-icon
           ></a>
-          <a href="#"
+          <a onclick="takeFromCart (item)"
             ><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon
           ></a>
         </div>
@@ -209,7 +209,7 @@
         <div class="product">
           <img src="./img/cart/homeCart/3.webp" alt="" />
           <div class="description">
-            <span>Modern Fit Suit</span>
+            <span id="itemName">Modern Fit Suit</span>
             <h5>Slim fit, contoured, shorter length.</h5>
             <div class="stars">
               <ion-icon name="star"></ion-icon>
@@ -220,10 +220,10 @@
             </div>
             <h4>Ghc 899</h4>
           </div>
-          <a href="#"
+          <a onclick="addItemToCart (itemName)"
             ><ion-icon name="cart-outline" class="proCart"></ion-icon
           ></a>
-          <a href="#"
+          <a onclick="takeFromCart (item)"
             ><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon
           ></a>
         </div>
@@ -245,10 +245,10 @@
             </div>
             <h4>Ghc 899</h4>
           </div>
-          <a href="#"
+          <a onclick="addItemToCart (item)"
             ><ion-icon name="cart-outline" class="proCart"></ion-icon
           ></a>
-          <a href="#"
+          <a onclick="takeFromCart (item)"
             ><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon
           ></a>
         </div>
@@ -267,10 +267,10 @@
             </div>
             <h4>Ghc 899</h4>
           </div>
-          <a href="#"
+          <a onclick="addItemToCart (item)"
             ><ion-icon name="cart-outline" class="proCart"></ion-icon
           ></a>
-          <a href="#"
+          <a onclick="takeFromCart (item)"
             ><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon
           ></a>
         </div>
@@ -291,10 +291,10 @@
             </div>
             <h4>Ghc 899</h4>
           </div>
-          <a href="#"
+          <a onclick="addItemToCart (item)"
             ><ion-icon name="cart-outline" class="proCart"></ion-icon
           ></a>
-          <a href="#"
+          <a onclick="takeFromCart (item)"
             ><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon
           ></a>
         </div>
@@ -316,10 +316,10 @@
             </div>
             <h4>Ghc 899</h4>
           </div>
-          <a href="#"
+          <a onclick="addItemToCart (item)"
             ><ion-icon name="cart-outline" class="proCart"></ion-icon
           ></a>
-          <a href="#"
+          <a onclick="takeFromCart (item)"
             ><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon
           ></a>
         </div>
@@ -341,10 +341,10 @@
             </div>
             <h4>Ghc 899</h4>
           </div>
-          <a href="#"
+          <a onclick="addItemToCart (item)"
             ><ion-icon name="cart-outline" class="proCart"></ion-icon
           ></a>
-          <a href="#"
+          <a onclick="takeFromCart (item)"
             ><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon
           ></a>
         </div>
@@ -379,10 +379,10 @@
             </div>
             <h4>Ghc 899</h4>
           </div>
-          <a href="#"
+          <a onclick="addItemToCart ()"
             ><ion-icon name="cart-outline" class="proCart"></ion-icon
           ></a>
-          <a href="#"
+          <a onclick="takeFromCart ()"
             ><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon
           ></a>
         </div>
@@ -401,10 +401,10 @@
             </div>
             <h4>Ghc 899</h4>
           </div>
-          <a href="#"
+          <a onclick="addItemToCart ()"
             ><ion-icon name="cart-outline" class="proCart"></ion-icon
           ></a>
-          <a href="#"
+          <a onclick="takeFromCart ()"
             ><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon
           ></a>
         </div>
@@ -423,10 +423,10 @@
             </div>
             <h4>Ghc 899</h4>
           </div>
-          <a href="#"
+          <a onclick="addItemToCart ()"
             ><ion-icon name="cart-outline" class="proCart"></ion-icon
           ></a>
-          <a href="#"
+          <a onclick="takeFromCart ()"
             ><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon
           ></a>
         </div>
@@ -448,109 +448,14 @@
             </div>
             <h4>Ghc 899</h4>
           </div>
-          <a href="#"
+          <a onclick="addItemToCart ()"
             ><ion-icon name="cart-outline" class="proCart"></ion-icon
           ></a>
-          <a href="#"
+          <a onclick="takeFromCart ()"
             ><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon
           ></a>
         </div>
 
-        <div class="product">
-          <img src="./img/cart/homeCart/other clothes/5.jpg" alt="" />
-          <div class="description">
-            <span>Double Breasted Suit</span>
-            <h5>4, 6 or 8 buttons max, 6 being the most common</h5>
-            <div class="stars">
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-            </div>
-            <h4>Ghc 899</h4>
-          </div>
-          <a href="#"
-            ><ion-icon name="cart-outline" class="proCart"></ion-icon
-          ></a>
-          <a href="#"
-            ><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon
-          ></a>
-        </div>
-
-        <div class="product">
-          <img src="./img/cart/homeCart/other clothes/6.png" alt="" />
-          <div class="description">
-            <span>Single Breasted Suit</span>
-            <h5>
-              Inclusion of either one, two or three buttons along the seam
-            </h5>
-            <div class="stars">
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-            </div>
-            <h4>Ghc 899</h4>
-          </div>
-          <a href="#"
-            ><ion-icon name="cart-outline" class="proCart"></ion-icon
-          ></a>
-          <a href="#"
-            ><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon
-          ></a>
-        </div>
-
-        <div class="product">
-          <img src="./img/cart/homeCart/other clothes/7.png" alt="" />
-          <div class="description">
-            <span>Peak Lapel Suit</span>
-            <h5>
-              Noticeable high peaks directed to shoulders, most popular style
-              from the 16th century.
-            </h5>
-            <div class="stars">
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-            </div>
-            <h4>Ghc 899</h4>
-          </div>
-          <a href="#"
-            ><ion-icon name="cart-outline" class="proCart"></ion-icon
-          ></a>
-          <a href="#"
-            ><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon
-          ></a>
-        </div>
-
-        <div class="product">
-          <img src="./img/cart/homeCart/other clothes/8.png" alt="" />
-          <div class="description">
-            <span>Shawl Lapel Suit</span>
-            <h5>
-              Rounded sides, continuous curve with no hard edges, iconic smoking
-              jacket style.
-            </h5>
-            <div class="stars">
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-            </div>
-            <h4>Ghc 899</h4>
-          </div>
-          <a href="#"
-            ><ion-icon name="cart-outline" class="proCart"></ion-icon
-          ></a>
-          <a href="#"
-            ><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon
-          ></a>
-        </div>
       </div>
     </section>
     <!-- Other products section ends here -->
