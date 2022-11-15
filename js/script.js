@@ -44,8 +44,6 @@
 
 
 // Addd to Cart Implementation below//
-const itemName = document.getElementById("itemName");
-
 
 function addItemToCart (){
   
