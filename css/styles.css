@@ -341,8 +341,8 @@ button.white{
     color: teal;
     text-align: center; 
     position: absolute;
-    bottom: 28px;
-    right: 28px;   
+    bottom: 18px;
+    right: 18px;   
  }
 
  .products .product .quantity{
@@ -354,8 +354,8 @@ button.white{
     font-weight: bold;
     text-align: center; 
     position: absolute;
-    bottom: 28px;
-    right: 68px;   
+    bottom: 18px;
+    right: 48px;   
  }
 
  .products .product .takeOut{
@@ -368,8 +368,8 @@ button.white{
     color: rgb(128, 0, 0);
     text-align: center; 
     position: absolute;
-    bottom: 28px;
-    right: 108px;   
+    bottom: 18px;
+    right: 88px;   
  }
 
  .products .product .proCart:hover{

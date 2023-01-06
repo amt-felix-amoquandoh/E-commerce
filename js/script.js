@@ -25,6 +25,23 @@
  }
 
 
+ let cartBasket = JSON.parse(localStorage.getItem("suits")) || [];
+
+ const itemsInCart = () => {
+  let cartIcon = document.getElementById("itemsUpdate");
+  cartIcon.innerHTML = cartBasket.map((idx) => idx.quantity).reduce((x, y) => x + y, 0);
+}
+
+const itemsMobileInCart = () => {
+  let cartIcon = document.getElementById("mobileItemsUpdate");
+  cartIcon.innerHTML = cartBasket.map((idx) => idx.quantity).reduce((x, y) => x + y, 0);
+}
+
+
+itemsInCart();
+itemsMobileInCart();
+
+
 // Shop Items Js Implementation //
 // let mainImage = document.getElementById("mainProduct");
 // let smallerImage = document.getElementsByClassName("typesGroup");
