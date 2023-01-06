@@ -668,6 +668,29 @@ footer .copyright{
     background-position: center;
 }
 
+.backToShopBtn{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    color: rgb(189, 139, 73);
+    background-color: #AE0203;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+  }
+
+  .backToShopBtn:hover{
+    color: #AE0203;
+    background-color: white;
+    border: 1px solid #AE0203;
+  }
+
+  .orderTitle{
+    margin: 36px;
+  }
+
 
 .shopCoverContent{   
     background-color: #9e9e9e98; 

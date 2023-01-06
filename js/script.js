@@ -3,6 +3,8 @@
  const navMenuClose = document.getElementById("mobileMenuClose");
  const shopICon = document.querySelector(".mobileNav");
  const shopBagde = document.querySelector(".cartBox");
+ const labels = document.getElementById("labels");
+ const ordersInCart = document.getElementById("orderSummary");
 
 // Mobile and Tablet NAvbar implementation//
  if (mobileMenu) {
@@ -40,6 +42,54 @@ const itemsMobileInCart = () => {
 
 itemsInCart();
 itemsMobileInCart();
+
+let loadCartItems = () => {
+ if (cartBasket.length !== 0) {
+  return (ordersInCart.innerHTML = cartBasket.map((idx) => {
+    return `
+    <div class="selectedCartItems">oh fuckkk</div>
+    `
+  }).join(""));
+ } else {
+  ordersInCart.innerHTML = ``;
+  labels.innerHTML = `
+  <h3><b>No Items in Cart</b></h3>
+  <a href="./shop.html">
+  <button class="backToShopBtn">Back to Shop</button>
+  </a>
+  `
+ }
+}
+
+loadCartItems();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Shop Items Js Implementation //
