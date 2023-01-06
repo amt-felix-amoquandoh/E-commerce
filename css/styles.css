@@ -80,7 +80,7 @@ button.white{
     align-items: center;
     justify-content: space-between;
     padding: 0px 80px;
-    background: rgba(147, 147, 147, 0.462);
+    background: rgba(147, 147, 147, 0.932);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     z-index: 999;
     position: sticky;
@@ -936,7 +936,7 @@ footer .copyright{
     }
     
     .section-p1{
-        padding: 40px 30px;
+        padding: 60px 30px;
     }
 
     
@@ -1137,7 +1137,7 @@ footer .socialSection ion-icon{
    .header{
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: -30px;
+    padding-left: -20px;
    }
 
    .navBrandImage {

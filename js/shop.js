@@ -120,32 +120,30 @@ let cartBasket = JSON.parse(localStorage.getItem("suits")) || [];
 
 // items loading to DOM functions
 function loadItems(){
-  if (shop.parentElement.id = "products"){
-    return (shop.innerHTML = shopItems.map((item) => {
-        let {image, title, description, price,uniqueId} = item;
-        let searchItems = cartBasket.find((idx) => idx.id === uniqueId) || [];
-        return `<div id=product-id-${uniqueId} class="product">
-        <img src="${image}" alt="" />
-        <div class="description">
-          <span>${title}</span>
-          <h5>${description}</h5>
-          <div class="stars">
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-          </div>
-          <h4>${ price}</h4>
-        </div>
-        <a onclick="addItem(${uniqueId})"><ion-icon name="cart-outline" class="proCart"></ion-icon></a>
-        <div id=${uniqueId} class="quantity">
-        ${searchItems.quantity === undefined? 0: searchItems.quantity}
-        </div>
-          <a onclick="removeItem(${uniqueId})"><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon></a>
-      </div>`
-    }).join(""))
-  }
+  return (shop.innerHTML = shopItems.map((item) => {
+    let {image, title, description, price,uniqueId} = item;
+    let searchItems = cartBasket.find((idx) => idx.id === uniqueId) || [];
+    return `<div id=product-id-${uniqueId} class="product">
+    <img src="${image}" alt="" />
+    <div class="description">
+      <span>${title}</span>
+      <h5>${description}</h5>
+      <div class="stars">
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+      </div>
+      <h4>${ price}</h4>
+    </div>
+    <a onclick="addItem(${uniqueId})"><ion-icon name="cart-outline" class="proCart"></ion-icon></a>
+    <div id=${uniqueId} class="quantity">
+    ${searchItems.quantity === undefined? 0: searchItems.quantity}
+    </div>
+      <a onclick="removeItem(${uniqueId})"><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon></a>
+  </div>`
+}).join(""))
 }
 
 const generateProducts = () => {
@@ -196,6 +194,7 @@ const updateItems = (id) => {
   
   document.getElementById(id).innerHTML = updateFoundItems.quantity;
   itemsInCart();
+  itemsMobileInCart();
 }
 
 const itemsInCart = () => {
@@ -203,7 +202,14 @@ const itemsInCart = () => {
   cartIcon.innerHTML = cartBasket.map((idx) => idx.quantity).reduce((x, y) => x + y, 0);
 }
 
+const itemsMobileInCart = () => {
+  let cartIcon = document.getElementById("mobileItemsUpdate");
+  cartIcon.innerHTML = cartBasket.map((idx) => idx.quantity).reduce((x, y) => x + y, 0);
+}
+
+
 itemsInCart();
+itemsMobileInCart();
 
 
 
