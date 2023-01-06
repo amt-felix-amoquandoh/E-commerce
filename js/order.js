@@ -48,7 +48,7 @@ let loadCartItems = () => {
  if (cartBasket.length !== 0) {
   return (ordersInCart.innerHTML = cartBasket.map((idx) => {
     return `
-    <div class="selectedCartItems">oh fuckkk</div>
+    <div class="selectedCartItems">Loading...</div>
     `
   }).join(""));
  } else {
