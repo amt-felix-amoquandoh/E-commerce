@@ -47,6 +47,8 @@ const itemsInCart = () => {
 let loadCartItems = () => {
  if (cartBasket.length !== 0) {
   return (ordersInCart.innerHTML = cartBasket.map((idx) => {
+    let {id , item} = idx;
+    let findItems = shopItems.find((stuff) => stuff.id === id)
     return `
     <div class="selectedCartItems">Loading...</div>
     `
