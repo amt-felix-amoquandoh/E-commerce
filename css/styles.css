@@ -1153,6 +1153,14 @@ footer .socialSection ion-icon{
     font-size: 24px;
 }
 
+.section-m1{
+    margin: 0;
+}
+
+.foot{
+    margin-bottom: -30px;
+}
+
 }
 
 
@@ -1280,6 +1288,14 @@ footer .socialSection ion-icon{
 
 .productDetails .productDesc{
     width: 100%;
+}
+
+.section-m1{
+    margin: 0;
+}
+
+.foot{
+    margin-bottom: -30px;
 }
 
 }
