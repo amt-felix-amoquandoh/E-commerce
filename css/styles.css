@@ -681,6 +681,54 @@ footer .copyright{
     transition: 0.3s;
   }
 
+  .orderSummary{
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+  }
+
+  .selectedCartItems{
+    padding: 10px 12px;
+    border: 1px solid rgba(177, 167, 154, 0.616);
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 3.1px 2.6px 3.6px rgba(0, 0, 0, 0.028),
+     8.6px 7.3px 10px rgba(0, 0, 0, 0.04),
+     20.8px 17.5px 24.1px rgba(0, 0, 0, 0.052),
+     69px 58px 80px rgba(0, 0, 0, 0.08);
+    margin: 15px auto;
+    transition: 0.3s ease;
+    display: flex;
+  }
+
+  .cartPriceTitle{
+    width: 195px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cartNamePrice{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cartItemPrice{
+     background-color: #080d09;
+     color: white;
+     padding: 2px 4px;
+     border-radius: 4px;
+  }
+
+  .cartButtons{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cartButtons a{
+    margin: 0 3px;
+  }
+
   .backToShopBtn:hover{
     color: #AE0203;
     background-color: white;

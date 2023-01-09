@@ -1,4 +1,4 @@
-export const shopItems = [
+const shopItems = [
   {
     image: "../img/homeCart/image1.png",
     title: "Classic Fit Suit",
