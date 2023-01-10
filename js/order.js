@@ -93,7 +93,7 @@ const ordersInCart = document.getElementById("orderSummary");
 
 let cartBasket = JSON.parse(localStorage.getItem("suits")) || [];
   
-
+// load cart order items function below
 const loadCartItems = () => {
  if (cartBasket.length !== 0) {
   return (ordersInCart.innerHTML = cartBasket.map((idx) => {
