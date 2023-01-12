@@ -563,8 +563,8 @@ footer .socialSection{
 }
 
 footer .navBrandBox{
-    margin-left: 35px;
-    margin-bottom: 15px;
+    margin-left: 25px;
+    margin-bottom: 20px;
 }
 
 footer .navBrandBox .footerBrandImage{
@@ -1207,7 +1207,8 @@ footer .socialSection ion-icon{
   } 
 
   .products .product .priceBtns h4 {
-    right: 198px;
+    right: 200px;
+    bottom: 15px;
 }
 
   .banner {

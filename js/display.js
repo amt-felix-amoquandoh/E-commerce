@@ -23,7 +23,8 @@ if (navMenuClose) {
  navMenuClose.addEventListener("click", () => {
       navMenuItems.classList.remove("active");
       mobileMenu.style.display = "flex" 
-      shopICon.style.display = "flex";      
+      shopICon.style.display = "flex";
+      brand.style.display = "none";      
     })
 }
 
