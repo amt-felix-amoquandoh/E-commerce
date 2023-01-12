@@ -109,14 +109,14 @@ function loadItems() {
         <ion-icon name="star"></ion-icon>
         <ion-icon name="star"></ion-icon>
         <ion-icon name="star"></ion-icon>
-      </div>
-      <h4>${price}</h4>
+      </div>      
     </div>
+    <div class="priceBtns">
+    <h4>${price}</h4>
     <a onclick="addItem(${uniqueId})"><ion-icon name="cart-outline" class="proCart"></ion-icon></a>
-    <div id=${uniqueId} class="quantity">
-    ${searchItems.quantity === undefined ? 0 : searchItems.quantity}
+    <div id=${uniqueId} class="quantity">${searchItems.quantity === undefined ? 0 : searchItems.quantity}</div>
+    <a onclick="removeItem(${uniqueId})"><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon></a>
     </div>
-      <a onclick="removeItem(${uniqueId})"><ion-icon name="remove-circle-outline" class="takeOut"></ion-icon></a>
   </div>`;
     })
     .join(""));

@@ -3,6 +3,7 @@ const navMenuItems = document.getElementById("navItems");
 const navMenuClose = document.getElementById("mobileMenuClose");
 const shopICon = document.querySelector(".mobileNav");
 const shopBagde = document.querySelector(".cartBox");
+const brand = document.querySelector(".navBrandBoxMobile");
 
 
 // Mobile and Tablet NAvbar implementation//
@@ -13,6 +14,7 @@ if (mobileMenu) {
        shopICon.style.display = "none";
        shopBagde.style.display = "none";
        navMenuClose.style.display = "flex"; 
+       brand.style.display = "flex";
    })    
 }
 
