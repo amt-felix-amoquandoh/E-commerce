@@ -590,14 +590,14 @@ footer .copyright{
 
 /* Shop page Styles */
 .shopCover{
-    height: 35vh;   
+    height: 25vh;   
     color: #AE0203; 
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
     flex-direction: column;
-    padding: 14px;
+    padding: 10px;
     background-color: rgba(34, 34, 34, 0.453);
     background-image: url('../img/page-backgrounds/shop.jpg');
     background-repeat: no-repeat;
@@ -678,11 +678,8 @@ footer .copyright{
 
 
 .shopCoverContent{   
-    background-color: #9e9e9ed8; 
-    padding-top: 30px; 
-    padding-left: 30px;
-    padding-right: 30px; 
-    padding-bottom: 30px;
+    background-color: #747373d8; 
+    padding: 20px;
     text-align: center; 
 }
 

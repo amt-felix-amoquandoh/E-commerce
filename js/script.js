@@ -57,25 +57,3 @@ generateProducts();
 
 
 
-
-
-
-// Product adding and removing functions
-// add item function below
-
-// Shop Items Js Implementation //
-// let mainImage = document.getElementById("mainProduct");
-// let smallerImage = document.getElementsByClassName("typesGroup");
-
-// mainImage[0].onclick = function(){
-//   mainImage.src = smallerImage[0].src;
-// }
-// smallerImage[1].onclick = function(){
-//   mainImage.src = smallerImage[1].src;
-// }
-// smallerImage[2].onclick = function(){
-//   mainImage.src = smallerImage[2].src;
-// }
-// smallerImage[3].onclick = function(){
-//   mainImage.src = smallerImage[3].src;
-// }
