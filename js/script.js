@@ -1,9 +1,22 @@
 import { shopItems } from "./shop.js";
 //  Shop Items display
-let shop = document.getElementById("productsBox");
-// let trying = document.getElementsByClassName("");
+const shop = document.getElementById("productsBox");
+const cartButton = document.querySelector(".cartBox");
+const closeCartBtn = document.querySelector(".closeCart");
+const ClearCartBtn = document.querySelector(".cartFooterButton");
+const cartArea =  document.querySelector(".cart");
+const cartOverlay = document.querySelector(".cartOverlay");
 
-// console.log(trying);
+
+
+
+
+
+
+
+
+
+
 
 let cartBasket = JSON.parse(localStorage.getItem("suits")) || [];
 

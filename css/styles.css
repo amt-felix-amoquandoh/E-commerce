@@ -101,7 +101,7 @@ button.white{
 }
 
 .navBrandBox span{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     align-self: center;    
 }
 
@@ -114,6 +114,7 @@ button.white{
 .navBrandBox .navBrandImage{
     height: 5rem;
     width: auto;
+    margin-left: -10px;
 }
 
 .navItems{
@@ -940,6 +941,19 @@ footer .copyright{
     .navBrandImage{
         margin-left: -50px;
         height: 9.6rem;       
+    }
+
+    .navBrandBox span{
+        font-size: small;      
+    }
+
+    .navBrandBoxMobile .navBrandImage{
+        margin-left: -10px;
+        height: 4.6rem;       
+    }
+
+    .navBrandBoxMobile span{
+        font-size: small;      
     }
 
     .mobileCart{
