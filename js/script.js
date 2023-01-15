@@ -96,6 +96,14 @@ class UI {
         })
     })
   }
+  setCartItemValues(cartBasket){
+    let itemTotal = 0;
+    let itemsTotal = 0;
+    cartBasket.map(item => {
+      itemTotal += item.price * item.amount;
+      itemsTotal += item.amount;
+    })
+  }
 }
 
 
