@@ -122,10 +122,16 @@ class UI {
      </div>
      <div>
       <ion-icon name="caret-up-outline" data-id = ${item.id}></ion-icon>
-      <p class="itemAmount">1</p>
+      <p class="itemAmount">${item.amount}</p>
       <ion-icon name="caret-down-outline" data-id = ${item.id}></ion-icon>
      </div>
-     `
+     `;
+     overlayCartContent.appendChild(itemDiv);
+     console.log(overlayCartContent);
+  }
+
+  displayCartOverlay(){
+    
   }
 }
 
