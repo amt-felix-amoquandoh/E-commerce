@@ -94,6 +94,7 @@ class UI {
           //display cart item 
            this.addCartItemToCart(selectedItem);
           //show the cart overlay
+          this.displayCartOverlay();
         })
     })
   }
@@ -127,11 +128,11 @@ class UI {
      </div>
      `;
      overlayCartContent.appendChild(itemDiv);
-     console.log(overlayCartContent);
   }
 
   displayCartOverlay(){
-    
+     cartOverlay.classList.add("transparentBack");
+     cartArea.classList.add("showCart");
   }
 }
 
