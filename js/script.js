@@ -7,6 +7,7 @@ const ClearCartBtn = document.querySelector(".cartFooterButton");
 const cartArea =  document.querySelector(".cart");
 const cartOverlay = document.querySelector(".cartOverlay");
 const cartItemsQuantity = document.getElementById("itemsUpdate");
+const mobileItemsQuantity = document.getElementById("mobileItemsUpdate");
 const cartTotal = document.querySelector(".ItemsTotal");
 const overlayCartContent = document.querySelector(".overlayCartContent");
 
@@ -91,7 +92,7 @@ class UI {
           //set cart values
           this.setCartItemValues(cartBasket);
           //display cart item 
-
+           this.addCartItemToCart(selectedItem);
           //show the cart overlay
         })
     })
@@ -104,8 +105,12 @@ class UI {
       itemsTotal += item.amount;
     })
     cartTotal.innerText = parseFloat(itemTotal.toFixed(2));
-    cartItemsQuantity.innerText = itemsTotal;  
-    console.log(cartTotal, cartItemsQuantity);
+    cartItemsQuantity.innerText = itemsTotal; 
+    mobileItemsQuantity.innerText = itemsTotal;  
+  }
+  addCartItemToCart(item){
+     const itemDiv = document.createElement("div");
+     itemDiv.classList.add("cartItem");
   }
 }
 
