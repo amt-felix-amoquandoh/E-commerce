@@ -6,16 +6,10 @@ const closeCartBtn = document.querySelector(".closeCart");
 const ClearCartBtn = document.querySelector(".cartFooterButton");
 const cartArea =  document.querySelector(".cart");
 const cartOverlay = document.querySelector(".cartOverlay");
-
-
-
-
-
-
-
-
-
-
+const cartItemsQuantity = document.getElementById("mobileItemsUpdate itemsUpdate");
+const cartTotal = document.querySelector(".ItemsTotal");
+const overlayCartContent = document.querySelector(".overlayCartContent");
+const productArea = document.querySelector(".product");
 
 
 let cartBasket = JSON.parse(localStorage.getItem("suits")) || [];
