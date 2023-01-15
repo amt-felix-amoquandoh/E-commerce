@@ -10,8 +10,11 @@ const cartItemsQuantity = document.getElementById("mobileItemsUpdate itemsUpdate
 const cartTotal = document.querySelector(".ItemsTotal");
 const overlayCartContent = document.querySelector(".overlayCartContent");
 
-
+//cart
 let cartBasket = [];
+
+//add Buttons
+let addButtons = [];
 
 // getting products implementation below
 class Products {
@@ -66,13 +69,14 @@ class UI {
   }
   getAddToCartBtns(){
     const addToCartButtons = [...document.querySelectorAll(".proCart")];
+    addButtons = addToCartButtons;
     addToCartButtons.forEach(button => {
       let uniqueId = button.dataset.id;
       let alreadySelectedItem = cartBasket.find(item => item.id === uniqueId);
       if (alreadySelectedItem) {
         button.setAttribute("name", "stop-circle-outline");
         button.disabled = true;        
-      } else{
+      }
         button.addEventListener("click", (event) => {
           event.target.setAttribute("name", "stop-circle-outline");
           event.target.disabled = true; 
@@ -85,8 +89,9 @@ class UI {
           //set cart values
 
           //display cart item 
+
+          //show the cart overlay
         })
-      }
     })
   }
 }
