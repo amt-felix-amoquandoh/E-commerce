@@ -71,8 +71,8 @@ class UI {
     const addToCartButtons = [...document.querySelectorAll(".proCart")];
     addButtons = addToCartButtons;
     addToCartButtons.forEach(button => {
-      let uniqueId = button.dataset.id;
-      let alreadySelectedItem = cartBasket.find(item => item.id === uniqueId);
+      let id = button.dataset.id;
+      let alreadySelectedItem = cartBasket.find(item => item.id === id);
       if (alreadySelectedItem) {
         button.setAttribute("name", "stop-circle-outline");
         button.disabled = true;        
@@ -81,6 +81,7 @@ class UI {
           event.target.setAttribute("name", "stop-circle-outline");
           event.target.disabled = true; 
           //get item from products
+          let selectedItem = {...Storage.getProduct(id), amount: 1};
 
           //add item to cart
 
@@ -101,6 +102,11 @@ class UI {
 class Storage{
    static saveCartItems (products){
     localStorage.setItem("products", JSON.stringify(products));
+   }
+
+   static getProduct(id){
+    let products = JSON.parse(localStorage.getItem("products"));
+    return products.find(product => product.id === id);
    }
 }
 
