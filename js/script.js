@@ -66,6 +66,10 @@ class UI {
   }
   getAddToCartBtns(){
     const addToCartButtons = [...document.querySelectorAll(".proCart")];
+    addToCartButtons.forEach(button => {
+      let uniqueId = button.dataset.id;
+      console.log(uniqueId);
+    })
   }
 }
 
