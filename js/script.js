@@ -111,6 +111,21 @@ class UI {
   addCartItemToCart(item){
      const itemDiv = document.createElement("div");
      itemDiv.classList.add("cartItem");
+     itemDiv.innerHTML = `
+     <img src=${item.image} alt="">          
+     <div>
+      <h4>${item.title}</h4>
+      <h5>Ghc ${item.price}</h5>
+      <span class="removeItem">
+        <ion-icon name="remove-circle-outline" data-id = ${item.id}></ion-icon>
+      </span>
+     </div>
+     <div>
+      <ion-icon name="caret-up-outline" data-id = ${item.id}></ion-icon>
+      <p class="itemAmount">1</p>
+      <ion-icon name="caret-down-outline" data-id = ${item.id}></ion-icon>
+     </div>
+     `
   }
 }
 
