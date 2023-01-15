@@ -6,7 +6,7 @@ const closeCartBtn = document.querySelector(".closeCart");
 const ClearCartBtn = document.querySelector(".cartFooterButton");
 const cartArea =  document.querySelector(".cart");
 const cartOverlay = document.querySelector(".cartOverlay");
-const cartItemsQuantity = document.getElementById("mobileItemsUpdate itemsUpdate");
+const cartItemsQuantity = document.getElementById("itemsUpdate");
 const cartTotal = document.querySelector(".ItemsTotal");
 const overlayCartContent = document.querySelector(".overlayCartContent");
 
@@ -103,6 +103,9 @@ class UI {
       itemTotal += item.price * item.amount;
       itemsTotal += item.amount;
     })
+    cartTotal.innerText = parseFloat(itemTotal.toFixed(2));
+    cartItemsQuantity.innerText = itemsTotal;  
+    console.log(cartTotal, cartItemsQuantity);
   }
 }
 
