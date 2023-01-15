@@ -68,7 +68,11 @@ class UI {
     const addToCartButtons = [...document.querySelectorAll(".proCart")];
     addToCartButtons.forEach(button => {
       let uniqueId = button.dataset.id;
-      console.log(uniqueId);
+      let alreadySelectedItem = cartBasket.find(item => item.id === uniqueId);
+      if (alreadySelectedItem) {
+        button.setAttribute("name", "stop-circle-outline");
+        button.disabled = true;        
+      }
     })
   }
 }
