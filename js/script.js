@@ -72,6 +72,20 @@ class UI {
       if (alreadySelectedItem) {
         button.setAttribute("name", "stop-circle-outline");
         button.disabled = true;        
+      } else{
+        button.addEventListener("click", (event) => {
+          event.target.setAttribute("name", "stop-circle-outline");
+          event.target.disabled = true; 
+          //get item from products
+
+          //add item to cart
+
+          //save in local storage
+
+          //set cart values
+
+          //display cart item 
+        })
       }
     })
   }
@@ -85,6 +99,8 @@ class Storage{
    }
 }
 
+
+// DOM load event 
 document.addEventListener("DOMContentLoaded", ()=>{
   const ui = new UI();
   const products = new Products();
@@ -140,39 +156,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 
 
-
-
-// items loading to DOM functions
-// function loadItems() {
-//   return (shop.innerHTML = shopItems
-//     .map((item) => {
-//       let { image, title, description, price, uniqueId } = item;
-//       return `<div id=product-id-${uniqueId} class="product">
-//     <img src="${image}" alt="" />
-//     <div class="description">
-//       <span>${title}</span>
-//       <h5>${description}</h5>
-//       <div class="stars">
-//         <ion-icon name="star"></ion-icon>
-//         <ion-icon name="star"></ion-icon>
-//         <ion-icon name="star"></ion-icon>
-//         <ion-icon name="star"></ion-icon>
-//         <ion-icon name="star"></ion-icon>
-//       </div>      
-//     </div>
-//     <div class="priceBtns">
-//     <h4>${price}</h4>
-//     <a><ion-icon name="cart-outline" class="proCart"></ion-icon></a>
-//     </div>
-//   </div>`;
-//     })
-//     .join(""));
-// }
-
-// const generateProducts = () => {
-//   loadItems();
-// };
-// generateProducts();
 
 
 
