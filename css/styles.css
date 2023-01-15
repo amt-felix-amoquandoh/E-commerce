@@ -259,14 +259,13 @@ button.white{
     font-weight: 700;
     color: rgb(172, 98, 0);
     position: absolute;
-    bottom: 8px;
+    bottom: 10px;
     right: 178px;  
  }
 
  .products .product .proCart{
     width: 30px;
     height: 25px;
-    background-color: rgba(154, 204, 187, 0.726);
     line-height: 40px;
     border-radius: 50px;
     font-weight: 400;
@@ -281,7 +280,7 @@ button.white{
  
  .products .product .proCart:hover{
       color: rgba(0, 128, 128, 0.88);
-      background-color: white;
+      background-color: rgba(154, 204, 187, 0.726);
  }
 
  /* Banner styles */

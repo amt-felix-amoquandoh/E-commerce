@@ -82,13 +82,14 @@ class UI {
           event.target.disabled = true; 
           //get item from products
           let selectedItem = {...Storage.getProduct(id), amount: 1};
-
+          
           //add item to cart
-
+          cartBasket = [...cartBasket, selectedItem];
+          
           //save in local storage
-
+          Storage.saveCart(cartBasket);
           //set cart values
-
+          this.setCartItemValues(cartBasket);
           //display cart item 
 
           //show the cart overlay
@@ -107,6 +108,10 @@ class Storage{
    static getProduct(id){
     let products = JSON.parse(localStorage.getItem("products"));
     return products.find(product => product.id === id);
+   }
+
+   static saveCart(cartBasket){
+    localStorage.setItem("cartbasket", JSON.stringify(cartBasket))
    }
 }
 
