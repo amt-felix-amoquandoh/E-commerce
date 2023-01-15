@@ -47,12 +47,16 @@
             </div>
           </a></li>          
           <li>
-            <div class="cartBox">
-                <div>
-                  <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
-                </div>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="itemsUpdate">0</span>
-            </div>
+            <button class="cartTransBtn" onclick="displayCartOverlay()">
+              
+                <div class="cartBox">
+                  <div>
+                    <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
+                  </div>
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="itemsUpdate">0</span>
+              </div>
+            
+            </button>
           </li>
           <a href="#">
             <ion-icon
@@ -65,12 +69,14 @@
         </ul>
       </div>
       <div id="mobile" class="mobileNav">
-        <a class="mobileCart" href="./orders.html">
-          <div>
-            <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
-          </div>
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="mobileItemsUpdate">0</span>
-        </a>
+        <div>
+          <button class="mobileCart cartTransBtn" onclick="displayCartOverlay()">
+            <div>
+              <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
+            </div>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="mobileItemsUpdate">0</span>
+          </button>
+        </div>
         <ion-icon
           id="mobileMenu"
           class="mobileMenu"
@@ -107,23 +113,25 @@
     <!-- products section ends here -->
 
     <!-- cart overlay -->
-    <div class="cartOverlay">
-      <div class="cart">
-        <span class="closeCart">
-          <ion-icon name="close-outline"></ion-icon>
-        </span>
-        <h2>Your Cart</h2><hr>
-        <div class="overlayCartContent">
-          <!-- <div class="cartItem">
-          
-        </div> -->
+    <section id="cartOverlay">
+      <div class="cartOverlay">
+        <div class="cart">
+          <span class="closeCart">
+            <ion-icon name="close-outline"></ion-icon>
+          </span>
+          <h2>Your Cart</h2>
+          <div class="overlayCartContent">
+            <!-- <div class="cartItem">
+            
+          </div> -->
+        </div>
+        <div class="cartFooter">
+          <h3>Total : Ghc <span class="ItemsTotal">0</span></h3>
+          <button class="cartFooterButton">Clear Cart</button>
+        </div>
       </div>
-      <div class="cartFooter">
-        <h3>Total : Ghc <span class="ItemsTotal">0</span></h3>
-        <button class="cartFooterButton">Clear Cart</button>
       </div>
-    </div>
-    </div>
+    </section>
     <!-- cartoverlay ends here -->
 
 

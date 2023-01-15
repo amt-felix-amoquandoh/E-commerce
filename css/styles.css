@@ -72,6 +72,12 @@ button.white{
     margin: 40px 0;
 }
 
+.cartTransBtn{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
 
 /* Homepage Styles */
 
@@ -193,7 +199,8 @@ button.white{
 .products .product{
     position: relative;
     width: 15%;
-    min-width: 250px;
+    min-width: 168px;
+    height: auto;
     padding: 10px;
     border: 1px solid rgba(177, 167, 154, 0.616);
     border-radius: 25px;
@@ -583,7 +590,7 @@ footer .copyright{
     z-index: 3;
     background: rgba(147, 147, 147, 0.959);;
     padding: 1.5rem;
-    margin-top: 5rem;
+    margin-top: 6.2rem;
     transition: 0.5s ease-in-out;
     transform: translateX(100%);
 }
@@ -872,6 +879,33 @@ footer .copyright{
 
 /* Media queries for standar devices */
 /* Tablet view */
+@media (max-width: 1405px){
+    .products .product {
+        margin: 5px;
+        width: 28%;
+    }
+}
+
+@media (max-width: 1210px){
+    .products .product {
+        margin: 5px;
+        width: 24%;
+    }
+}
+
+
+@media (max-width: 1130px){
+    .products .product {
+        margin: 5px;
+        width: 30%;
+    }
+
+    .products .product .priceBtns h4 {
+        right: 155px;
+        bottom: 12px;
+    }
+}
+
 @media (max-width: 830px){
     body{
         min-width: 100vw;
@@ -1005,11 +1039,12 @@ footer .copyright{
     }
 
     .products .product {
-        margin: 20px;
+        margin: 5px;
+        width: 32%;
     }
 
     .products .product img {
-        height: 15rem;        
+        height: 14rem;        
     }
 
     .products .product .description h5 {
@@ -1149,18 +1184,52 @@ footer .socialSection ion-icon{
 
 .products{
     margin-top: -50px;
+    padding: 0;
 }
 
+.products .productsBox{    
+    padding-top: 60px;
+    margin: 0;    
+}
+
+.products .product img{    
+    height: 10rem;
+    
+}
+
+.products .product .description{
+   text-align: center;
+}
+
+.products .product .description h5{
+    text-align: start;
+    padding-top: -3px;
+ }
+
+.products .product .description .stars{
+    position: absolute;
+    bottom: 32px;
+    right: 70px;
+ }
+
+.products .product .description span{
+    background-color: rgba(255, 255, 255, 0.815);
+    padding-top: 10px;
+    color: #2c2a24;
+   
+ }
+
 .products .product {
-    width: 80%;
+    width: 35%;
+    margin: 8px 4px;
   } 
 
   .products .product .priceBtns h4 {
-    right: 200px;
-    bottom: 15px;
+    right: 88px;
+    bottom: 8px;
 }
 
-  .banner {
+.banner {
     height: 40vh;        
    }
 
@@ -1269,7 +1338,7 @@ footer .socialSection ion-icon{
     .cart h2{
         text-transform: capitalize;
         text-align: center;
-        letter-spacing: 15px;
+        letter-spacing: 4px;
         margin-bottom: 2rem;
     }
 }

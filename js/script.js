@@ -1,7 +1,7 @@
 // import { shopItems } from "./shop.js";
 // shop variables
 const productArea = document.getElementById("productsBox");
-const cartButton = document.querySelector(".cartBox");
+const cartButton = document.querySelector(".cartTransBtn");
 const closeCartBtn = document.querySelector(".closeCart");
 const ClearCartBtn = document.querySelector(".cartFooterButton");
 const cartArea =  document.querySelector(".cart");
@@ -16,6 +16,11 @@ let cartBasket = [];
 
 //add Buttons
 let addButtons = [];
+
+function displayCartOverlay(){
+  cartOverlay.classList.toggle("transparentBack");
+  cartArea.classList.toggle("showCart");
+}
 
 // getting products implementation below
 class Products {
@@ -134,6 +139,20 @@ class UI {
      cartOverlay.classList.add("transparentBack");
      cartArea.classList.add("showCart");
   }
+  setApplication(){
+      cartBasket = Storage.getItemsFromCart(); 
+      this.setCartItemValues(cartBasket);
+      this.populateCart(cartBasket);
+      closeCartBtn.addEventListener("click", this.hideCart)
+  }
+  populateCart(cartBasket){
+    cartBasket.forEach(item => this.addCartItemToCart(item));
+
+  }
+  hideCart(){
+    cartOverlay.classList.remove("transparentBack");
+     cartArea.classList.remove("showCart");
+  }
 }
 
 
@@ -151,6 +170,10 @@ class Storage{
    static saveCart(cartBasket){
     localStorage.setItem("cartbasket", JSON.stringify(cartBasket))
    }
+
+   static getItemsFromCart (){
+    return localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
+   }
 }
 
 
@@ -158,7 +181,8 @@ class Storage{
 document.addEventListener("DOMContentLoaded", ()=>{
   const ui = new UI();
   const products = new Products();
-
+  // application setup
+  ui.setApplication();
   //get product items
   products.getProducts().then(products => {
     ui.loadAllproducts(products);
@@ -167,6 +191,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
     ui.getAddToCartBtns();
   });
 })
+
+
 
 
 
