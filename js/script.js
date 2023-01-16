@@ -64,7 +64,7 @@ class UI {
         </div>
         <div class="priceBtns">
           <h4 class="itemPrice">Ghc ${product.price}</h4>
-        <a><ion-icon name="cart-outline" class="proCart" data-id = ${product.id}></ion-icon></a>
+        <button class="cartTransBtn"><ion-icon name="cart-outline" class="proCart" data-id = ${product.id}></ion-icon></button>
         <!--  -->
         </div>
       </div> 
@@ -81,27 +81,34 @@ class UI {
       let alreadySelectedItem = cartBasket.find(item => item.id === id);
       if (alreadySelectedItem) {
         button.setAttribute("name", "stop-circle-outline");
-        button.disabled = true;        
-      }
+        button.style.display = "none"; 
+        console.log(button.parentElement);       
+      } else{
         button.addEventListener("click", (event) => {
           event.target.setAttribute("name", "stop-circle-outline");
-          event.target.disabled = true; 
+          event.target.style.display = "none"; 
+          console.log(event.target.parentElement);
           //get item from products
           let selectedItem = {...Storage.getProduct(id), amount: 1};
-          
+         
           //add item to cart
           cartBasket = [...cartBasket, selectedItem];
           
           //save in local storage
           Storage.saveCart(cartBasket);
+
           //set cart values
           this.setCartItemValues(cartBasket);
+
           //display cart item 
            this.addCartItemToCart(selectedItem);
+           
           //show the cart overlay
-          this.displayCartOverlay();
+          // this.displayCartOverlay();
         })
-    })
+      }
+       
+    });
   }
   setCartItemValues(cartBasket){
     let itemTotal = 0;
@@ -168,11 +175,11 @@ class Storage{
    }
 
    static saveCart(cartBasket){
-    localStorage.setItem("cartbasket", JSON.stringify(cartBasket))
+    localStorage.setItem("cartBasket", JSON.stringify(cartBasket))
    }
 
    static getItemsFromCart (){
-    return localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
+    return localStorage.getItem("cartBasket") ? JSON.parse(localStorage.getItem("cartBasket")) : [];
    }
 }
 
