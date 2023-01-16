@@ -57,7 +57,7 @@ class UI {
         </div>
         <div class="priceBtns">
           <h4 class="itemPrice">Ghc ${product.price}</h4>
-        <button class="proCart" data-id = ${product.id}><ion-icon name="cart-outline"></ion-icon></button>
+        <button class="proCart" data-id = ${product.id}>Add to Cart</button>
         <!--  -->
         </div>
       </div> 
@@ -121,14 +121,12 @@ class UI {
      <div>
       <h4>${item.title}</h4>
       <h5>Ghc ${item.price}</h5>
-      <span class="removeItem">
-        <ion-icon name="trash-outline" data-id = ${item.id}></ion-icon>
-      </span>
+        <ion-icon class="removeItem" data-id = ${item.id} name="trash-outline"></ion-icon>
      </div>
      <div>
-      <ion-icon name="caret-up-outline" data-id = ${item.id}></ion-icon>
+      <ion-icon class="upBtn" name="caret-up-outline" data-id = ${item.id}></ion-icon>
       <p class="itemAmount">${item.amount}</p>
-      <ion-icon name="caret-down-outline" data-id = ${item.id}></ion-icon>
+      <ion-icon class="downBtn" name="caret-down-outline" data-id = ${item.id}></ion-icon>
      </div>
      `;
      overlayCartContent.appendChild(itemDiv);
@@ -157,6 +155,24 @@ class UI {
       this.clearCartBasket();
     })
     // cart functionality
+    overlayCartContent.addEventListener("click", event => {
+      if (event.target.classList.contains("removeItem")) {        
+        let removeFromBasket = event.target;
+        let id = removeFromBasket.dataset.id;
+        overlayCartContent.removeChild(removeFromBasket.parentElement.parentElement);
+        this.removeItem(id);        
+      } else if (event.target.classList.contains("upBtn")){
+         let addUpToBasket = event.target;
+         let id = addUpToBasket.dataset.id;
+         let itemTotal = cartBasket.find(item => item.id === id);
+         itemTotal.amount = itemTotal.amount + 1;
+         Storage.saveCart(cartBasket);
+         this.setCartItemValues(cartBasket);
+         addUpToBasket.nextElementSibling.innerText = itemTotal.amount;
+      } else if (event.target.classList.contains("downBtn")) {
+                
+      }
+    });
   }
  
   clearCartBasket(){
@@ -174,7 +190,7 @@ class UI {
     Storage.saveCart(cartBasket)
     let button = this.getOneButton(id);
     button.disabled = false;
-    button.innerHTML = `<ion-icon name="cart-outline"></ion-icon>`;
+    button.innerHTML = `Add to Cart`;
   }
   getOneButton(id){
     return addButtons.find(button => button.dataset.id === id);
