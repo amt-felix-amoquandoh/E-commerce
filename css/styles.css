@@ -262,7 +262,8 @@ button.white{
     color: rgb(172, 98, 0);
     position: absolute;
     bottom: 10px;
-    right: 185px;  
+    right: 170px;  
+    text-align: start;
  }
 
  .products .product .priceBtns .proCart{
