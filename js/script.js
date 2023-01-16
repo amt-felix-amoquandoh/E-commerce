@@ -122,6 +122,13 @@ class UI {
       <h4>${item.title}</h4>
       <h5>Ghc ${item.price}</h5>
         <ion-icon class="removeItem" data-id = ${item.id} name="trash-outline"></ion-icon>
+        <div class="stars">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
      </div>
      <div>
       <ion-icon class="upBtn" name="caret-up-outline" data-id = ${item.id}></ion-icon>
@@ -170,7 +177,18 @@ class UI {
          this.setCartItemValues(cartBasket);
          addUpToBasket.nextElementSibling.innerText = itemTotal.amount;
       } else if (event.target.classList.contains("downBtn")) {
-                
+         let takeOutOfBasket = event.target;
+         let id = takeOutOfBasket.dataset.id; 
+         let itemTotal = cartBasket.find(item => item.id === id); 
+         itemTotal.amount = itemTotal.amount - 1; 
+         if (itemTotal.amount > 0) {
+           Storage.saveCart(cartBasket);
+           this.setCartItemValues(cartBasket);
+           takeOutOfBasket.previousElementSibling.innerText = itemTotal.amount;
+         }else{
+          overlayCartContent.removeChild(takeOutOfBasket.parentElement.parentElement)
+          this.removeItem(id); 
+         }    
       }
     });
   }
