@@ -273,7 +273,6 @@ button.white{
  .products .product .proCart{
     width: 30px;
     height: 25px;
-    line-height: 40px;
     border-radius: 50px;
     font-weight: 400;
     color: teal;
@@ -282,7 +281,14 @@ button.white{
     bottom: 15px;
     right: 14px; 
     padding: 4px;  
+    border: none;
+    outline: none;
  }
+
+ .products .product .proCart ion-icon{
+    font-size: 24px;
+ }
+
 
  
  .products .product .proCart:hover{
@@ -1060,11 +1066,18 @@ footer .copyright{
     .products .product {
         margin: 5px;
         width: 32%;
+        height: 20rem;
     }
 
     .products .product img {
-        height: 14rem;        
+        height: 10.5rem;        
     }
+
+    .products .product .proCart{
+        bottom: 22px;
+        right: 24px; 
+          
+     }
 
     .products .product .description h5 {
         margin: 5px;
@@ -1205,8 +1218,8 @@ footer .socialSection ion-icon{
 }
 
 .products .product .proCart{
-    bottom: 6px;
-    
+    bottom: 10px;
+    right: 20px;    
  }
 
 .products .productsBox{    
@@ -1239,13 +1252,13 @@ footer .socialSection ion-icon{
 
  .products .product {
     width: 44%;
-    height: 17.2rem;
+    height: 16.5rem;
     /* margin: 8px 10px; */
 }
 
   .products .product .priceBtns h4 {
-    right: 96px;
-    bottom: 3px;
+    right: 92px;
+    bottom: 0px;
 }
 
 .banner {

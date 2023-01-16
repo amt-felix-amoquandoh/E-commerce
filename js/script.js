@@ -57,7 +57,7 @@ class UI {
         </div>
         <div class="priceBtns">
           <h4 class="itemPrice">Ghc ${product.price}</h4>
-        <button class="cartTransBtn"><ion-icon name="cart-outline" class="proCart" data-id = ${product.id}></ion-icon></button>
+        <button class="proCart" data-id = ${product.id}><ion-icon name="cart-outline"></ion-icon></button>
         <!--  -->
         </div>
       </div> 
@@ -73,14 +73,14 @@ class UI {
       let id = button.dataset.id;
       let alreadySelectedItem = cartBasket.find(item => item.id === id);
       if (alreadySelectedItem) {
-        button.setAttribute("name", "stop-circle-outline");
-        button.style.display = "none"; 
-        button.parentElement.parentElement.firstElementChild.innerText = "In Cart";       
-      } else{
+        button.innerText = "In Cart";
+        button.disabled = true;
+        // button.parentElement.parentElement.firstElementChild.innerText = "In Cart";       
+      } 
         button.addEventListener("click", (event) => {
-          event.target.setAttribute("name", "stop-circle-outline");
-          event.target.style.display = "none"; 
-          event.target.parentElement.parentElement.firstElementChild.innerText = "In Cart"
+          event.target.innerText = "In Cart"
+          event.target.disabled = true;
+          // event.target.parentElement.parentElement.firstElementChild.innerText = "In Cart"
           //get item from products
           let selectedItem = {...Storage.getProduct(id), amount: 1};
          
@@ -99,7 +99,6 @@ class UI {
           //show the cart overlay
           // this.displayCartOverlay();
         })
-      }
        
     });
   }
@@ -153,6 +152,33 @@ class UI {
     cartOverlay.classList.remove("transparentBack");
      cartArea.classList.remove("showCart");
   }
+  cartLogic(){
+    ClearCartBtn.addEventListener("click", () => {
+      this.clearCartBasket();
+    })
+    // cart functionality
+  }
+ 
+  clearCartBasket(){
+    let selectedItems = cartBasket.map(item => item.id);
+    selectedItems.forEach(id => this.removeItem(id));
+
+    while (overlayCartContent.children.length > 0) {
+      overlayCartContent.removeChild(overlayCartContent.children[0])      
+    }
+    this.hideCart();
+  } 
+  removeItem(id){
+    cartBasket = cartBasket.filter(item => item.id !== id);
+    this.setCartItemValues(cartBasket);
+    Storage.saveCart(cartBasket)
+    let button = this.getOneButton(id);
+    button.disabled = false;
+    button.innerHTML = `<ion-icon name="cart-outline"></ion-icon>`;
+  }
+  getOneButton(id){
+    return addButtons.find(button => button.dataset.id === id);
+  }
 }
 
 
@@ -189,6 +215,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     Storage.saveCartItems(products);
   }).then( () => {
     ui.getAddToCartBtns();
+    ui.cartLogic();
   });
 })
 
