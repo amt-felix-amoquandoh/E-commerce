@@ -199,7 +199,7 @@ button.white{
 .products .product{
     position: relative;
     width: 15%;
-    min-width: 168px;
+    min-width: 150px;
     height: auto;
     padding: 10px;
     border: 1px solid rgba(177, 167, 154, 0.616);
@@ -590,11 +590,21 @@ footer .copyright{
     z-index: 3;
     background: rgba(147, 147, 147, 0.959);;
     padding: 1.5rem;
-    margin-top: 6.2rem;
+    margin-top: 4.5rem;
     transition: 0.5s ease-in-out;
     transform: translateX(100%);
 }
 
+.miniCart{
+    display: flex;
+    flex-direction: row;
+}
+
+.closeCart{
+    position: absolute;
+    top: 40px;
+    left: 320px;
+}
 
 .overlayCartContent ion-icon{
     font-size: 22px;
@@ -943,7 +953,11 @@ footer .copyright{
 
     .navBrandImage{
         margin-left: -50px;
-        height: 9.6rem;       
+        height: 4.6rem;       
+    }
+
+    x span i {
+        font-size: smaller;
     }
 
     .navBrandBox span{
@@ -1048,20 +1062,18 @@ footer .copyright{
     .products .product .description h5 {
         margin: 5px;
         color: rgb(75, 73, 73);
-        line-height: 25px;
+        line-height: 18px;
+        font-size: smaller;
+        text-align: start;
     }
 
     .products .product .description span {
-        background-color: grey;
-        padding: 8px 8px;
-        font-weight: bold;
-        color: white;
-        font-size: 18px;
-        margin: 0px 5px;
+        text-align: start;
     }
 
     .products .product .priceBtns h4 {
         right: 168px;
+        text-align: start;
     }
 
     .banner {
@@ -1217,10 +1229,11 @@ footer .socialSection ion-icon{
    
  }
 
-.products .product {
-    width: 38%;
-    margin: 8px 10px;
-  } 
+ .products .product {
+    width: 44%;
+    height: 19.8rem;
+    /* margin: 8px 10px; */
+}
 
   .products .product .priceBtns h4 {
     right: 88px;
@@ -1321,6 +1334,10 @@ footer .socialSection ion-icon{
 }
 
 }
+
+
+
+
 
 @media screen and (min-width: 768px) {
     .cart{

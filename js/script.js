@@ -53,14 +53,7 @@ class UI {
         <img class="itemImage" src=${product.image} />
         <div class="description">
           <span class="itemTitle">${product.title}</span>
-          <h5>${product.description}</h5>
-          <div class="stars">
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-          </div> 
+          <h5>${product.description}</h5>         
         </div>
         <div class="priceBtns">
           <h4 class="itemPrice">Ghc ${product.price}</h4>
