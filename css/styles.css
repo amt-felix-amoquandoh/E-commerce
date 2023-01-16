@@ -1203,9 +1203,8 @@ footer .socialSection ion-icon{
     line-height: 55px;
    }
 
-   .cover{
-    padding: 0 20px;
-    background-position: 55%;
+   .shopCover{
+    height: 15vh;
    }
 
    .cover h4{
