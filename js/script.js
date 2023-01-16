@@ -82,12 +82,12 @@ class UI {
       if (alreadySelectedItem) {
         button.setAttribute("name", "stop-circle-outline");
         button.style.display = "none"; 
-        console.log(button.parentElement);       
+        // button.parentElement.innerText = "In Cart";       
       } else{
         button.addEventListener("click", (event) => {
           event.target.setAttribute("name", "stop-circle-outline");
           event.target.style.display = "none"; 
-          console.log(event.target.parentElement);
+          // event.target.parentElement.innerText = "In Cart"
           //get item from products
           let selectedItem = {...Storage.getProduct(id), amount: 1};
          
