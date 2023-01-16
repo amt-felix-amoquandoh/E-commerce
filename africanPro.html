@@ -26,69 +26,68 @@
   <body>
     <!-- Project starts here-->
 
-    <!-- Navbar and Header Section -->
-    <section class="header" id="header">
-      <div class="navBrandBox">
-        <a href="./index.html">
-          <img src="./img/icons/brand.png" class="navBrandImage" alt="" />
-        </a>
-        <span><i>Clothing<span>- </span> Store</i></span>
-      </div>
-      <div>
-        <ul class="navItems" id="navItems">
-          <li><a href="./index.html">Shop</a></li>
-          <li><a href="./categoreis.html" class="active">Categories</a></li>
-          <li><a href="./aboutus.html">About Us</a></li>
-          <li><a href="./index.html">
-            <div class="navBrandBox navBrandBoxMobile">
-              <a href="./index.html">
-                <img src="./img/icons/brand.png" class="navBrandImage" alt="" />
-              </a>
-              <span><i>Clothing<span>- </span> Store</i></span>
-            </div>
-          </a></li>          
-          <li>
-            <div class="cartBox">
-              <a href="./orders.html">
-                <div>
-                  <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
-                </div>
-                <span
-                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
-                  id="itemsUpdate"
-                >
-                </span>
-              </a>
-            </div>
-          </li>
-          <a href="#">
-            <ion-icon
-              id="mobileMenuClose"
-              class="mobileMenuClose"
-              size="large"
-              name="close-circle-outline"
-            ></ion-icon>
+ <!-- Navbar and Header Section -->
+ <section class="header" id="header">
+  <div class="navBrandBox">
+    <a href="./index.html">
+      <img src="./img/icons/brand.png" class="navBrandImage" alt="" />
+    </a>
+    <span><i>Clothing<span>- </span> Store</i></span>
+  </div>
+  <div>
+    <ul class="navItems" id="navItems">
+      <li><a href="./index.html" class="active">Shop</a></li>
+      <li><a href="./categoreis.html">Categories</a></li>
+      <li><a href="./aboutus.html">About Us</a></li>
+      <li><a href="./index.html">
+        <div class="navBrandBox navBrandBoxMobile">
+          <a href="./index.html">
+            <img src="./img/icons/brand.png" class="navBrandImage" alt="" />
           </a>
-        </ul>
-      </div>
-      <div id="mobile" class="mobileNav">
-        <a class="mobileCart" href="">
-          <div>
-            <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
+          <span><i>Clothing<span>- </span> Store</i></span>
+        </div>
+      </a></li>          
+      <li>
+        <button class="cartTransBtn" onclick="displayCartOverlay()">
+          
+            <div class="cartBox">
+              <div>
+                <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
+              </div>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="itemsUpdate">0</span>
           </div>
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="mobileItemsUpdate">
-    
-          </span>
-        </a>
+        
+        </button>
+      </li>
+      <a href="#">
         <ion-icon
-          id="mobileMenu"
-          class="mobileMenu"
+          id="mobileMenuClose"
+          class="mobileMenuClose"
           size="large"
-          name="menu-outline"
+          name="close-circle-outline"
         ></ion-icon>
-      </div>
-    </section>
-    <!-- Navbar and Header Section Ends here -->
+      </a>
+    </ul>
+  </div>
+  <div id="mobile" class="mobileNav">
+    <div>
+      <button class="mobileCart cartTransBtn" onclick="displayCartOverlay()">
+        <div>
+          <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
+        </div>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="mobileItemsUpdate">0</span>
+      </button>
+    </div>
+    <ion-icon
+      id="mobileMenu"
+      class="mobileMenu"
+      size="large"
+      name="menu-outline"
+    ></ion-icon>
+  </div>
+</section>
+<!-- Navbar and Header Section Ends here -->
+
 
     <!-- Single products section begins here -->
     <section id="productDetails" class="productDetails section-p1 section-m1">
@@ -215,6 +214,32 @@
       </div>
     </section>
     <!-- Other products section ends here -->
+
+        <!-- cart overlay -->
+        <section id="cartOverlay">
+          <div class="cartOverlay">
+            <div class="cart">
+              <div class="miniCart">
+                <h2>Your Cart</h2>
+                <span class="closeCart">
+                  <ion-icon size="large" name="close-circle-outline"></ion-icon>
+                </span>
+                
+              </div>
+              <div class="overlayCartContent">
+                <!-- <div class="cartItem">
+                
+              </div> -->
+            </div>
+            <div class="cartFooter">
+              <h3>Total : Ghc <span class="ItemsTotal">0</span></h3>
+              <button class="cartFooterButton">Clear Cart</button>
+              <button class="checkoutButton"><a href="./checkout.html">Checkout</a></button>
+            </div>
+          </div>
+          </div>
+        </section>
+        <!-- cartoverlay ends here -->
 
     <!-- newsletter section -->
     <section id="newsletter" class="newsletter section-p1 section-m1">
