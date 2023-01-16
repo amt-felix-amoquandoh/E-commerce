@@ -75,12 +75,12 @@ class UI {
       if (alreadySelectedItem) {
         button.setAttribute("name", "stop-circle-outline");
         button.style.display = "none"; 
-        // button.parentElement.innerText = "In Cart";       
+        button.parentElement.parentElement.firstElementChild.innerText = "In Cart";       
       } else{
         button.addEventListener("click", (event) => {
           event.target.setAttribute("name", "stop-circle-outline");
           event.target.style.display = "none"; 
-          // event.target.parentElement.innerText = "In Cart"
+          event.target.parentElement.parentElement.firstElementChild.innerText = "In Cart"
           //get item from products
           let selectedItem = {...Storage.getProduct(id), amount: 1};
          
@@ -123,7 +123,7 @@ class UI {
       <h4>${item.title}</h4>
       <h5>Ghc ${item.price}</h5>
       <span class="removeItem">
-        <ion-icon name="remove-circle-outline" data-id = ${item.id}></ion-icon>
+        <ion-icon name="trash-outline" data-id = ${item.id}></ion-icon>
       </span>
      </div>
      <div>

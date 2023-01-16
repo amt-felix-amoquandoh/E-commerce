@@ -58,7 +58,7 @@
             "sys": { "id" : "peakLapel"},
             "fields": {
               "title": "Peak Lapel Suit",
-              "description": "Noticeable high peaks directed to shoulders, most popular style from the 16th century.",
+              "description": "Noticeable high peaks, most popular style from the 16th century.",
               "price": 444,
               "image": { "fields": {"file": {"url": "../img/homeCart/image7.png"}}}
             }
@@ -67,7 +67,7 @@
             "sys": { "id" : "shawlLapel"},
             "fields": {
               "title": "Shawl Lapel Suit",
-              "description": "Rounded sides, continuous curve with no hard edges, iconic smoking jacket style.",
+              "description": "Rounded sides, continuous curve with no hard edges.",
               "price": 223,
               "image": { "fields": {"file": {"url": "../img/homeCart/image8.png"}}}
             }
