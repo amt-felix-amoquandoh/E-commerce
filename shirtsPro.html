@@ -7,9 +7,9 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./img/icons/pageLogo.png"
+      href="./img/icons/brand.png"
     />
-    <title>Icy Suits</title>
+    <title>Clothing Store</title>
     <link rel="stylesheet" href="/css/styles.css" />
     <link
       rel="stylesheet"
@@ -26,68 +26,86 @@
   <body>
     <!-- Project starts here-->
 
- <!-- Navbar and Header Section -->
- <section class="header" id="header">
-  <div class="navBrandBox">
-    <a href="./index.html">
-      <img src="./img/icons/brand.png" class="navBrandImage" alt="" />
-    </a>
-    <span><i>Clothing<span>- </span> Store</i></span>
-  </div>
-  <div>
-    <ul class="navItems" id="navItems">
-      <li><a href="./index.html" class="active">Shop</a></li>
-      <li><a href="./categoreis.html">Categories</a></li>
-      <li><a href="./aboutus.html">About Us</a></li>
-      <li><a href="./index.html">
-        <div class="navBrandBox navBrandBoxMobile">
-          <a href="./index.html">
-            <img src="./img/icons/brand.png" class="navBrandImage" alt="" />
-          </a>
-          <span><i>Clothing<span>- </span> Store</i></span>
-        </div>
-      </a></li>          
-      <li>
-        <button class="cartTransBtn" onclick="displayCartOverlay()">
-          
-            <div class="cartBox">
-              <div>
-                <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
+    <!-- Navbar and Header Section -->
+    <section class="header" id="header">
+      <div class="navBrandBox">
+        <a href="./index.html">
+          <img src="./img/icons/brand.png" class="navBrandImage" alt="" />
+        </a>
+        <span
+          ><i>Clothing<span>- </span> Store</i></span
+        >
+      </div>
+      <div>
+        <ul class="navItems" id="navItems">
+          <li><a href="./index.html" class="active">Shop</a></li>
+          <li><a href="./categoreis.html">Categories</a></li>
+          <li><a href="./aboutus.html">About Us</a></li>
+          <li>
+            <a href="./index.html">
+              <div class="navBrandBox navBrandBoxMobile">
+                <a href="./index.html">
+                  <img
+                    src="./img/icons/brand.png"
+                    class="navBrandImage"
+                    alt=""
+                  />
+                </a>
+                <span
+                  ><i>Clothing<span>- </span> Store</i></span
+                >
               </div>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="itemsUpdate">0</span>
-          </div>
-        
-        </button>
-      </li>
-      <a href="#">
-        <ion-icon
-          id="mobileMenuClose"
-          class="mobileMenuClose"
-          size="large"
-          name="close-circle-outline"
-        ></ion-icon>
-      </a>
-    </ul>
-  </div>
-  <div id="mobile" class="mobileNav">
-    <div>
-      <button class="mobileCart cartTransBtn" onclick="displayCartOverlay()">
+            </a>
+          </li>
+          <li>
+            <button class="cartTransBtn" onclick="displayCartOverlay()">
+              <div class="cartBox">
+                <div>
+                  <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
+                </div>
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
+                  id="itemsUpdate"
+                  >0</span
+                >
+              </div>
+            </button>
+          </li>
+          <a href="#">
+            <ion-icon
+              id="mobileMenuClose"
+              class="mobileMenuClose"
+              size="large"
+              name="close-circle-outline"
+            ></ion-icon>
+          </a>
+        </ul>
+      </div>
+      <div id="mobile" class="mobileNav">
         <div>
-          <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
+          <button
+            class="mobileCart cartTransBtn"
+            onclick="displayCartOverlay()"
+          >
+            <div>
+              <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
+            </div>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
+              id="mobileItemsUpdate"
+              >0</span
+            >
+          </button>
         </div>
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" id="mobileItemsUpdate">0</span>
-      </button>
-    </div>
-    <ion-icon
-      id="mobileMenu"
-      class="mobileMenu"
-      size="large"
-      name="menu-outline"
-    ></ion-icon>
-  </div>
-</section>
-<!-- Navbar and Header Section Ends here -->
-
+        <ion-icon
+          id="mobileMenu"
+          class="mobileMenu"
+          size="large"
+          name="menu-outline"
+        ></ion-icon>
+      </div>
+    </section>
+    <!-- Navbar and Header Section Ends here -->
 
     <!-- Single products section begins here -->
     <section id="productDetails" class="productDetails section-p1 section-m1">
@@ -99,7 +117,6 @@
           height="500px"
           alt=""
         />
-       
       </div>
 
       <div class="productDesc" id="proDescription">
@@ -113,12 +130,22 @@
           <option value="">Large</option>
           <option value="">Extra Large</option>
         </select>
-        <input type="number" value="1">
+        <input type="number" value="1" />
         <button class="basic">Add to Cart</button>
         <h4>Product Details</h4>
-        <span>For those who don’t want to overthink the process, a classic fit suit is a way to go. This type of suit for men is comfortable in feel and unfettered in design, this suit style provides breathability without resorting to a loose or unkempt aesthetic–they don’t call it “classic” for nothing. An easy choice if you want something that’s perfect for the office Monday to Friday, but with a suit jacket that can be put with chinos for a smart casual weekend look. It’s safe to say, classic suits will never go out of style.</span>
+        <span
+          >For those who don’t want to overthink the process, a classic fit suit
+          is a way to go. This type of suit for men is comfortable in feel and
+          unfettered in design, this suit style provides breathability without
+          resorting to a loose or unkempt aesthetic–they don’t call it “classic”
+          for nothing. An easy choice if you want something that’s perfect for
+          the office Monday to Friday, but with a suit jacket that can be put
+          with chinos for a smart casual weekend look. It’s safe to say, classic
+          suits will never go out of style.</span
+        >
       </div>
-    </section><hr>
+    </section>
+    <hr />
     <!-- Single products section ends here -->
 
     <!-- Other products section -->
@@ -126,7 +153,6 @@
       <h2>Other Clothing Products</h2>
       <p>Find other clothing products in our prestigious Store!!!</p>
       <div class="productsBox">
-
         <div class="product">
           <img src="./img/cart/homeCart/other clothes/2.jpg" alt="" />
           <div class="description">
@@ -205,41 +231,36 @@
             ><ion-icon name="cart-outline" class="proCart"></ion-icon
           ></a>
         </div>
-
-       
-
-       
-
-        
       </div>
     </section>
     <!-- Other products section ends here -->
 
-        <!-- cart overlay -->
-        <section id="cartOverlay">
-          <div class="cartOverlay">
-            <div class="cart">
-              <div class="miniCart">
-                <h2>Your Cart</h2>
-                <span class="closeCart">
-                  <ion-icon size="large" name="close-circle-outline"></ion-icon>
-                </span>
-                
-              </div>
-              <div class="overlayCartContent">
-                <!-- <div class="cartItem">
+    <!-- cart overlay -->
+    <section id="cartOverlay">
+      <div class="cartOverlay">
+        <div class="cart">
+          <div class="miniCart">
+            <h2>Your Cart</h2>
+            <span class="closeCart">
+              <ion-icon size="large" name="close-circle-outline"></ion-icon>
+            </span>
+          </div>
+          <div class="overlayCartContent">
+            <!-- <div class="cartItem">
                 
               </div> -->
-            </div>
-            <div class="cartFooter">
-              <h3>Total : Ghc <span class="ItemsTotal">0</span></h3>
-              <button class="cartFooterButton">Clear Cart</button>
-              <button class="checkoutButton"><a href="./checkout.html">Checkout</a></button>
-            </div>
           </div>
+          <div class="cartFooter">
+            <h3>Total : Ghc <span class="ItemsTotal">0</span></h3>
+            <button class="cartFooterButton">Clear Cart</button>
+            <button class="checkoutButton">
+              <a href="./checkout.html">Checkout</a>
+            </button>
           </div>
-        </section>
-        <!-- cartoverlay ends here -->
+        </div>
+      </div>
+    </section>
+    <!-- cartoverlay ends here -->
 
     <!-- newsletter section -->
     <section id="newsletter" class="newsletter section-p1 section-m1">
@@ -267,12 +288,12 @@
           <a href="./index.html">
             <img src="./img/icons/brand.png" class="footerBrandImage" alt="" />
           </a>
-          <span><i>Clothing<span>- </span> Store</i></span>
+          <span
+            ><i>Clothing<span>- </span> Store</i></span
+          >
         </div>
         <h4>Contact</h4>
-        <p>
-          <strong>Address: </strong> Accra, Ghana.
-        </p>
+        <p><strong>Address: </strong> Accra, Ghana.</p>
         <p><strong>Phone: </strong> +233 54 55 94 975</p>
         <p><strong>Working Hours: </strong> 07:00 - 19:00, Mon - Sunday</p>
         <div class="socialSection">
@@ -334,26 +355,24 @@
     <!-- footere section ends here -->
 
     <!-- Project ends here-->
-
-    
   </body>
   <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
-      crossorigin="anonymous"
-    ></script>
-    <script type="text/javascript" src="./js/script.js"></script>
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"
+  ></script>
+  <script type="text/javascript" src="./js/script.js"></script>
 </html>
