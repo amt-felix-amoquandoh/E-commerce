@@ -617,7 +617,7 @@ footer .copyright {
   box-shadow: 0px 2.6px 10px rgba(0, 0, 0, 0.035),
     0px 21px 80px rgba(0, 0, 0, 0.07);
   border-radius: 3px;
-  background-color: rgba(0, 148, 148, 0.699);
+  background-color: rgba(0, 128, 128, 0.753);
   display: grid;
   align-items: center;
   grid-template-columns: auto 1fr auto;
