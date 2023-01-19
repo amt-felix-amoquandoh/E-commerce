@@ -111,7 +111,8 @@ button.white {
 .navBrandBox span i {
   font-family: "Homemade Apple", cursive;
   font-weight: bold;
-  color: rgb(172, 98, 0);
+  color: rgb(143, 81, 0);
+  font-size: 1.5rem;
 }
 
 .navBrandBox .navBrandImage {
@@ -182,6 +183,11 @@ button.white {
 .products {
   text-align: center;
   padding: 0 60px;
+}
+
+.products h1{
+  margin-bottom: -22px;
+  margin-top: 72px;
 }
 
 .products .productsBox {
@@ -453,7 +459,7 @@ button.white {
   white-space: nowrap;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  margin-top: -2px;
+  height: 50px;
 }
 
 .newsletter button:hover {
@@ -723,8 +729,8 @@ footer .copyright {
 
 /* Shop page Styles */
 .shopCover {
-  height: 40vh;
-  color: rgb(28, 111, 179);
+  height: 35vh;
+  color: rgb(13, 90, 153);
   display: flex;
   justify-content: center;
   text-align: center;
@@ -986,6 +992,7 @@ span.price {
 .categories {
   text-align: center;
   padding: 0 60px;
+  margin-bottom: 115px;
 }
 
 .categories .categoriesBox {
@@ -1008,7 +1015,7 @@ span.price {
     8.6px 7.3px 10px rgba(0, 0, 0, 0.04),
     20.8px 17.5px 24.1px rgba(0, 0, 0, 0.052),
     69px 58px 80px rgba(0, 0, 0, 0.08);
-  margin: 15px 0;
+  margin: 5px 0;
   transition: 0.3s ease;
 }
 
@@ -1033,7 +1040,6 @@ span.price {
 }
 
 .electroCoverContent {
-
   background-color: #747373d8;
   padding: 5px 20px;
   text-align: center;
@@ -1052,7 +1058,7 @@ span.price {
 
 
 .personalCover {
-  color: rgb(43,122,144);
+  color: rgb(5, 89, 112);
   display: flex;
   justify-content: center;
   text-align: center;
@@ -1060,21 +1066,20 @@ span.price {
   flex-direction: column;
   padding: 10px;
   background-color: rgba(34, 34, 34, 0.453);
-  background-image: url("../img/store/footstore.jpg");
+  background-image: url("../img/store/pers.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .personalCoverContent {
-
-  background-color: #747373d8;
+  background-color: #b4b2b2d8;
   padding: 5px 20px;
   text-align: center;
 }
 
 .personalCover h2 {
-  color: rgb(43,122,144);
+  color: rgb(6, 67, 83);
   font-size: 3.8rem;
   font-weight: bold;
 }
@@ -1086,7 +1091,7 @@ span.price {
 
 
 .clothingCover {
-  color: rgb(153,117,28);
+  color: rgb(88, 64, 2);
   display: flex;
   justify-content: center;
   text-align: center;
@@ -1094,7 +1099,7 @@ span.price {
   flex-direction: column;
   padding: 10px;
   background-color: rgba(34, 34, 34, 0.453);
-  background-image: url("../img/store/cloth1.jpg");
+  background-image: url("../img/page-backgrounds/shop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1102,13 +1107,13 @@ span.price {
 
 .clothingCoverContent {
 
-  background-color: #747373d8;
+  background-color: #b9b6b6b9;
   padding: 5px 20px;
   text-align: center;
 }
 
 .clothingCover h2 {
-  color: rgb(153,117,28);
+  color: rgb(122, 88, 0);
   font-size: 3.8rem;
   font-weight: bold;
 }
@@ -1128,7 +1133,7 @@ span.price {
   flex-direction: column;
   padding: 10px;
   background-color: rgba(34, 34, 34, 0.453);
-  background-image: url("../img/store/pers2.jpg");
+  background-image: url("../img/store/shoesCover.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1136,13 +1141,13 @@ span.price {
 
 .footWearCoverContent {
 
-  background-color: #747373d8;
+  background-color: #b9b9b9d8;
   padding: 5px 20px;
   text-align: center;
 }
 
 .footWearCover h2 {
-  color: rgb(52,109,68);
+  color: rgb(10, 68, 27);
   font-size: 3.8rem;
   font-weight: bold;
 }
@@ -1271,7 +1276,11 @@ span.price {
   }
 
   .navBrandBoxMobile span {
-    font-size: small;
+    font-size: 1.4rem;
+  }
+
+  .navBrandBox span i {
+    font-size: 1.3rem;
   }
 
   .mobileCart {
@@ -1299,29 +1308,6 @@ span.price {
     left: 30px;
     color: #222;
     margin-top: -12px;
-  }
-
-  .cover {
-    height: 70vh;
-    background-image: none;
-    position: relative;
-    min-width: 100vw;
-    margin: auto 0;
-  }
-
-  .cover:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    min-width: 100%;
-    height: 100%;
-    opacity: 0.4;
-    background-image: url("../img/page-backgrounds/clem-onojeghuo-CJtNSIOicD0-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-position: top 40% right 30%;
-    background-size: cover;
   }
 
   .coverContent {
@@ -1355,6 +1341,20 @@ span.price {
     margin: 5px;
     width: 32%;
     height: 20rem;
+  }
+
+  .categories{
+    padding: 0;
+  }
+
+  .categories .categoriesBox {
+    justify-content: center;
+  }
+
+  .categories .card {
+    margin: 5px;
+    width: 42%;
+    
   }
 
   .products .product img {
@@ -1470,8 +1470,8 @@ span.price {
     height: 5rem;
   }
 
-  .navBrandBox span {
-    font-size: small;
+  .navBrandBox span i {
+    font-size: 1.1rem;
   }
 
   .mobileCart {
@@ -1496,9 +1496,39 @@ span.price {
     padding-bottom: 0px;
   }
 
-  .products {
-    margin-top: -30px;
+  .categories{
     padding: 0;
+    margin-bottom: 22px;
+  }
+
+  .categories h2{
+    margin-top: 22px;
+    font-weight: bold;
+  }
+  
+  .categories p{
+    padding: -10px 2px;
+    margin: -5px 8px;
+  }
+
+  .categories .categoriesBox {
+    justify-content: center;
+  }
+
+  .categories .card {
+    margin: 5px;
+    width: 76%;
+    
+  }
+
+  .products {
+    padding: 0;
+    margin-top: 62px;
+  }
+
+  .products h1{
+    margin-bottom: -18px;
+    margin-top: 10px;
   }
 
   .products .product .proCart {
@@ -1509,7 +1539,6 @@ span.price {
   }
 
   .products .productsBox {
-    padding-top: 60px;
     margin: 0;
   }
 
@@ -1537,7 +1566,6 @@ span.price {
   .products .product {
     width: 44%;
     height: 16.5rem;
-    /* margin: 8px 10px; */
   }
 
   .products .product .priceBtns h4 {
@@ -1584,27 +1612,33 @@ span.price {
     margin-bottom: -10px;
     height: 30vh;
   }
-
+  
   .shopCover h2,
-  .appointCover h2,
+  .electroCover h2,
+  .personalCover h2,
+  .footWearCover h2,
   .aboutCover h2,
-  .ordersCover h2 {
-    margin-bottom: -10px;
-    font-size: 1.5rem;
+  .clothingCover h2 {
+    font-size: 1.8rem;
+    line-height: 25px;
   }
 
   .shopCover h5,
-  .appointCover h5,
+  .electroCover h5,
+  .personalCover h5,
+  .footWearCover h5,
   .aboutCover h5,
-  .ordersCover h5 {
+  .clothingCover h5 {
     color: rgb(24, 24, 24);
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .shopCoverContent,
-  .appointCoverContent,
   .aboutCoverContent,
-  .ordersCoverContent {
+  .electroCoverContent,
+  .personalCoverContent,
+  .footWearCoverContent,
+  .clothingCoverContent {
     padding: 10px;
     background-color: #818181f1;
   }
