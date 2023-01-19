@@ -723,30 +723,30 @@ footer .copyright {
 
 /* Shop page Styles */
 .shopCover {
-  height: 25vh;
-  color: #ae0203;
+  height: 40vh;
+  color: rgb(28, 111, 179);
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
   flex-direction: column;
   padding: 10px;
-  background-color: rgba(34, 34, 34, 0.453);
-  background-image: url("../img/page-backgrounds/shop.jpg");
+  background-color: rgba(34, 34, 34, 0.904);
+  background-image: url("../img/store/sotremain.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .shopCoverContent {
-  
-  background-color: #747373d8;
+
+  background-color: #747373ef;
   padding: 5px 20px;
   text-align: center;
 }
 
 .shopCover h2 {
-  color: rgb(181, 29, 29);
+  color: rgb(39, 142, 226);
   font-size: 3.8rem;
   font-weight: bold;
 }
@@ -980,6 +980,211 @@ span.price {
   float: right;
   color: grey;
 }
+
+
+/* Categories Styling */
+.categories {
+  text-align: center;
+  padding: 0 60px;
+}
+
+.categories .categoriesBox {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+.categories .card {
+  position: relative;
+  width: 24.5%;
+  min-width: 200px;
+  height: auto;
+  padding: 10px;
+  border: 1px solid rgba(177, 167, 154, 0.616);
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 3.1px 2.6px 3.6px rgba(0, 0, 0, 0.028),
+    8.6px 7.3px 10px rgba(0, 0, 0, 0.04),
+    20.8px 17.5px 24.1px rgba(0, 0, 0, 0.052),
+    69px 58px 80px rgba(0, 0, 0, 0.08);
+  margin: 15px 0;
+  transition: 0.3s ease;
+}
+
+/* Page Cover Styles */
+.electroCover, .personalCover, .clothingCover, .footWearCover{
+  height: 40vh;
+}
+
+.electroCover {
+  color: rgb(220,68,68);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  background-color: rgba(34, 34, 34, 0.453);
+  background-image: url("../img/store/electr.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.electroCoverContent {
+
+  background-color: #747373d8;
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.electroCover h2 {
+  color: rgb(220,68,68);
+  font-size: 3.8rem;
+  font-weight: bold;
+}
+
+.electroCover h5 {
+  color: rgb(24, 24, 24);
+  font-size: 2rem;
+}
+
+
+.personalCover {
+  color: rgb(43,122,144);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  background-color: rgba(34, 34, 34, 0.453);
+  background-image: url("../img/store/footstore.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.personalCoverContent {
+
+  background-color: #747373d8;
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.personalCover h2 {
+  color: rgb(43,122,144);
+  font-size: 3.8rem;
+  font-weight: bold;
+}
+
+.personalCover h5 {
+  color: rgb(24, 24, 24);
+  font-size: 2rem;
+}
+
+
+.clothingCover {
+  color: rgb(153,117,28);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  background-color: rgba(34, 34, 34, 0.453);
+  background-image: url("../img/store/cloth1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.clothingCoverContent {
+
+  background-color: #747373d8;
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.clothingCover h2 {
+  color: rgb(153,117,28);
+  font-size: 3.8rem;
+  font-weight: bold;
+}
+
+.clothingCover h5 {
+  color: rgb(24, 24, 24);
+  font-size: 2rem;
+}
+
+
+.footWearCover {
+  color: rgb(52,109,68);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  background-color: rgba(34, 34, 34, 0.453);
+  background-image: url("../img/store/pers2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.footWearCoverContent {
+
+  background-color: #747373d8;
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.footWearCover h2 {
+  color: rgb(52,109,68);
+  font-size: 3.8rem;
+  font-weight: bold;
+}
+
+.footWearCover h5 {
+  color: rgb(24, 24, 24);
+  font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
 @media (max-width: 800px) {
