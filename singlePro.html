@@ -10,6 +10,7 @@
       href="./img/icons/brand.png"
     />
     <title>Clothing Store</title>
+    <link rel="stylesheet" href="/css/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -25,6 +26,7 @@
   <body>
     <!-- Project starts here-->
 
+    <!-- Navbar and Header Section -->
     <section class="header" id="header">
       <div class="navBrandBox">
         <a href="./index.html">
@@ -36,8 +38,8 @@
       </div>
       <div>
         <ul class="navItems" id="navItems">
-          <li><a href="./index.html">Shop</a></li>
-          <li class="dropdown"><a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="./categoreis.html" class="active">Categories</a>
+          <li><a href="./index.html">Home</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="./categoreis.html" class="active">Store</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="./men.html">Mens' Fashion</a></li>
               <li><a class="dropdown-item" href="./women.html">Womens' Fashion</a></li>
@@ -113,38 +115,133 @@
     </section>
     <!-- Navbar and Header Section Ends here -->
 
-    <!-- cover Section -->
-    <section class="shopCover" id="shopCover">
-      <div class="shopCoverContent">
-        <h2 class="">With Super Value Deals</h2>
-        <h5 class="">
-          Establish confidence through clothing that sets you apart.
-        </h5>
+    <!-- Single products section begins here -->
+    <section id="productDetails" class="productDetails section-p1 section-m1">
+      <div class="singleProductImgs">
+        <img
+          src="./img/cart/shopmain/double vent.jpg"
+          id="mainProduct"
+          width="100%"
+          height="500px"
+          alt=""
+        />
+      </div>
+
+      <div class="productDesc" id="proDescription">
+        <h6>Suit / Classic</h6>
+        <h4>Classic Styled Siuts</h4>
+        <h2>Ghc 477.99</h2>
+        <select name="" id="">
+          <option value="">Select Size</option>
+          <option value="">Small</option>
+          <option value="">Medium</option>
+          <option value="">Large</option>
+          <option value="">Extra Large</option>
+        </select>
+        <input type="number" value="1" />
+        <button class="basic">Add to Cart</button>
+        <h4>Product Details</h4>
+        <span
+          >For those who don’t want to overthink the process, a classic fit suit
+          is a way to go. This type of suit for men is comfortable in feel and
+          unfettered in design, this suit style provides breathability without
+          resorting to a loose or unkempt aesthetic–they don’t call it “classic”
+          for nothing. An easy choice if you want something that’s perfect for
+          the office Monday to Friday, but with a suit jacket that can be put
+          with chinos for a smart casual weekend look. It’s safe to say, classic
+          suits will never go out of style.</span
+        >
       </div>
     </section>
-    <!-- cover Section Ends here -->
+    <hr />
+    <!-- Single products section ends here -->
 
+    <!-- Other products section -->
     <section id="products" class="products section-p1 section-m1">
-      <h1 class="headings">Mens' Fashion</h1>
-      <div class="productsBox" id="productsBox">
+      <h2>Other Clothing Products</h2>
+      <p>Find other clothing products in our prestigious Store!!!</p>
+      <div class="productsBox">
+        <div class="product">
+          <img src="./img/cart/homeCart/other clothes/2.jpg" alt="" />
+          <div class="description">
+            <span>Slim Fit Suit</span>
+            <h5>Contoured to the body, slim but has some room for comfort</h5>
+            <div class="stars">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+            <h4>Ghc 899</h4>
+          </div>
+          <a href="#"
+            ><ion-icon name="cart-outline" class="proCart"></ion-icon
+          ></a>
+        </div>
 
+        <div class="product">
+          <img src="./img/cart/homeCart/other clothes/3.jpg" alt="" />
+          <div class="description">
+            <span>Modern Fit Suit</span>
+            <h5>Slim fit, contoured, shorter length.</h5>
+            <div class="stars">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+            <h4>Ghc 899</h4>
+          </div>
+          <a href="#"
+            ><ion-icon name="cart-outline" class="proCart"></ion-icon
+          ></a>
+        </div>
+
+        <div class="product">
+          <img src="./img/cart/homeCart/other clothes/4.jpg" alt="" />
+          <div class="description">
+            <span>Patch Pocket Blazer</span>
+            <h5>
+              Popular style from the 80s where the classic ‘V’ style was a
+              mainstay.
+            </h5>
+            <div class="stars">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+            <h4>Ghc 899</h4>
+          </div>
+          <a href="#"
+            ><ion-icon name="cart-outline" class="proCart"></ion-icon
+          ></a>
+        </div>
+
+        <div class="product">
+          <img src="./img/cart/homeCart/other clothes/6.png" alt="" />
+          <div class="description">
+            <span>Double Breasted Suit</span>
+            <h5>4, 6 or 8 buttons max, 6 being the most common</h5>
+            <div class="stars">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+            <h4>Ghc 899</h4>
+          </div>
+          <a href="#"
+            ><ion-icon name="cart-outline" class="proCart"></ion-icon
+          ></a>
+        </div>
       </div>
     </section>
-
-    <section id="products" class="products section-p1 section-m1">
-      <h1 class="headings">Womens' Fashion</h1>
-      <div class="productsBox" id="productsBox"></div>
-    </section>
-
-    <section id="products" class="products section-p1 section-m1">
-      <h1 class="headings">Boys' and Girls' Fashion</h1>
-      <div class="productsBox" id="productsBox"></div>
-    </section>
-
-    <section id="products" class="products section-p1 section-m1">
-      <h1 class="headings">Shoes</h1>
-      <div class="productsBox" id="productsBox"></div>
-    </section>
+    <!-- Other products section ends here -->
 
     <!-- cart overlay -->
     <section id="cartOverlay">
@@ -158,8 +255,8 @@
           </div>
           <div class="overlayCartContent">
             <!-- <div class="cartItem">
-            
-          </div> -->
+                
+              </div> -->
           </div>
           <div class="cartFooter">
             <h3>Total : Ghc <span class="ItemsTotal">0</span></h3>
@@ -172,16 +269,6 @@
       </div>
     </section>
     <!-- cartoverlay ends here -->
-
-    <!-- PaginATION SECtION -->
-    <section id="shopDisplay" class="shopDisplay section-p1">
-      <a href="">1</a>
-      <a href="">2</a>
-      <a href="">
-        <ion-icon class="arrowIcon" name="arrow-forward-outline"></ion-icon>
-      </a>
-    </section>
-    <!-- PaginATION SECtION -->
 
     <!-- newsletter section -->
     <section id="newsletter" class="newsletter section-p1 section-m1">
@@ -274,6 +361,7 @@
       </div>
     </footer>
     <!-- footere section ends here -->
+
     <!-- Project ends here-->
   </body>
   <script
@@ -294,7 +382,5 @@
     integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
     crossorigin="anonymous"
   ></script>
-  <script type="text/javascript" src="./js/display.js"></script>
   <script type="text/javascript" src="./js/script.js"></script>
-  <!-- <script type="module" src="./js/shop.js"></script> -->
 </html>
