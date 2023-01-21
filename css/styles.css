@@ -802,7 +802,7 @@ footer .copyright {
 }
 
 .shopCover h2 {
-  color: rgb(39, 142, 226);
+  color: #dd2020d5;
   font-size: 3.8rem;
   font-weight: bold;
 }
@@ -1096,7 +1096,7 @@ span.price {
 }
 
 .electroCover h2 {
-  color: rgb(220,68,68);
+  color: rgb(219, 125, 63);
   font-size: 3.8rem;
   font-weight: bold;
 }
