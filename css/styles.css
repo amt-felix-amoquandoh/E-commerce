@@ -399,7 +399,7 @@ button.white {
 }
 
 .promo1 {
-  background-image: url("../img/page-backgrounds/bannerTry.jpg");
+  background-image: url("../img/page-backgrounds/banner.jpg");
 }
 
 .proBanner h4 {
@@ -441,13 +441,13 @@ button.white {
 }
 
 .productBanner1 {
-  background-image: url("../img/page-backgrounds/alt.jpg");
+  background-image: url("../img/page-backgrounds/banner0.jpg");
 }
 .productBanner2 {
-  background-image: url("../img/page-backgrounds/banner.jpg");
+  background-image: url("../img/page-backgrounds/banner2.jpg");
 }
 .productBanner3 {
-  background-image: url("../img/page-backgrounds/banner5.jpg");
+  background-image: url("../img/page-backgrounds/bannerOther.jpg");
 }
 
 .productBanners h2 {
@@ -788,7 +788,7 @@ footer .copyright {
   flex-direction: column;
   padding: 10px;
   background-color: rgba(34, 34, 34, 0.904);
-  background-image: url("../img/store/sotremain.jpg");
+  background-image: url("../img/page-backgrounds/shop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -923,7 +923,7 @@ footer .copyright {
   flex-direction: column;
   padding: 14px;
   background-color: rgba(34, 34, 34, 0.453);
-  background-image: url("../img/page-backgrounds/alt.jpg");
+  background-image: url("../img/page-backgrounds/online.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
