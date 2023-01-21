@@ -183,36 +183,89 @@ button.white {
 /* Products section styles */
 .products {
   text-align: center;
-  padding: 0 60px;
+  max-width: auto;
+  padding: 0 25px;
+  margin: 0 auto;
 }
 
-.products h1{
+.products h2{
   margin-bottom: -22px;
   margin-top: 72px;
+  font-weight: bold;
+  color: rgb(172, 98, 0);
 }
 
 .products .productsBox {
   display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-  flex-wrap: wrap;
+  padding: 25px 0px;
+  list-style: none;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
 }
 
 .products .product {
   position: relative;
-  width: 15%;
-  min-width: 150px;
-  height: 22rem;
-  padding: 10px;
+  width: 100%;
+  min-width: 250px;
+  height: auto;
+  padding: 20px;
   border: 2px solid rgba(177, 167, 154, 0.13);
   border-radius: 25px;
   cursor: pointer;
-  box-shadow: 3.1px 2.6px 3.6px rgba(0, 0, 0, 0.028),
-    8.6px 7.3px 10px rgba(0, 0, 0, 0.04),
-    20.8px 17.5px 24.1px rgba(0, 0, 0, 0.052),
-    69px 58px 80px rgba(0, 0, 0, 0.08);
-  margin: 15px 0;
-  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+    scroll-snap-align: start;
+    transition: all 0.2s;
+}
+
+.product:not(:last-child) {
+  margin-right: 10px;
+}
+
+.productsBox::-webkit-scrollbar {
+  height: 12px;
+}
+
+.productsBox::-webkit-scrollbar-thumb,
+.productsBox::-webkit-scrollbar-track {
+  border-radius: 92px;
+}
+
+.productsBox::-webkit-scrollbar-thumb {
+  background: teal;
+}
+
+.productsBox::-webkit-scrollbar-track {
+  background: rgb(202, 201, 201);
+}
+
+@media (min-width: 500px) {
+  .product {
+    flex-basis: calc(50% - 10px);
+  }
+
+  .product:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .product {
+    flex-basis: calc(calc(100% / 3) - 20px);
+  }
+
+  .product:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .product {
+    flex-basis: calc(25% - 30px);
+  }
+
+  .product:not(:last-child) {
+    margin-right: 40px;
+  }
 }
 
 .product:hover {
@@ -1179,15 +1232,6 @@ span.price {
 
 
 
-
-
-
-
-
-
-
-
-
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
 @media (max-width: 800px) {
   .row {
@@ -1330,7 +1374,7 @@ span.price {
     padding: 10px 50px 10px 35px;
   }
 
-  .products .productsBox {
+  /* .products .productsBox {
     justify-content: center;
   }
 
@@ -1338,22 +1382,9 @@ span.price {
     margin: 5px;
     width: 32%;
     height: 20rem;
-  }
+  } */
 
-  .categories{
-    padding: 0;
-  }
-
-  .categories .categoriesBox {
-    justify-content: center;
-  }
-
-  .categories .card {
-    margin: 5px;
-    width: 42%;
-    
-  }
-
+ 
   .products .product img {
     height: 10.5rem;
   }
@@ -1380,6 +1411,12 @@ span.price {
     right: 168px;
     text-align: start;
   }
+
+  .products h2{
+    margin-bottom: -18px;
+    margin-top: -45px;
+  }
+
 
   .banner {
     height: 22vh;
@@ -1518,14 +1555,18 @@ span.price {
     
   }
 
-  .products {
+  /* .products {
     padding: 0;
     margin-top: 62px;
+  } */
+
+  .products h2{
+    margin-bottom: -18px;
+    margin-top: -30px;
   }
 
-  .products h1{
-    margin-bottom: -18px;
-    margin-top: 10px;
+  .products p{
+    margin-bottom: -28px;
   }
 
   .products .product .proCart {
@@ -1535,9 +1576,9 @@ span.price {
     padding: 0px 5px;
   }
 
-  .products .productsBox {
+  /* .products .productsBox {
     margin: 0;
-  }
+  } */
 
   .products .product img {
     height: 8rem;
@@ -1560,10 +1601,10 @@ span.price {
     color: #2c2a24;
   }
 
-  .products .product {
+  /* .products .product {
     width: 44%;
     height: 16.5rem;
-  }
+  } */
 
   .products .product .priceBtns h4 {
     right: 92px;
