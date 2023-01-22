@@ -1,89 +1,326 @@
-export const shopItems = [
-  {
-    image: "../img/homeCart/image1.png",
-    title: "Classic Fit Suit",
-    description: "Classic, best suits man with a fuller build",
-    price: "Ghc 1899",
-    uniqueId: "classic",
-  },
-  {
-    image: "../img/homeCart/image2.png",
-    title: "Slim Fit Suit",
-    description: "Contoured to the body, slim but has some room for comfort",
-    price: "Ghc 1960",
-    uniqueId: "slim",
-  },
-  {
-    image: "../img/homeCart/image3.png",
-    title: "Modern Fit Suit",
-    description: "Slim fit, contoured, shorter length.",
-    price: "Ghc 2899",
-    uniqueId: "modern",
-  },
-  {
-    image: "../img/homeCart/image4.png",
-    title: "Patch Pocket Blazer",
-    description:
-      "Popular style from the 80s where the classic ‘V’ style was a mainstay",
-    price: "Ghc 2099",
-    uniqueId: "patchpocket",
-  },
-  {
-    image: "../img/homeCart/image5.png",
-    title: "Double Breasted Suit",
-    description: "4, 6 or 8 buttons max, 6 being the most common",
-    price: "Ghc 2800",
-    uniqueId: "doublebreasted",
-  },
-  {
-    image: "../img/homeCart/image6.png",
-    title: "Single Breasted Suit",
-    description: "Inclusion of either one, two or three buttons along the seam",
-    price: "Ghc 1999",
-    uniqueId: "singlebreasted",
-  },
-  {
-    image: "../img/homeCart/image7.png",
-    title: "Peak Lapel Suit",
-    description:
-      "Noticeable high peaks directed to shoulders, most popular style from the 16th century.",
-    price: "Ghc 2444",
-    uniqueId: "peak",
-  },
-  {
-    image: "../img/homeCart/image8.png",
-    title: "Shawl Lapel Suit",
-    description:
-      "Rounded sides, continuous curve with no hard edges, iconic smoking jacket style.",
-    price: "Ghc 2223",
-    uniqueId: "shawl",
-  },
-  {
-    image: "../img/homeCart/image9.png",
-    title: "Other clothings",
-    description: "Classic, best suits man with a fuller build",
-    price: "Ghc 899",
-    uniqueId: "tshirts",
-  },
-  {
-    image: "../img/homeCart/image10.png",
-    title: "Other clothings",
-    description: "Classic, best suits man with a fuller build",
-    price: "Ghc 899",
-    uniqueId: "longsleeves",
-  },
-  {
-    image: "../img/homeCart/image11.png",
-    title: "Other clothings",
-    description: "Classic, best suits man with a fuller build",
-    price: "Ghc 899",
-    uniqueId: "shortsleeves",
-  },
-  {
-    image: "../img/homeCart/image13.png",
-    title: "Other clothings",
-    description: "Classic, best suits man with a fuller build",
-    price: "Ghc 899",
-    uniqueId: "womensjacket",
-  },
-];
+// import { shopItems } from "./shop.js";
+// shop variables
+const productArea = document.getElementById("productsBox");
+const cartButton = document.querySelector(".cartTransBtn");
+const closeCartBtn = document.querySelector(".closeCart");
+const ClearCartBtn = document.querySelector(".cartFooterButton");
+const cartArea =  document.querySelector(".cart");
+const cartOverlay = document.querySelector(".cartOverlay");
+const cartItemsQuantity = document.getElementById("itemsUpdate");
+const mobileItemsQuantity = document.getElementById("mobileItemsUpdate");
+const cartTotal = document.querySelector(".ItemsTotal");
+const overlayCartContent = document.querySelector(".overlayCartContent");
+
+//cart
+let cartBasket = [];
+
+//add Buttons
+let addButtons = [];
+
+function displayCartOverlay(){
+  cartOverlay.classList.toggle("transparentBack");
+  cartArea.classList.toggle("showCart");
+}
+
+// getting products implementation below
+class Products {
+  async getProducts(){
+    try {
+      let result = await fetch("shop.json");
+      let data = await result.json();
+      let products = data.items;
+      products = products.map(item => {
+        const {title, price, description} = item.fields;
+        const {id} = item.sys;
+        const image = item.fields.image.fields.file.url;
+        return {title, price, description, id, image};
+      })
+      return products;
+    } catch (error) {
+      console.log(error);      
+    }
+  }
+}
+
+// display products implementation
+class UI {
+  loadAllproducts(products){
+    let itemResult = "";
+    products.forEach(product => {
+      itemResult += `
+      <!-- single Product -->
+      
+      <div class="product">
+        <img class="itemImage" src=${product.image} />
+        <div class="description">
+          <span class="itemTitle">${product.title}</span> 
+          <div class="stars">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+        </div>
+          <h5>${product.description}</h5>         
+        </div>
+        <div class="priceBtns">
+          <h4 class="itemPrice">Ghc ${product.price}</h4>
+        <button class="proCart" data-id = ${product.id}>Add to Cart</button>
+        <!--  -->
+        </div>
+      </div> 
+    
+      <!-- single product ends here -->
+      `      
+    });
+    productArea.innerHTML = itemResult;
+  }
+  getAddToCartBtns(){
+    const addToCartButtons = [...document.querySelectorAll(".proCart")];
+    addButtons = addToCartButtons;
+    addToCartButtons.forEach(button => {
+      let id = button.dataset.id;
+      let alreadySelectedItem = cartBasket.find(item => item.id === id);
+      if (alreadySelectedItem) {
+        button.innerText = "In Cart";
+        button.disabled = true;
+        // button.parentElement.parentElement.firstElementChild.innerText = "In Cart";       
+      } 
+        button.addEventListener("click", (event) => {
+          event.target.innerText = "In Cart"
+          event.target.disabled = true;
+          // event.target.parentElement.parentElement.firstElementChild.innerText = "In Cart"
+          //get item from products
+          let selectedItem = {...Storage.getProduct(id), amount: 1};
+         
+          //add item to cart
+          cartBasket = [...cartBasket, selectedItem];
+          
+          //save in local storage
+          Storage.saveCart(cartBasket);
+
+          //set cart values
+          this.setCartItemValues(cartBasket);
+
+          //display cart item 
+           this.addCartItemToCart(selectedItem);
+           
+          //show the cart overlay
+          // this.displayCartOverlay();
+        })
+       
+    });
+  }
+  setCartItemValues(cartBasket){
+    let itemTotal = 0;
+    let itemsTotal = 0;
+    cartBasket.map(item => {
+      itemTotal += item.price * item.amount;
+      itemsTotal += item.amount;
+    })
+    cartTotal.innerText = parseFloat(itemTotal.toFixed(2));
+    cartItemsQuantity.innerText = itemsTotal; 
+    mobileItemsQuantity.innerText = itemsTotal;  
+  }
+  addCartItemToCart(item){
+     const itemDiv = document.createElement("div");
+     itemDiv.classList.add("cartItem");
+     itemDiv.innerHTML = `
+     <img src=${item.image} alt="">          
+     <div>
+      <h4>${item.title}</h4>
+      <h5>Ghc ${item.price}</h5>
+        <ion-icon class="removeItem" data-id = ${item.id} name="trash-outline"></ion-icon>
+        <div class="stars">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+     </div>
+     <div>
+      <ion-icon class="upBtn" name="caret-up-outline" data-id = ${item.id}></ion-icon>
+      <p class="itemAmount">${item.amount}</p>
+      <ion-icon class="downBtn" name="caret-down-outline" data-id = ${item.id}></ion-icon>
+     </div>
+     `;
+     overlayCartContent.appendChild(itemDiv);
+  }
+
+  displayCartOverlay(){
+     cartOverlay.classList.add("transparentBack");
+     cartArea.classList.add("showCart");
+  }
+  setApplication(){
+      cartBasket = Storage.getItemsFromCart(); 
+      this.setCartItemValues(cartBasket);
+      this.populateCart(cartBasket);
+      closeCartBtn.addEventListener("click", this.hideCart)
+  }
+  populateCart(cartBasket){
+    cartBasket.forEach(item => this.addCartItemToCart(item));
+
+  }
+  hideCart(){
+    cartOverlay.classList.remove("transparentBack");
+     cartArea.classList.remove("showCart");
+  }
+  cartLogic(){
+    ClearCartBtn.addEventListener("click", () => {
+      this.clearCartBasket();
+    })
+    // cart functionality
+    overlayCartContent.addEventListener("click", event => {
+      if (event.target.classList.contains("removeItem")) {        
+        let removeFromBasket = event.target;
+        let id = removeFromBasket.dataset.id;
+        overlayCartContent.removeChild(removeFromBasket.parentElement.parentElement);
+        this.removeItem(id);        
+      } else if (event.target.classList.contains("upBtn")){
+         let addUpToBasket = event.target;
+         let id = addUpToBasket.dataset.id;
+         let itemTotal = cartBasket.find(item => item.id === id);
+         itemTotal.amount = itemTotal.amount + 1;
+         Storage.saveCart(cartBasket);
+         this.setCartItemValues(cartBasket);
+         addUpToBasket.nextElementSibling.innerText = itemTotal.amount;
+      } else if (event.target.classList.contains("downBtn")) {
+         let takeOutOfBasket = event.target;
+         let id = takeOutOfBasket.dataset.id; 
+         let itemTotal = cartBasket.find(item => item.id === id); 
+         itemTotal.amount = itemTotal.amount - 1; 
+         if (itemTotal.amount > 0) {
+           Storage.saveCart(cartBasket);
+           this.setCartItemValues(cartBasket);
+           takeOutOfBasket.previousElementSibling.innerText = itemTotal.amount;
+         }else{
+          overlayCartContent.removeChild(takeOutOfBasket.parentElement.parentElement)
+          this.removeItem(id); 
+         }    
+      }
+    });
+  }
+ 
+  clearCartBasket(){
+    let selectedItems = cartBasket.map(item => item.id);
+    selectedItems.forEach(id => this.removeItem(id));
+
+    while (overlayCartContent.children.length > 0) {
+      overlayCartContent.removeChild(overlayCartContent.children[0])      
+    }
+    this.hideCart();
+  } 
+  removeItem(id){
+    cartBasket = cartBasket.filter(item => item.id !== id);
+    this.setCartItemValues(cartBasket);
+    Storage.saveCart(cartBasket)
+    let button = this.getOneButton(id);
+    button.disabled = false;
+    button.innerHTML = `Add to Cart`;
+  }
+  getOneButton(id){
+    return addButtons.find(button => button.dataset.id === id);
+  }
+}
+
+
+//saving cart items to local storage
+class Storage{
+   static saveCartItems (products){
+    localStorage.setItem("products", JSON.stringify(products));
+   }
+
+   static getProduct(id){
+    let products = JSON.parse(localStorage.getItem("products"));
+    return products.find(product => product.id === id);
+   }
+
+   static saveCart(cartBasket){
+    localStorage.setItem("cartBasket", JSON.stringify(cartBasket))
+   }
+
+   static getItemsFromCart (){
+    return localStorage.getItem("cartBasket") ? JSON.parse(localStorage.getItem("cartBasket")) : [];
+   }
+}
+
+
+// DOM load event 
+document.addEventListener("DOMContentLoaded", ()=>{
+  const ui = new UI();
+  const products = new Products();
+  // application setup
+  ui.setApplication();
+  //get product items
+  products.getProducts().then(products => {
+    ui.loadAllproducts(products);
+    Storage.saveCartItems(products);
+  }).then( () => {
+    ui.getAddToCartBtns();
+    ui.cartLogic();
+  });
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

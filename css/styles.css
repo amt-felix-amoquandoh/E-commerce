@@ -183,93 +183,40 @@ button.white {
 /* Products section styles */
 .products {
   text-align: center;
-  max-width: auto;
-  padding: 0 25px;
-  margin: 0 auto;
+  padding: 0 60px;
 }
 
-.products h2{
+.products h1{
   margin-bottom: -22px;
   margin-top: 72px;
-  font-weight: bold;
-  color: rgb(172, 98, 0);
 }
 
 .products .productsBox {
   display: flex;
-  padding: 25px 0px;
-  list-style: none;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
 }
 
 .products .product {
   position: relative;
-  width: 100%;
-  min-width: 250px;
-  height: auto;
-  padding: 20px;
-  border: 2px solid rgba(177, 167, 154, 0.13);
+  width: 15%;
+  min-width: 150px;
+  height: 22.8rem;
+  padding: 10px;
+  border: 1px solid rgba(177, 167, 154, 0.616);
   border-radius: 25px;
   cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
-    scroll-snap-align: start;
-    transition: all 0.2s;
-}
-
-.product:not(:last-child) {
-  margin-right: 10px;
-}
-
-.productsBox::-webkit-scrollbar {
-  height: 12px;
-}
-
-.productsBox::-webkit-scrollbar-thumb,
-.productsBox::-webkit-scrollbar-track {
-  border-radius: 92px;
-}
-
-.productsBox::-webkit-scrollbar-thumb {
-  background: teal;
-}
-
-.productsBox::-webkit-scrollbar-track {
-  background: rgb(202, 201, 201);
-}
-
-@media (min-width: 500px) {
-  .product {
-    flex-basis: calc(50% - 10px);
-  }
-
-  .product:not(:last-child) {
-    margin-right: 20px;
-  }
-}
-
-@media (min-width: 700px) {
-  .product {
-    flex-basis: calc(calc(100% / 3) - 20px);
-  }
-
-  .product:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
-@media (min-width: 1100px) {
-  .product {
-    flex-basis: calc(25% - 30px);
-  }
-
-  .product:not(:last-child) {
-    margin-right: 40px;
-  }
+  box-shadow: 3.1px 2.6px 3.6px rgba(0, 0, 0, 0.028),
+    8.6px 7.3px 10px rgba(0, 0, 0, 0.04),
+    20.8px 17.5px 24.1px rgba(0, 0, 0, 0.052),
+    69px 58px 80px rgba(0, 0, 0, 0.08);
+  margin: 15px 0;
+  transition: 0.3s ease;
 }
 
 .product:hover {
-  border: 2px solid teal;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.09);
 }
 
 .products .product img {
@@ -279,26 +226,35 @@ button.white {
   border-radius: 20px;
 }
 
-.products .product .description {
-  text-align: start;
-  padding: 10px 0;
+.products .product img:hover {
+  transform: scale(1.1);
 }
 
+.products .product .description {
+  text-align: start;
+  margin-top: 7.5px;
+}
+
+
+
 .products .product .description span {
-  margin-top: 4px;
   color: white;
   padding: 5px 6px;
   font-size: 14px;
   font-weight: bold;
-  background-color: rgb(61, 61, 61);
+  background-color: rgb(87, 86, 86);
 }
 
 .products .product .description h5 {
-  padding-top: 10px;
-  padding-bottom: 6px;
+  padding-bottom: 4px;
   color: #000000;
   font-size: 16px;
   font-weight: lighter;
+}
+
+.products .product .description .stars {
+  color: rgb(247, 210, 1);
+  margin-top: 5px;
 }
 
 .products .priceBtns {
@@ -306,11 +262,11 @@ button.white {
 }
 
 .products .product .priceBtns h4 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   color: rgb(172, 98, 0);
   position: absolute;
-  bottom: 12px;
+  bottom: 5px;
   right: 175px;
   text-align: start;
 }
@@ -321,8 +277,8 @@ button.white {
   background-color: rgba(18, 150, 150, 0.747);
   color: rgb(255, 255, 255);
   position: absolute;
-  bottom: 16px;
-  right: 20px;
+  bottom: 10px;
+  right: 18px;
   padding-top: 3px;
   padding-left: 5px;
   padding-right: 5px;
@@ -1096,7 +1052,7 @@ span.price {
 }
 
 .electroCover h2 {
-  color: rgb(220, 129, 68);
+  color: rgb(220, 185, 68);
   font-size: 3.8rem;
   font-weight: bold;
 }
@@ -1244,10 +1200,23 @@ span.price {
 
 /* Media queries for standar devices */
 /* Tablet view */
-@media (max-width: 1405px) {
+@media (max-width: 1510px) {
+  .products .product .priceBtns h4 {
+    right: 130px;
+    bottom: 3px;
+  }
+
+}
+
+@media (max-width: 1420px) {
   .products .product {
     margin: 5px;
-    width: 28%;
+    width: 24%;
+  }
+
+  .products .product .priceBtns h4 {
+    right: 220px;
+    bottom: 3px;
   }
 }
 
@@ -1259,6 +1228,12 @@ span.price {
 }
 
 @media (max-width: 1130px) {
+  .navItems li a {
+    
+    font-size: 1rem;
+    
+  }
+
   .products .product {
     margin: 5px;
     width: 30%;
@@ -1266,7 +1241,7 @@ span.price {
 
   .products .product .priceBtns h4 {
     right: 155px;
-    bottom: 12px;
+    bottom: 3px;
   }
 }
 
@@ -1374,7 +1349,7 @@ span.price {
     padding: 10px 50px 10px 35px;
   }
 
-  /* .products .productsBox {
+  .products .productsBox {
     justify-content: center;
   }
 
@@ -1382,9 +1357,22 @@ span.price {
     margin: 5px;
     width: 32%;
     height: 20rem;
-  } */
+  }
 
- 
+  .categories{
+    padding: 0;
+  }
+
+  .categories .categoriesBox {
+    justify-content: center;
+  }
+
+  .categories .card {
+    margin: 5px;
+    width: 42%;
+    
+  }
+
   .products .product img {
     height: 10.5rem;
   }
@@ -1411,12 +1399,6 @@ span.price {
     right: 168px;
     text-align: start;
   }
-
-  .products h2{
-    margin-bottom: -18px;
-    margin-top: -45px;
-  }
-
 
   .banner {
     height: 22vh;
@@ -1555,18 +1537,14 @@ span.price {
     
   }
 
-  /* .products {
+  .products {
     padding: 0;
     margin-top: 62px;
-  } */
-
-  .products h2{
-    margin-bottom: -18px;
-    margin-top: -30px;
   }
 
-  .products p{
-    margin-bottom: -28px;
+  .products h1{
+    margin-bottom: -18px;
+    margin-top: 10px;
   }
 
   .products .product .proCart {
@@ -1576,12 +1554,12 @@ span.price {
     padding: 0px 5px;
   }
 
-  /* .products .productsBox {
+  .products .productsBox {
     margin: 0;
-  } */
+  }
 
   .products .product img {
-    height: 10rem;
+    height: 8rem;
   }
 
   .products .product .description h5 {
@@ -1601,10 +1579,10 @@ span.price {
     color: #2c2a24;
   }
 
-  /* .products .product {
+  .products .product {
     width: 44%;
     height: 16.5rem;
-  } */
+  }
 
   .products .product .priceBtns h4 {
     right: 92px;
