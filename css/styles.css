@@ -145,6 +145,7 @@ button.white {
   font-size: 1.4rem;
   font-weight: 600;
   color: #1a1a1a;
+  text-transform: capitalize;
 }
 
 .navItems li a:hover,
