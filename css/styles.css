@@ -185,11 +185,16 @@ button.white {
 .products {
   text-align: center;
   padding: 0 60px;
+  margin-bottom: 80px;
+  padding-bottom: 30px;
+  border-bottom: 2px rgb(216, 213, 213) solid;
+  
 }
 
 .products h1{
   margin-bottom: -22px;
   margin-top: 72px;
+  font-weight: 800;
 }
 
 .products .productsBox {
@@ -197,6 +202,7 @@ button.white {
   justify-content: space-between;
   padding-top: 20px;
   flex-wrap: wrap;
+  text-decoration: none;
 }
 
 .products .product {
@@ -205,7 +211,7 @@ button.white {
   min-width: 150px;
   height: 22.8rem;
   padding: 10px;
-  border: 1px solid rgba(177, 167, 154, 0.616);
+  border: 2px solid white;
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 3.1px 2.6px 3.6px rgba(0, 0, 0, 0.028),
@@ -217,7 +223,7 @@ button.white {
 }
 
 .product:hover {
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.09);
+  border: 2px solid rgb(85, 85, 85);
 }
 
 .products .product img {
@@ -227,16 +233,22 @@ button.white {
   border-radius: 20px;
 }
 
-.products .product img:hover {
+/* .products .product img:hover {
   transform: scale(1.1);
-}
+} */
 
 .products .product .description {
   text-align: start;
   margin-top: 7.5px;
 }
 
-
+.products .homeCategory {
+  text-align: start;
+  margin-bottom: -25px;
+  font-size: xx-large;
+  font-weight: 500;
+  color: rgb(172, 98, 0);
+}
 
 .products .product .description span {
   color: white;
