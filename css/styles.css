@@ -214,12 +214,13 @@ button.white {
   border: 2px solid white;
   border-radius: 25px;
   cursor: pointer;
-  box-shadow: 3.1px 2.6px 3.6px rgba(0, 0, 0, 0.028),
-    8.6px 7.3px 10px rgba(0, 0, 0, 0.04),
-    20.8px 17.5px 24.1px rgba(0, 0, 0, 0.052),
-    69px 58px 80px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
   margin: 15px 0;
   transition: 0.3s ease;
+}
+
+.product:active {
+  transform: translateY(5px);
 }
 
 .product:hover {
@@ -231,6 +232,7 @@ button.white {
   height: 12.5rem;
   transition: all 1s;
   border-radius: 20px;
+  object-fit: cover;
 }
 
 /* .products .product img:hover {
@@ -240,6 +242,11 @@ button.white {
 .products .product .description {
   text-align: start;
   margin-top: 7.5px;
+}
+
+.products h2{
+  margin-top: -18px;
+  margin-bottom: -10px;
 }
 
 .products .homeCategory {
@@ -308,6 +315,18 @@ button.white {
   background-color: rgba(154, 204, 187, 0.726);
 }
 
+.carousel-item img{
+  height: 38vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-item{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 /* Banner styles */
 .banner {
   display: flex;
@@ -364,7 +383,7 @@ button.white {
 }
 
 .promo {
-  background-image: url("../img/page-backgrounds/banner1.jpg");
+  background-image: url("../img/page-backgrounds/access.jpg");
 }
 
 .promo1 {
@@ -747,36 +766,23 @@ footer .copyright {
 }
 
 /* Shop page Styles */
-.shopCover {
-  height: 35vh;
-  color: rgb(13, 90, 153);
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 10px;
-  background-color: rgba(34, 34, 34, 0.904);
-  background-image: url("../img/page-backgrounds/shop.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.shopCoverContent {
-
+.carousel-caption {
   background-color: #747373ef;
   padding: 5px 20px;
   text-align: center;
 }
 
-.shopCover h2 {
+.carousel-item .carousel-caption {
+  margin-bottom: 90px;
+}
+
+.carousel-item h2 {
   color: #dd2020d5;
   font-size: 3.8rem;
   font-weight: bold;
 }
 
-.shopCover h5 {
+.carousel-item h5 {
   color: rgb(24, 24, 24);
   font-size: 2rem;
 }
@@ -1225,6 +1231,8 @@ span.price {
   .products .product {
     margin: 5px;
     width: 24%;
+    box-shadow: none;
+    border: 2px solid rgba(187, 187, 187, 0.74);
   }
 
   .products .product .priceBtns h4 {
@@ -1237,6 +1245,8 @@ span.price {
   .products .product {
     margin: 5px;
     width: 24%;
+    box-shadow: none;
+    border: 2px solid rgba(187, 187, 187, 0.74);
   }
 }
 
@@ -1250,6 +1260,8 @@ span.price {
   .products .product {
     margin: 5px;
     width: 30%;
+    box-shadow: none;
+    border: 2px solid rgba(187, 187, 187, 0.74);
   }
 
   .products .product .priceBtns h4 {
@@ -1364,12 +1376,15 @@ span.price {
 
   .products .productsBox {
     justify-content: center;
+    border-bottom: none;
   }
 
   .products .product {
     margin: 5px;
     width: 32%;
     height: 20rem;
+    box-shadow: none;
+    border: 2px solid rgba(187, 187, 187, 0.74);
   }
 
   .categories{
@@ -1551,13 +1566,25 @@ span.price {
   }
 
   .products {
-    padding: 0;
+    padding: 0 5px;
     margin-top: 62px;
   }
 
-  .products h1{
-    margin-bottom: -18px;
-    margin-top: 10px;
+  .products .homeCategory {
+    text-align: center;
+    margin-bottom: -25px;
+    font-size: x-large;
+    font-weight: 500;
+  }
+
+  .products .product .description .stars {
+    margin-bottom: 3px;
+    margin-top: -2px;
+  }
+
+  .products h2{
+    margin-bottom: 3px;
+    margin-top: 25px;
   }
 
   .products .product .proCart {
@@ -1568,7 +1595,8 @@ span.price {
   }
 
   .products .productsBox {
-    margin: 0;
+    margin-bottom: 80px;
+    border-bottom: none;
   }
 
   .products .product img {
@@ -1580,12 +1608,6 @@ span.price {
     margin-top: -6.5px;
   }
 
-  .products .product .description .stars {
-    position: absolute;
-    bottom: 32px;
-    right: 70px;
-  }
-
   .products .product .description span {
     background-color: rgba(255, 255, 255, 0.815);
     padding-top: 10px;
@@ -1593,13 +1615,16 @@ span.price {
   }
 
   .products .product {
-    width: 44%;
-    height: 16.5rem;
+    width: 45%;
+    height: 17.2rem;
+    box-shadow: none;
+    border: 2px solid rgba(201, 201, 201, 0.726);
   }
 
   .products .product .priceBtns h4 {
-    right: 92px;
+    right: 98px;
     bottom: 0px;
+    font-size: small;
   }
 
   .banner {
@@ -1642,7 +1667,7 @@ span.price {
     height: 30vh;
   }
   
-  .shopCover h2,
+  .carousel-caption h2,
   .electroCover h2,
   .personalCover h2,
   .footWearCover h2,
@@ -1652,7 +1677,7 @@ span.price {
     line-height: 25px;
   }
 
-  .shopCover h5,
+  .carousel-caption h5,
   .electroCover h5,
   .personalCover h5,
   .footWearCover h5,
@@ -1662,7 +1687,7 @@ span.price {
     font-size: 1rem;
   }
 
-  .shopCoverContent,
+  .carousel-caption,
   .aboutCoverContent,
   .electroCoverContent,
   .personalCoverContent,

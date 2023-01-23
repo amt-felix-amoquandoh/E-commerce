@@ -137,13 +137,6 @@ class UI {
       <h4>${item.title}</h4>
       <h5>Ghc ${item.price}</h5>
         <ion-icon class="removeItem" data-id = ${item.id} name="trash-outline"></ion-icon>
-        <div class="stars">
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-              <ion-icon name="star"></ion-icon>
-            </div>
      </div>
      <div>
       <ion-icon class="upBtn" name="caret-up-outline" data-id = ${item.id}></ion-icon>
