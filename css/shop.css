@@ -76,7 +76,6 @@ button.white {
   outline: none;
 }
 
-
 /* Homepage Styles */
 
 /* header styling */
@@ -188,10 +187,9 @@ button.white {
   margin-bottom: 80px;
   padding-bottom: 30px;
   border-bottom: 2px rgb(216, 213, 213) solid;
-  
 }
 
-.products h1{
+.products h1 {
   margin-bottom: -22px;
   margin-top: 72px;
   font-weight: 800;
@@ -244,7 +242,7 @@ button.white {
   margin-top: 7.5px;
 }
 
-.products h2{
+.products h2 {
   margin-top: -18px;
   margin-bottom: -10px;
 }
@@ -315,13 +313,13 @@ button.white {
   background-color: rgba(154, 204, 187, 0.726);
 }
 
-.carousel-item img{
+.carousel-item img {
   height: 38vh;
   width: 100%;
   object-fit: cover;
 }
 
-.carousel-item{
+.carousel-item {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1012,7 +1010,6 @@ span.price {
   color: grey;
 }
 
-
 /* Categories Styling */
 .categories {
   text-align: center;
@@ -1045,12 +1042,15 @@ span.price {
 }
 
 /* Page Cover Styles */
-.electroCover, .personalCover, .clothingCover, .footWearCover{
+.electroCover,
+.personalCover,
+.clothingCover,
+.footWearCover {
   height: 40vh;
 }
 
 .electroCover {
-  color: rgb(220,68,68);
+  color: rgb(220, 68, 68);
   display: flex;
   justify-content: center;
   text-align: center;
@@ -1071,7 +1071,7 @@ span.price {
 }
 
 .electroCover h2 {
-  color: rgb(220, 185, 68);
+  color: rgb(214, 121, 55);
   font-size: 3.8rem;
   font-weight: bold;
 }
@@ -1080,7 +1080,6 @@ span.price {
   color: rgb(24, 24, 24);
   font-size: 2rem;
 }
-
 
 .personalCover {
   color: rgb(5, 89, 112);
@@ -1114,7 +1113,6 @@ span.price {
   font-size: 2rem;
 }
 
-
 .clothingCover {
   color: rgb(88, 64, 2);
   display: flex;
@@ -1131,7 +1129,6 @@ span.price {
 }
 
 .clothingCoverContent {
-
   background-color: #b9b6b6b9;
   padding: 5px 20px;
   text-align: center;
@@ -1148,9 +1145,8 @@ span.price {
   font-size: 2rem;
 }
 
-
 .footWearCover {
-  color: rgb(52,109,68);
+  color: rgb(52, 109, 68);
   display: flex;
   justify-content: center;
   text-align: center;
@@ -1158,14 +1154,14 @@ span.price {
   flex-direction: column;
   padding: 10px;
   background-color: rgba(34, 34, 34, 0.453);
-  background-image: url("../img/store/shoesCover.jpg");
+  background-image: url("../img/store/shoes.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  object-fit: contain;
 }
 
 .footWearCoverContent {
-
   background-color: #b9b9b9d8;
   padding: 5px 20px;
   text-align: center;
@@ -1181,31 +1177,6 @@ span.price {
   color: rgb(24, 24, 24);
   font-size: 2rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
 @media (max-width: 800px) {
@@ -1224,7 +1195,6 @@ span.price {
     right: 130px;
     bottom: 3px;
   }
-
 }
 
 @media (max-width: 1420px) {
@@ -1252,9 +1222,7 @@ span.price {
 
 @media (max-width: 1130px) {
   .navItems li a {
-    
     font-size: 1rem;
-    
   }
 
   .products .product {
@@ -1387,7 +1355,7 @@ span.price {
     border: 2px solid rgba(187, 187, 187, 0.74);
   }
 
-  .categories{
+  .categories {
     padding: 0;
   }
 
@@ -1398,7 +1366,6 @@ span.price {
   .categories .card {
     margin: 5px;
     width: 42%;
-    
   }
 
   .products .product img {
@@ -1540,17 +1507,17 @@ span.price {
     padding-bottom: 0px;
   }
 
-  .categories{
+  .categories {
     padding: 0;
     margin-bottom: 22px;
   }
 
-  .categories h2{
+  .categories h2 {
     margin-top: 22px;
     font-weight: bold;
   }
-  
-  .categories p{
+
+  .categories p {
     padding: -10px 2px;
     margin: -5px 8px;
   }
@@ -1562,7 +1529,6 @@ span.price {
   .categories .card {
     margin: 5px;
     width: 76%;
-    
   }
 
   .products {
@@ -1582,7 +1548,7 @@ span.price {
     margin-top: -2px;
   }
 
-  .products h2{
+  .products h2 {
     margin-bottom: 3px;
     margin-top: 25px;
   }
@@ -1666,7 +1632,7 @@ span.price {
     margin-bottom: -10px;
     height: 30vh;
   }
-  
+
   .carousel-caption h2,
   .electroCover h2,
   .personalCover h2,
