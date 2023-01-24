@@ -185,9 +185,9 @@ button.white {
   text-align: center;
   padding: 0 60px;
   margin-bottom: 80px;
+  margin-top: 20px;
   padding-bottom: 30px;
   border-bottom: 2px rgb(216, 213, 213) solid;
-  overflow-x: hidden;
 }
 
 .products h1 {
