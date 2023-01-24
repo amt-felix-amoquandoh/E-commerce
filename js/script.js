@@ -258,8 +258,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
   }).then( () => {
     ui.getAddToCartBtns();
     ui.cartLogic();
+
   });
 })
+
+
 
 
 
