@@ -187,6 +187,7 @@ button.white {
   margin-bottom: 80px;
   padding-bottom: 30px;
   border-bottom: 2px rgb(216, 213, 213) solid;
+  overflow-x: hidden;
 }
 
 .products h1 {
@@ -1040,6 +1041,115 @@ span.price {
   margin: 5px 0;
   transition: 0.3s ease;
 }
+
+/*  */
+.cards-wrapper {
+  position: relative;
+  top: 80%;
+  transform: translateY(10%);
+}
+.cards {
+  font-size: 0;
+  padding: 0 16px;
+  position: relative;
+  left: 0;
+  white-space: nowrap;
+  transition: 1.1s ease;
+}
+.card {
+  width: 300px;
+  height: 400px;
+  background: #c8c8c8;
+  display: inline-block;
+  margin-right: 16px;
+  position: relative;
+  left: 0;
+  overflow: hidden;
+}
+.card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.cards-nav {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 80px;
+}
+.cards-nav-left, .cards-nav-right {
+  position: absolute;
+  background: rgba(255, 255, 255, .66);
+  cursor: pointer;
+  width: 48px;
+  height: 72px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.5s ease;
+}
+.cards-nav-left:hover, .cards-nav-right:hover {
+  background: white;
+}
+.cards-nav-left svg, .cards-nav-right svg {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  fill: #090956;
+}
+.cards-nav-left {
+  left: 0;
+}
+.cards-nav-right {
+  right: 0;
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
 @media (max-width: 800px) {
