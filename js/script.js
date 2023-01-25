@@ -2,8 +2,8 @@
 // shop variables
 const productArea = document.getElementById("cards");
 const electroProductsBox = document.getElementById("electroCards");
-const persProductsBox = document.getElementById("persProductsBox");
-const footProductsBox = document.getElementById("footProductsBox");
+const persProductsBox = document.getElementById("persCards");
+const footProductsBox = document.getElementById("footCards");
 const cartButton = document.querySelector(".cartTransBtn");
 const closeCartBtn = document.querySelector(".closeCart");
 const ClearCartBtn = document.querySelector(".cartFooterButton");
@@ -78,6 +78,8 @@ class UI {
     });
     productArea.firstElementChild.innerHTML = itemResult;
     electroProductsBox.firstElementChild.innerHTML = itemResult;
+    persProductsBox.firstElementChild.innerHTML = itemResult;
+    footProductsBox.firstElementChild.innerHTML = itemResult;
   }
   getAddToCartBtns(){
     const addToCartButtons = [...document.querySelectorAll(".proCart")];

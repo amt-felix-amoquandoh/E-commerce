@@ -10,7 +10,7 @@ const endPoint = -Math.abs(allCardsWidth - viewportWidth)
 let scrollAmount = viewportWidth
 let clicksRight = 0;
 
-cardsNavRight.addEventListener("click", (e) => {
+function moveRight(){
 	clicksRight = clicksRight + 1
 	scrollAmount = -Math.abs(scrollAmount)
 	cards.style.left = `${scrollAmount*clicksRight}px`;
@@ -21,9 +21,9 @@ cardsNavRight.addEventListener("click", (e) => {
 		cardsNavRight.classList.add("disabled")
 		cards.style.left = `${endPoint}px`
 	}
-})
+}
 
-cardsNavLeft.addEventListener("click", (e) => {
+function moveLeft(){
 	clicksRight = clicksRight - 1
 	cards.style.left = `${scrollAmount*clicksRight}px`;
 	cardsNavRight.classList.remove("disabled")
@@ -32,4 +32,15 @@ cardsNavLeft.addEventListener("click", (e) => {
 	if (numericValue === 0) {
 		cardsNavLeft.classList.add("disabled")
 	}
+}
+
+cardsNavRight.addEventListener("click", (e) => {
+	moveRight(e);
 })
+
+cardsNavLeft.addEventListener("click", (e) => {
+	moveLeft(e);
+})
+
+
+// 2nd 
