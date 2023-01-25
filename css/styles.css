@@ -187,16 +187,21 @@ button.white {
   margin-bottom: 80px;
   margin-top: 20px;
   border-bottom: 2px rgba(216, 213, 213, 0.753) solid;
+  overflow-x: hidden;
 }
 
 .products h2 {
   margin-top: -18px;
-  margin-bottom: -35px;
+  margin-bottom: -25px;
+}
+
+.products p {
+  margin-bottom: 5px;
 }
 
 .products .homeCategory {
   text-align: start;
-  margin-bottom: -25px;
+  margin-bottom: -45px;
   font-size: xx-large;
   font-weight: 500;
   color: rgb(172, 98, 0);
@@ -1301,9 +1306,18 @@ span.price {
     padding: 10px 50px 10px 35px;
   }
 
-  .products .productsBox {
-    justify-content: center;
-    border-bottom: none;
+  .products .homeCategory {
+    text-align: center;
+    margin-top: 18px;
+    font-size: x-large;
+    font-weight: bold;  
+    margin-bottom: -5px;
+  }
+
+  .cards-wrapper{
+    overflow-wrap: normal;
+    overflow-x: scroll;
+    margin-bottom: 5px;
   }
 
   .card .product {
