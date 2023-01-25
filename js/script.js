@@ -1,6 +1,6 @@
 // import { shopItems } from "./shop.js";
 // shop variables
-const productArea = document.getElementById("productsBox");
+const productArea = document.querySelector(".cards");
 const electroProductsBox = document.getElementById("electroProductsBox");
 const persProductsBox = document.getElementById("persProductsBox");
 const footProductsBox = document.getElementById("footProductsBox");
@@ -52,9 +52,9 @@ class UI {
     products.forEach(product => {
       itemResult += `
       <!-- single Product -->
-      
+      <div class="card">
       <div class="product">
-        <img class="itemImage" src=${product.image} />
+      <img class="itemImage" src=${product.image} />
         <div class="description">
           <span class="itemTitle">${product.title}</span> 
           <div class="stars">
@@ -70,16 +70,13 @@ class UI {
           <h4 class="itemPrice">Ghc ${product.price}</h4>
         <button class="proCart" data-id = ${product.id}>Add to Cart</button>
         <!--  -->
-        </div>
-      </div> 
-    
+        </div>    
+      </div>     
+      </div>   
       <!-- single product ends here -->
       `      
     });
     productArea.firstElementChild.innerHTML = itemResult;
-    electroProductsBox.firstElementChild.innerHTML = itemResult;
-    persProductsBox.firstElementChild.innerHTML = itemResult;
-    footProductsBox.firstElementChild.innerHTML = itemResult;
   }
   getAddToCartBtns(){
     const addToCartButtons = [...document.querySelectorAll(".proCart")];

@@ -1,0 +1,13 @@
+{
+    "items": [
+        {
+            "sys": { "id" : "classic"},
+            "fields": {
+              "title": "Classic Fit Suit",
+              "description": "Classic, best suits man with a fuller build",
+              "price": 299,
+              "image": { "fields": {"file": {"url": "../img/homeCart/image1.png"}}}
+            }
+        }
+    ]
+}
