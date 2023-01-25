@@ -184,10 +184,9 @@ button.white {
 .products {
   text-align: center;
   padding-left: 40px;
-  margin-bottom: 80px;
+  margin-bottom: -40px;
   margin-top: 20px;
-  border-bottom: 2px rgba(216, 213, 213, 0.753) solid;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .products h2 {
@@ -231,7 +230,7 @@ button.white {
 }
 
 .card {
-  width: 280px;
+  width: 17.6rem;
   height: 25rem;  
   display: inline-block;
   position: relative;
@@ -242,11 +241,11 @@ button.white {
 
 .card .product {
   position: relative;
-  width: 25%;
-  min-width: 250px;
+  width: 15%;
+  min-width: 15.8rem;
   height: 23.5rem;
   padding: 10px;
-  border: 2px solid rgba(177, 177, 177, 0.616);
+  border: 2px solid rgba(2, 156, 156, 0.308);
   border-radius: 25px;
   cursor: pointer;
   margin: 15px 0;
@@ -258,7 +257,7 @@ button.white {
 }
 
 .card .product:hover {
-  border: 2px solid rgb(85, 85, 85);
+  border: 2px solid teal;
 }
 
 .card .product img {
@@ -1176,6 +1175,8 @@ span.price {
 }
 
 @media (max-width: 1210px) {
+
+
   .card .product {
     margin: 5px;
     width: 24%;
@@ -1317,7 +1318,18 @@ span.price {
   .cards-wrapper{
     overflow-wrap: normal;
     overflow-x: scroll;
+    overflow-y: hidden;
     margin-bottom: 5px;
+    scroll-behavior: smooth;
+    padding-bottom: -50px;
+  }
+
+  .card{
+    margin-bottom: -50px;
+  }
+ 
+  .cards-nav-left, .cards-nav-right {
+    display: none;
   }
 
   .card .product {
@@ -1474,6 +1486,21 @@ span.price {
     margin-top: 62px;
   }
 
+  .cards-wrapper{
+    overflow-x: scroll;
+    margin-bottom: 5px;
+  }
+
+  .cards {
+    width: 14rem;
+  }
+
+  .card {
+    width: 14rem;
+    height: 25rem;  
+  }
+
+
   .products .homeCategory {
     text-align: center;
     margin-bottom: -25px;
@@ -1519,10 +1546,10 @@ span.price {
   }
 
   .card .product {
-    width: 45%;
-    height: 17.2rem;
-    box-shadow: none;
-    border: 2px solid rgba(201, 201, 201, 0.726);
+    width: 25%;
+    min-width: 12rem;
+    height: 17rem;
+    border: 2px solid rgba(0, 128, 128, 0.678);
   }
 
   .card .product .priceBtns h4 {

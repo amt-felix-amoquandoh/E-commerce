@@ -2,7 +2,7 @@
 const cards = document.querySelector(".cards")
 const cardsNavRight = document.querySelector(".cards-nav-right")
 const cardsNavLeft = document.querySelector(".cards-nav-left")
-const allCards = document.querySelectorAll(".try")
+const allCards = document.querySelectorAll(".cardRow")
 const singleCardWidth = allCards[0].scrollWidth + 16
 const allCardsWidth = (singleCardWidth * allCards.length)
 const viewportWidth = window.innerWidth

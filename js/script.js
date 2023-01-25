@@ -1,7 +1,7 @@
 // import { shopItems } from "./shop.js";
 // shop variables
-const productArea = document.querySelector(".cards");
-const electroProductsBox = document.getElementById("electroProductsBox");
+const productArea = document.getElementById("cards");
+const electroProductsBox = document.getElementById("electroCards");
 const persProductsBox = document.getElementById("persProductsBox");
 const footProductsBox = document.getElementById("footProductsBox");
 const cartButton = document.querySelector(".cartTransBtn");
@@ -77,6 +77,7 @@ class UI {
       `      
     });
     productArea.firstElementChild.innerHTML = itemResult;
+    electroProductsBox.firstElementChild.innerHTML = itemResult;
   }
   getAddToCartBtns(){
     const addToCartButtons = [...document.querySelectorAll(".proCart")];
