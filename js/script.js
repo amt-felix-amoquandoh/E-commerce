@@ -1,4 +1,3 @@
-// import { shopItems } from "./shop.js";
 // shop variables
 const productArea = document.getElementById("cards");
 const electroProductsBox = document.getElementById("electroCards");
