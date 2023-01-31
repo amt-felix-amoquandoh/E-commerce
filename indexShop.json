@@ -36,5 +36,24 @@
               "image": { "fields": {"file": {"url": "../img/homeCart/image13.png"}}}
             }
         }
+        ,
+        {
+            "sys": { "id" : "longSleeves"},
+            "fields": {
+              "title": "Other clothings",
+              "description": "Iconic modern long sleeve styles.",
+              "price": 193,
+              "image": { "fields": {"file": {"url": "../img/homeCart/image10.png"}}}
+            }
+        },
+        {
+            "sys": { "id" : "africanWear"},
+            "fields": {
+              "title": "African Wear",
+              "description": "Iconic modern African apparel styles.",
+              "price": 391,
+              "image": { "fields": {"file": {"url": "../img/homeCart/image11.png"}}}
+            }
+        }
     ]
 }

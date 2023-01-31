@@ -25,7 +25,7 @@ function displayCartOverlay(){
 class Products {
   async getProducts(){
     try {
-      let result = await fetch("shop.json");
+      let result = await fetch("indexShop.json");
       let data = await result.json();
       let products = data.items;
       products = products.map(item => {
@@ -49,7 +49,7 @@ class UI {
       itemResult += `
       <!-- single Product -->
       
-      <div class="product" onclick="window.location.href='singlePro.html'">
+      <div class="product">
         <img class="itemImage" src=${product.image} />
         <div class="description">
           <span class="itemTitle">${product.title}</span> 
@@ -261,6 +261,23 @@ document.addEventListener("DOMContentLoaded", ()=>{
   });
 })
 
+
+// Shop Items Js Implementation //
+let mainImage = document.getElementById("mainProduct");
+let smallerImage = document.getElementsByClassName("typesImg");
+
+smallerImage[0].onclick = function(){
+  mainImage.src = smallerImage[0].src;
+}
+smallerImage[1].onclick = function(){
+  mainImage.src = smallerImage[1].src;
+}
+smallerImage[2].onclick = function(){
+  mainImage.src = smallerImage[2].src;
+}
+smallerImage[3].onclick = function(){
+  mainImage.src = smallerImage[3].src;
+}
 
 
 
