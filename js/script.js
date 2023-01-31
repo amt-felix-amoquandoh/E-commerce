@@ -75,7 +75,7 @@ class UI {
       <!-- single product ends here -->
       `      
     });
-    productArea.firstElementChild.innerHTML = itemResult;
+    // productArea.firstElementChild.innerHTML = itemResult;
     electroProductsBox.firstElementChild.innerHTML = itemResult;
     persProductsBox.firstElementChild.innerHTML = itemResult;
     footProductsBox.firstElementChild.innerHTML = itemResult;
