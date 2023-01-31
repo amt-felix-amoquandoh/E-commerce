@@ -66,8 +66,7 @@ class UI {
           <h5>${product.description}</h5>         
         </div>
         <div class="priceBtns">
-          <h4 class="itemPrice">Ghc ${product.price}</h4>
-        <button class="proCart" data-id = ${product.id}>Add to Cart</button>
+        <button class="proCart"><ion-icon name="heart"></ion-icon></button>
         <!--  -->
         </div>    
       </div>     

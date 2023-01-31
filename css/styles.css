@@ -280,16 +280,16 @@ button.white {
 }
 
 .card .product .description {
-  text-align: start;
-  margin-top: 7.5px;
+  text-align: center;
+  padding-top: 15.5px;
 }
 
 
 
 .card .product .description span {
   color: white;
-  padding: 5px 6px;
-  font-size: 14px;
+  padding: 8px 10px;
+  font-size: 17.2px;
   font-weight: bold;
   background-color: rgb(87, 86, 86);
 }
@@ -300,11 +300,12 @@ button.white {
   font-size: 16px;
   font-weight: lighter;
   white-space: pre-wrap;
+  margin-top: 4px;
 }
 
 .card .product .description .stars {
   color: rgb(247, 210, 1);
-  margin-top: 5px;
+  margin-top: 12px;
 }
 
 .card .product .priceBtns {
@@ -324,8 +325,8 @@ button.white {
 .card .product .priceBtns .proCart {
   border-radius: 2px;
   letter-spacing: -1px;
-  background-color: rgba(18, 150, 150, 0.747);
-  color: rgb(255, 255, 255);
+  background-color: transparent;
+  color: rgba(235, 84, 84, 0.918);
   position: absolute;
   bottom: 10px;
   right: 18px;
@@ -340,10 +341,15 @@ button.white {
   font-size: 24px;
 }
 
-.card .product .priceBtns .proCart:hover {
+.card .product .proCart ion-icon:hover {
+  font-size: 30px;
+  transition: ease-in-out;
+}
+
+/* .card .product .priceBtns .proCart:hover {
   color: rgba(0, 128, 128, 0.88);
   background-color: rgba(154, 204, 187, 0.726);
-}
+} */
 
 .cards-nav {
   position: absolute;
