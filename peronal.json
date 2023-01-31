@@ -1,0 +1,59 @@
+{
+    "items": [
+        {
+            "sys": { "id" : "classic"},
+            "fields": {
+              "title": "Classic Fit Suit",
+              "description": "Classic, best suits man with a fuller build",
+              "price": 299,
+              "image": { "fields": {"file": {"url": "../img/homeCart/image1.png"}}}
+            }
+        },
+        {
+            "sys": { "id" : "longSleeves"},
+            "fields": {
+              "title": "Other clothings",
+              "description": "Iconic modern long sleeve styles.",
+              "price": 193,
+              "image": { "fields": {"file": {"url": "../img/homeCart/image10.png"}}}
+            }
+        },
+        {
+            "sys": { "id" : "africanWear"},
+            "fields": {
+              "title": "African Wear",
+              "description": "Iconic modern African apparel styles.",
+              "price": 391,
+              "image": { "fields": {"file": {"url": "../img/homeCart/image11.png"}}}
+            }
+        },
+        {
+            "sys": { "id" : "shoes"},
+            "fields": {
+              "title": "Shoes",
+              "description": "Iconic modern quality shoes variety.",
+              "price": 150,
+              "image": { "fields": {"file": {"url": "../img/homeCart/image13.png"}}}
+            }
+        }
+        ,
+        {
+            "sys": { "id" : "longSleeves"},
+            "fields": {
+              "title": "Other clothings",
+              "description": "Iconic modern long sleeve styles.",
+              "price": 193,
+              "image": { "fields": {"file": {"url": "../img/homeCart/image10.png"}}}
+            }
+        },
+        {
+            "sys": { "id" : "africanWear"},
+            "fields": {
+              "title": "African Wear",
+              "description": "Iconic modern African apparel styles.",
+              "price": 391,
+              "image": { "fields": {"file": {"url": "../img/homeCart/image11.png"}}}
+            }
+        }
+    ]
+}
