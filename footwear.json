@@ -3,57 +3,111 @@
         {
             "sys": { "id" : "classic"},
             "fields": {
-              "title": "Classic Fit Suit",
+              "title": "Heels",
               "description": "Classic, best suits man with a fuller build",
               "price": 299,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image1.png"}}}
+              "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot1.jpg"}}}
             }
         },
         {
             "sys": { "id" : "longSleeves"},
             "fields": {
-              "title": "Other clothings",
+              "title": "Sneakers",
               "description": "Iconic modern long sleeve styles.",
               "price": 193,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image10.png"}}}
+              "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot2.jpg"}}}
             }
         },
         {
             "sys": { "id" : "africanWear"},
             "fields": {
-              "title": "African Wear",
+              "title": "Shoes",
               "description": "Iconic modern African apparel styles.",
               "price": 391,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image11.png"}}}
+              "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot3.jpg"}}}
             }
         },
         {
             "sys": { "id" : "shoes"},
             "fields": {
-              "title": "Shoes",
+              "title": "Sneakers",
               "description": "Iconic modern quality shoes variety.",
               "price": 150,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image13.png"}}}
+              "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot4.jpg"}}}
             }
         }
         ,
         {
             "sys": { "id" : "longSleeves"},
             "fields": {
-              "title": "Other clothings",
+              "title": "Shoes",
               "description": "Iconic modern long sleeve styles.",
               "price": 193,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image10.png"}}}
+              "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot5.jpg"}}}
             }
         },
         {
             "sys": { "id" : "africanWear"},
             "fields": {
-              "title": "African Wear",
+              "title": "Sneakers",
               "description": "Iconic modern African apparel styles.",
               "price": 391,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image11.png"}}}
+              "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot6.jpg"}}}
             }
+        },
+        {
+          "sys": { "id" : "africanWear"},
+          "fields": {
+            "title": "Shoes",
+            "description": "Iconic modern African apparel styles.",
+            "price": 391,
+            "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot7.jpg"}}}
+          }
+      },
+      {
+        "sys": { "id" : "africanWear"},
+        "fields": {
+          "title": "Heels",
+          "description": "Iconic modern African apparel styles.",
+          "price": 391,
+          "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot8.jpg"}}}
         }
+    },
+    {
+      "sys": { "id" : "africanWear"},
+      "fields": {
+        "title": "Sneakers",
+        "description": "Iconic modern African apparel styles.",
+        "price": 391,
+        "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot9.jpg"}}}
+      }
+  },
+  {
+    "sys": { "id" : "africanWear"},
+    "fields": {
+      "title": "Sandals",
+      "description": "Iconic modern African apparel styles.",
+      "price": 391,
+      "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot10.jpg"}}}
+    }
+},
+{
+  "sys": { "id" : "africanWear"},
+  "fields": {
+    "title": "Sneakers",
+    "description": "Iconic modern African apparel styles.",
+    "price": 391,
+    "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot11.jpg"}}}
+  }
+},
+{
+  "sys": { "id" : "africanWear"},
+  "fields": {
+    "title": "Shoes",
+    "description": "Iconic modern African apparel styles.",
+    "price": 391,
+    "image": { "fields": {"file": {"url": "./img/categoreis/foot/foot12.jpg"}}}
+  }
+}
     ]
 }

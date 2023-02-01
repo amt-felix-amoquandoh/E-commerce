@@ -3,57 +3,112 @@
         {
             "sys": { "id" : "classic"},
             "fields": {
-              "title": "Classic Fit Suit",
+              "title": "Personal Care",
               "description": "Classic, best suits man with a fuller build",
               "price": 299,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image1.png"}}}
+              "image": { "fields": {"file": {"url": "./img/categoreis/health/personal1.jpg"}}}
             }
         },
         {
             "sys": { "id" : "longSleeves"},
             "fields": {
-              "title": "Other clothings",
+              "title": "Health Care",
               "description": "Iconic modern long sleeve styles.",
               "price": 193,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image10.png"}}}
+              "image": { "fields": {"file": {"url": "./img/categoreis/health/pers2.jpg"}}}
             }
         },
         {
             "sys": { "id" : "africanWear"},
             "fields": {
-              "title": "African Wear",
+              "title": "Health Care",
               "description": "Iconic modern African apparel styles.",
               "price": 391,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image11.png"}}}
+              "image": { "fields": {"file": {"url": "./img/categoreis/health/pers3.jpg"}}}
             }
         },
         {
             "sys": { "id" : "shoes"},
             "fields": {
-              "title": "Shoes",
+              "title": "Personal Care",
               "description": "Iconic modern quality shoes variety.",
               "price": 150,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image13.png"}}}
+              "image": { "fields": {"file": {"url": "./img/categoreis/health/pers4.jpg"}}}
             }
         }
         ,
         {
             "sys": { "id" : "longSleeves"},
             "fields": {
-              "title": "Other clothings",
+              "title": "Personal Care",
               "description": "Iconic modern long sleeve styles.",
               "price": 193,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image10.png"}}}
+              "image": { "fields": {"file": {"url": "./img/categoreis/health/pers5.jpg"}}}
             }
         },
         {
             "sys": { "id" : "africanWear"},
             "fields": {
-              "title": "African Wear",
+              "title": "Personal Care",
               "description": "Iconic modern African apparel styles.",
               "price": 391,
-              "image": { "fields": {"file": {"url": "../img/homeCart/image11.png"}}}
+              "image": { "fields": {"file": {"url": "./img/categoreis/health/pers6.jpg"}}}
             }
-        }
+        },
+        {
+          "sys": { "id" : "classic"},
+          "fields": {
+            "title": "Personal Care",
+            "description": "Classic, best suits man with a fuller build",
+            "price": 299,
+            "image": { "fields": {"file": {"url": "./img/categoreis/health/pers7.jpg"}}}
+          }
+      },
+      {
+          "sys": { "id" : "longSleeves"},
+          "fields": {
+            "title": "Health Care",
+            "description": "Iconic modern long sleeve styles.",
+            "price": 193,
+            "image": { "fields": {"file": {"url": "./img/categoreis/health/pers8.jpg"}}}
+          }
+      },
+      {
+          "sys": { "id" : "africanWear"},
+          "fields": {
+            "title": "Health Care",
+            "description": "Iconic modern African apparel styles.",
+            "price": 391,
+            "image": { "fields": {"file": {"url": "./img/categoreis/health/pers9.jpg"}}}
+          }
+      },
+      {
+          "sys": { "id" : "shoes"},
+          "fields": {
+            "title": "Personal Care",
+            "description": "Iconic modern quality shoes variety.",
+            "price": 150,
+            "image": { "fields": {"file": {"url": "./img/categoreis/health/pers10.jpg"}}}
+          }
+      }
+      ,
+      {
+          "sys": { "id" : "longSleeves"},
+          "fields": {
+            "title": "Personal Care",
+            "description": "Iconic modern long sleeve styles.",
+            "price": 193,
+            "image": { "fields": {"file": {"url": "./img/categoreis/health/pers11.jpg"}}}
+          }
+      },
+      {
+          "sys": { "id" : "africanWear"},
+          "fields": {
+            "title": "Personal Care",
+            "description": "Iconic modern African apparel styles.",
+            "price": 391,
+            "image": { "fields": {"file": {"url": "./img/categoreis/health/pers12.jpg"}}}
+          }
+      }
     ]
 }
