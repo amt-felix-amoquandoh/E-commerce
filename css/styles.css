@@ -92,44 +92,6 @@ button.white {
   left: 0;
 }
 
-.bg-image:before {
-  content: ' ';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-  background-image: url('../img/categoreis/electro/camera.jpg');
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
-}
-
-.mask {
-  position: relative;
-}
-
-.bg-image{
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-
-
-  /* Default height for small devices */
-  #intro-example {
-    height: 400px;
-  }
-
-  /* Height for devices larger than 992px */
-  @media (min-width: 992px) {
-    #intro-example {
-      height: 400px;
-    }
-  }
 
 .navBrandBox {
   display: flex;
@@ -218,6 +180,91 @@ button.white {
 }
 
 /* Cover section Styling */
+.bg-image:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.55;
+  background-image: linear-gradient(
+    98deg,
+    rgba(235, 72, 63, 0.459),
+    rgba(247, 176, 53, 0.5)
+  ),  url('../img/categoreis/electro/camera.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.mask {
+  position: relative;
+}
+
+.bg-image{
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+.text-white input {
+  height: 3.125rem;
+  padding: 0 1.25rem;
+  font-size: 1.1rem;
+  width: 100%;
+  border: 2.5px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.text-white button {
+  background-color: teal;
+  color: white;
+  white-space: nowrap;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 50px;
+}
+
+.text-white button:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.text-white input:focus {
+  border-top: 2.5px solid rgb(218, 83, 34);
+  border-bottom: 2.5px solid rgb(218, 83, 34);
+  border-left: 2.5px solid rgb(218, 83, 34);;
+}
+
+.text-white .signUpFrom {
+  display: flex;
+  width: 100%;
+}
+
+.text-white ion-icon{
+   font-size: 26px;
+   color: white;
+   margin-top: -5px;
+}
+  /* Default height for small devices */
+  #intro-example {
+    height: 400px;
+  }
+
+  /* Height for devices larger than 992px */
+  @media (min-width: 992px) {
+    #intro-example {
+      height: 400px;
+    }
+  }
+
 
 /* Products section styles */
 .products {
