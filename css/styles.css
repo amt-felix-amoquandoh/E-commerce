@@ -265,7 +265,7 @@ button.white {
     }
   }
   
-.selectedLang{
+/* .selectedLang{
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -276,8 +276,8 @@ button.white {
   display: block;
   width: 32px;
   height: 32px;
-  background-image: url("../img/icons/ghana.png");
-}
+  background-image: url("");
+} */
 
 /* Products section styles */
 .products {
