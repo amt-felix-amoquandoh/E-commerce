@@ -264,7 +264,20 @@ button.white {
       height: 400px;
     }
   }
+  
+.selectedLang{
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
 
+.selectedLang::before{
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/icons/ghana.png");
+}
 
 /* Products section styles */
 .products {
