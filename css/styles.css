@@ -95,6 +95,7 @@ button.white {
 .bg-image{
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.5;
 }
 
   /* Default height for small devices */
