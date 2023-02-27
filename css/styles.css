@@ -92,6 +92,11 @@ button.white {
   left: 0;
 }
 
+.bg-image{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
   /* Default height for small devices */
   #intro-example {
     height: 400px;
@@ -100,7 +105,7 @@ button.white {
   /* Height for devices larger than 992px */
   @media (min-width: 992px) {
     #intro-example {
-      height: 600px;
+      height: 400px;
     }
   }
 
