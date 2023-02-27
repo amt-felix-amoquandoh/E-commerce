@@ -76,8 +76,8 @@ class UI {
     });
     // productArea.firstElementChild.innerHTML = itemResult;
     electroProductsBox.firstElementChild.innerHTML = itemResult;
-    persProductsBox.firstElementChild.innerHTML = itemResult;
-    footProductsBox.firstElementChild.innerHTML = itemResult;
+    // persProductsBox.firstElementChild.innerHTML = itemResult;
+    // footProductsBox.firstElementChild.innerHTML = itemResult;
   }
   getAddToCartBtns(){
     const addToCartButtons = [...document.querySelectorAll(".proCart")];
