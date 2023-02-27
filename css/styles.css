@@ -92,11 +92,32 @@ button.white {
   left: 0;
 }
 
+.bg-image:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-image: url('../img/categoreis/electro/camera.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.mask {
+  position: relative;
+}
+
 .bg-image{
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.5;
+  position: relative;
 }
+
+
 
   /* Default height for small devices */
   #intro-example {
