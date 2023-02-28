@@ -1,6 +1,6 @@
 // shop variables
 const productArea = document.getElementById("cards");
-const electroProductsBox = document.getElementById("electroCards");
+const electroProductsBox = document.getElementById("swiper-wrapper");
 const persProductsBox = document.getElementById("persCards");
 const footProductsBox = document.getElementById("footCards");
 const cartButton = document.querySelector(".cartTransBtn");
@@ -51,6 +51,7 @@ class UI {
     products.forEach(product => {
       itemResult += `
       <!-- single Product -->
+      <div class="swiper-slide">
       <div class="card">
       <div class="product">
       <img class="itemImage" src=${product.image} />
@@ -63,12 +64,13 @@ class UI {
         <!--  -->
         </div>    
       </div>     
-      </div>   
+      </div> 
+      </div>  
       <!-- single product ends here -->
       `      
     });
     // productArea.firstElementChild.innerHTML = itemResult;
-    electroProductsBox.firstElementChild.innerHTML = itemResult;
+    electroProductsBox.innerHTML = itemResult;
     // persProductsBox.firstElementChild.innerHTML = itemResult;
     // footProductsBox.firstElementChild.innerHTML = itemResult;
   }
@@ -252,6 +254,51 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
   });
 })
+
+const swiper = new Swiper('.newMusicSwiper', {
+  // Optional parameters
+  slidesPreview: 1,
+  spaceBetween: 20,
+  autoplay: {
+     delay: 7500,
+     disableOnInteraction: false,
+  }, 
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints: {
+    280:{
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    320:{
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    510:{
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    758:{
+      slidesPerView: 4,
+      spaceBetween: 15,
+    },
+    900:{
+      slidesPerView: 7,
+      spaceBetween: 20,
+    }
+  },
+});
 
 
 
