@@ -180,7 +180,7 @@ button.white {
 }
 
 /* Cover section Styling */
-.bg-image:before {
+/* .bg-image:before {
   content: ' ';
   display: block;
   position: absolute;
@@ -197,7 +197,7 @@ button.white {
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
-}
+} */
 
 .mask {
   position: relative;
@@ -255,13 +255,13 @@ button.white {
 }
   /* Default height for small devices */
   #intro-example {
-    height: 400px;
+    height: 250px;
   }
 
   /* Height for devices larger than 992px */
   @media (min-width: 992px) {
     #intro-example {
-      height: 400px;
+      height: 150px;
     }
   }
   
