@@ -282,18 +282,26 @@ const swiper = new Swiper('.newMusicSwiper', {
       spaceBetween: 10,
     },
     320:{
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 10,
     },
     510:{
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 10,
     },
     758:{
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 15,
     },
     900:{
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1020:{
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    1100:{
       slidesPerView: 7,
       spaceBetween: 20,
     }

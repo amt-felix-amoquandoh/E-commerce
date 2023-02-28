@@ -84,12 +84,13 @@ button.white {
   align-items: center;
   justify-content: space-between;
   padding: 10px 80px;
-  background: rgba(147, 147, 147, 0.979);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  background: rgba(121, 120, 120, 0.699);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.123);
   z-index: 999;
   position: sticky;
   top: 0;
   left: 0;
+  height: 75px;
 }
 
 
@@ -213,6 +214,10 @@ button.white {
   background-size: cover;
 } */
 
+.clothingItems{
+  margin-top: -1.5rem;
+}
+
 .mask {
   position: relative;
 }
@@ -222,11 +227,12 @@ button.white {
   background-size: cover;
   position: relative;
   margin-top: -2rem;
-  margin-bottom: -6.2rem;
+  margin-bottom: -11rem;
 }
 
 .text-white{
   min-width: 520px;
+  display: none;
 }
 
 
@@ -273,6 +279,58 @@ button.white {
    color: white;
    margin-top: -5px;
 }
+
+.navSearch{
+  min-width: 520px;
+  margin-top: 15px;
+  margin-left: 50px;
+}
+
+
+.navSearch input {
+  height: 3rem;
+  padding: 0 1.25rem;
+  font-size: 1.1rem;
+  width: 100%;
+  border: 2.5px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.navSearch button {
+  background-color: teal;
+  color: white;
+  white-space: nowrap;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 3rem;
+}
+
+.navSearch button:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.navSearch input:focus {
+  border-top: 2.5px solid rgb(218, 83, 34);
+  border-bottom: 2.5px solid rgb(218, 83, 34);
+  border-left: 2.5px solid rgb(218, 83, 34);;
+}
+
+.navSearch .signUpFrom {
+  display: flex;
+  width: 100%;
+}
+
+.navSearch ion-icon{
+   font-size: 26px;
+   color: white;
+   margin-top: -5px;
+}
+
   /* Default height for small devices */
   #intro-example {
     height: 100px;
@@ -455,65 +513,6 @@ button.white {
   color: rgba(0, 128, 128, 0.88);
   background-color: rgba(154, 204, 187, 0.726);
 } */
-
-.cards-nav {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 102%;
-  transform: translateY(-50%);
-  width: 100%;
-  height: 80px;
- 
-}
-.cards-nav-left, .cards-nav-right {
-  position: absolute;
-  background: transparent;
-  cursor: pointer;
-  width: 48px;
-  height: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: 0.5s ease;
-}
-.cards-nav-left:hover, .cards-nav-right:hover {
-  background: white;
-}
-.cards-nav-left svg, .cards-nav-right svg {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  left: 50%;
-  fill: #090956;
-}
-.cards-nav-left {
-  left: 10;
-  margin-left: -95px;
-}
-.cards-nav-right {
-  right: 10;
-  margin-left: 105px;
-}
-.disabled {
-  pointer-events: none;
-  opacity: 0.25;
-  
-}
-
-
-.carousel-item img {
-  height: 38vh;
-  width: 100%;
-  object-fit: cover;
-}
-
-.carousel-item {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 
 /* Banner styles */
 .banner {
@@ -1218,6 +1217,22 @@ span.price {
 }
 
 @media (max-width: 1420px) {
+  .navItems li a {
+    font-size: 1.2rem;
+  }
+
+  .navSearch{
+    display: none;
+  }
+
+  .navBrandBox .navBrandImage {
+    margin-left: -70px;
+    height: 4.6rem;
+  }
+
+  .text-white{
+    display: block;
+  }
   .card .product {
     margin: 5px;
     width: 24%;
@@ -1232,7 +1247,27 @@ span.price {
 }
 
 @media (max-width: 1210px) {
+  .bg-image{
+    margin-top: -2rem;
+    margin-bottom: -8rem;
+  }
+  
+  .navItems li a {
+    font-size: 1rem;
+  }
 
+  .navSearch{
+    display: none;
+  }
+
+  .navBrandBox .navBrandImage {
+    margin-left: -70px;
+    height: 4.6rem;
+  }
+
+  .text-white{
+    display: block;
+  }
 
   .card .product {
     margin: 5px;
@@ -1247,6 +1282,19 @@ span.price {
     font-size: 1rem;
   }
 
+  .navSearch{
+    display: none;
+  }
+
+  .navBrandBox .navBrandImage {
+    margin-left: -70px;
+    height: 4.6rem;
+  }
+
+  .text-white{
+    display: block;
+  }
+
   .card .product {
     margin: 5px;
     width: 30%;
@@ -1258,7 +1306,14 @@ span.price {
     right: 155px;
     bottom: 3px;
   }
+
+  .bg-image{
+    margin-top: -2rem;
+    margin-bottom: -8rem;
+  }
 }
+
+@media (max-width: 830px) {}
 
 @media (max-width: 830px) {
   body {
@@ -1270,6 +1325,11 @@ span.price {
 
   .text-white{
     min-width: 420px;
+    display: block;
+  }
+
+  .navSearch{
+    display: none;
   }
 
   .bg-image{
@@ -1512,6 +1572,11 @@ span.price {
 
   .text-white{
     min-width: 350px;
+    display: block;
+  }
+
+  .navSearch{
+    display: none;
   }
 
   .bg-image{
