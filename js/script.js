@@ -260,7 +260,7 @@ const swiper = new Swiper('.newMusicSwiper', {
   slidesPreview: 1,
   spaceBetween: 20,
   autoplay: {
-     delay: 7500,
+     delay: 17500,
      disableOnInteraction: false,
   }, 
 
