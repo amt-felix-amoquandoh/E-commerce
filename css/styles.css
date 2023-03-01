@@ -84,7 +84,7 @@ button.white {
   align-items: center;
   justify-content: space-between;
   padding: 10px 80px;
-  background: rgba(121, 120, 120, 0.699);
+  background: rgba(121, 120, 120, 0.76);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.123);
   z-index: 999;
   position: sticky;
@@ -215,7 +215,7 @@ button.white {
 } */
 
 .clothingItems{
-  margin-top: -1.8rem;
+  margin-top: -2rem;
 }
 
 .mask {
@@ -419,7 +419,7 @@ button.white {
   min-width: 14rem;
   height: 21.8rem;
   padding: 10px;
-  border: 2px solid rgba(2, 156, 156, 0.308);
+  border: 2px solid rgba(2, 156, 156, 0.014);
   border-radius: 25px;
   cursor: pointer;
   margin: 15px 0px;
@@ -463,7 +463,7 @@ button.white {
   font-size: 16px;
   font-weight: lighter;
   white-space: pre-wrap;
-  margin-top: 4px;
+  margin-top: 9px;
 }
 
 .card .product .description .stars {
@@ -489,10 +489,10 @@ button.white {
   border-radius: 2px;
   letter-spacing: -1px;
   background-color: transparent;
-  color: rgba(235, 84, 84, 0.918);
+  color: rgb(47, 80, 170);
   position: absolute;
   bottom: 10px;
-  right: 18px;
+  right: 68px;
   padding-top: 3px;
   padding-left: 5px;
   padding-right: 5px;
@@ -504,15 +504,10 @@ button.white {
   font-size: 24px;
 }
 
-.card .product .proCart ion-icon:hover {
-  font-size: 30px;
-  transition: ease-in-out;
+.card .product .priceBtns .proCart:hover {
+  color: rgb(172, 98, 0);
+  background-color: rgb(214, 214, 214);
 }
-
-/* .card .product .priceBtns .proCart:hover {
-  color: rgba(0, 128, 128, 0.88);
-  background-color: rgba(154, 204, 187, 0.726);
-} */
 
 /* Banner styles */
 .banner {
@@ -605,7 +600,6 @@ button.white {
 .swiper {
   margin: 70px;
 }
-
 
 /* .swipeButtons{
   

@@ -20,7 +20,7 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/shop.css" />
   </head>
   <body>
     <!-- Project starts here-->
@@ -37,7 +37,7 @@
       </div>
       <div>
         <ul class="navItems" id="navItems">
-          <li><a href="./index.html">Shop</a></li>
+          <li><a href="./index.html" class="active">Shop</a></li>
           <li class="dropdown"><a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="">categories</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="./electro.html">Electronics</a></li>
@@ -77,7 +77,7 @@
             </a>
           </li>
           <li>
-            <button class="cartTransBtn">
+            <button class="cartTransBtn" onclick="displayCartOverlay()">
               <div class="cartBox">
                 <div>
                   <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
@@ -102,7 +102,10 @@
       </div>
       <div id="mobile" class="mobileNav">
         <div>
-          <button class="mobileCart cartTransBtn">
+          <button
+            class="mobileCart cartTransBtn"
+            onclick="displayCartOverlay()"
+          >
             <div>
               <img src="./img/icons/shop-bag.png" class="shopIcon" alt="" />
             </div>
@@ -123,170 +126,90 @@
     </section>
     <!-- Navbar and Header Section Ends here -->
 
-    <!--  -->
-    <section id="checkout">
-      <div class="row checkout">
-        <div class="col-75">
-          <div class="container">
-            <form action="/action_page.php">
-              <div class="row">
-                <div class="col-50">
-                  <h3>Billing Address</h3>
-                  <label for="fname"
-                    ><i class="fa fa-user"></i> Full Name</label
-                  >
-                  <input
-                    type="text"
-                    id="fname"
-                    name="firstname"
-                    placeholder="John M. Doe"
-                  />
-                  <label for="email"
-                    ><i class="fa fa-envelope"></i> Email</label
-                  >
-                  <input
-                    type="text"
-                    id="email"
-                    name="email"
-                    placeholder="john@example.com"
-                  />
-                  <label for="adr"
-                    ><i class="fa fa-address-card-o"></i> Address</label
-                  >
-                  <input
-                    type="text"
-                    id="adr"
-                    name="address"
-                    placeholder="542 W. 15th Street"
-                  />
-                  <label for="city"
-                    ><i class="fa fa-institution"></i> City</label
-                  >
-                  <input
-                    type="text"
-                    id="city"
-                    name="city"
-                    placeholder="New York"
-                  />
-
-                  <div class="row">
-                    <div class="col-50">
-                      <label for="state">State</label>
-                      <input
-                        type="text"
-                        id="state"
-                        name="state"
-                        placeholder="NY"
-                      />
-                    </div>
-                    <div class="col-50">
-                      <label for="zip">Zip</label>
-                      <input
-                        type="text"
-                        id="zip"
-                        name="zip"
-                        placeholder="10001"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-50">
-                  <h3>Payment</h3>
-                  <label for="fname">Accepted Cards</label>
-                  <div class="icon-container">
-                    <i class="fa fa-cc-visa" style="color: navy"></i>
-                    <i class="fa fa-cc-amex" style="color: blue"></i>
-                    <i class="fa fa-cc-mastercard" style="color: red"></i>
-                    <i class="fa fa-cc-discover" style="color: orange"></i>
-                  </div>
-                  <label for="cname">Name on Card</label>
-                  <input
-                    type="text"
-                    id="cname"
-                    name="cardname"
-                    placeholder="John More Doe"
-                  />
-                  <label for="ccnum">Credit card number</label>
-                  <input
-                    type="text"
-                    id="ccnum"
-                    name="cardnumber"
-                    placeholder="1111-2222-3333-4444"
-                  />
-                  <label for="expmonth">Exp Month</label>
-                  <input
-                    type="text"
-                    id="expmonth"
-                    name="expmonth"
-                    placeholder="September"
-                  />
-                  <div class="row">
-                    <div class="col-50">
-                      <label for="expyear">Exp Year</label>
-                      <input
-                        type="text"
-                        id="expyear"
-                        name="expyear"
-                        placeholder="2018"
-                      />
-                    </div>
-                    <div class="col-50">
-                      <label for="cvv">CVV</label>
-                      <input
-                        type="text"
-                        id="cvv"
-                        name="cvv"
-                        placeholder="352"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <label>
-                <input type="checkbox" checked="checked" name="sameadr" />
-                Shipping address same as billing
-                </label>
-                <button type="button" class="btn checkoutBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Continue to
-                  checkout</button>
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Checkout Successful</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                       <img src="./img/icons/check.gif" class="img-fluid" alt="">
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              
-            </form>
+    <!-- Single products section begins here -->
+    <section id="productDetails" class="productDetails section-p1 section-m1">
+      <div class="singleProductImgs">
+        <img src="./img/single products/shoe1.jpg" id="mainProduct" width="100%" height="500px" alt=""/>
+        <div class="typesGroup">
+          <div class="typesCol">
+            <img src="./img/single products/shoe1.jpg" width="100%" class="typesImg" alt="">
+          </div>
+          <div class="typesCol">
+            <img src="./img//single products/shoe2.jpg" width="100%" class="typesImg" alt="">
+          </div>
+          <div class="typesCol">
+            <img src="./img/single products/shoe3.jpg" width="100%" class="typesImg" alt="">
+          </div>
+          <div class="typesCol">
+            <img src="./img/single products/shoe4.jpg" width="100%" class="typesImg" alt="">
           </div>
         </div>
-        <div class="col-25">
-          <div class="container">
-            <h3>Your Cart</h3>
-            <div class="overlayCartContent">
-              <!-- <div class="cartItem">
-              
-            </div> -->
-            </div>
-            <div class="cartFooter">
-              <h3>Total : Ghc <span class="ItemsTotal">0</span></h3>
-            </div>
-            </div>
-          </div>
-        </div>
+      </div>
+
+      <div class="productDesc" id="proDescription">
+        <h6>Suit / Classic</h6>
+        <h4>Classic Styled Siuts</h4>
+        <h2>Ghc 477.99</h2>
+        <select name="" id="">
+          <option value="">Select Size</option>
+          <option value="">Small</option>
+          <option value="">Medium</option>
+          <option value="">Large</option>
+          <option value="">Extra Large</option>
+        </select>
+        <input type="number" value="1" />
+        <button class="basic">Add to Cart</button>
+        <h4>Product Details</h4>
+        <span
+          >For those who don’t want to overthink the process, a classic fit suit
+          is a way to go. This type of suit for men is comfortable in feel and
+          unfettered in design, this suit style provides breathability without
+          resorting to a loose or unkempt aesthetic–they don’t call it “classic”
+          for nothing. An easy choice if you want something that’s perfect for
+          the office Monday to Friday, but with a suit jacket that can be put
+          with chinos for a smart casual weekend look. It’s safe to say, classic
+          suits will never go out of style.</span
+        >
+      </div>
     </section>
-    <!--  -->
+  
+    <!-- Single products section ends here -->
 
+   <!-- Single products section begins here -->
+   <section id="products" class="products section-p1 section-m1">
+    <h1 class="headings">Other Products</h1>
+    <div class="productsBox" id="productsBox">
+      
+    </div>
+  </section>
+  <!-- Single products section ends here -->
+
+    <!-- cart overlay -->
+    <section id="cartOverlay">
+      <div class="cartOverlay">
+        <div class="cart">
+          <div class="miniCart">
+            <h2>Your Cart</h2>
+            <span class="closeCart">
+              <ion-icon size="large" name="close-circle-outline"></ion-icon>
+            </span>
+          </div>
+          <div class="overlayCartContent">
+            <!-- <div class="cartItem">
+                
+              </div> -->
+          </div>
+          <div class="cartFooter">
+            <h3>Total : Ghc <span class="ItemsTotal">0</span></h3>
+            <button class="cartFooterButton">Clear Cart</button>
+            <button class="checkoutButton">
+              <a href="./checkout.html">Checkout</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- cartoverlay ends here -->
 
     <!-- newsletter section -->
     <section id="newsletter" class="newsletter section-p1 section-m1">
@@ -400,6 +323,6 @@
     integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
     crossorigin="anonymous"
   ></script>
+  <script type="text/javascript" src="./js/singlePro.js"></script>
   <script type="text/javascript" src="./js/display.js"></script>
-  <script type="text/javascript" src="./js/script.js"></script>
 </html>

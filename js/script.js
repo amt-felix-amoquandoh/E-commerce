@@ -28,7 +28,7 @@ function displayCartOverlay(){
 class Products {
   async getProducts(){
     try {
-      let result = await fetch("indexShop.json");
+      let result = await fetch("shop.json");
       let data = await result.json();
       let products = data.items;
       products = products.map(item => {
@@ -59,8 +59,8 @@ class UI {
           <span class="itemTitle">${product.title}</span> 
           <h5>${product.description}</h5>         
         </div>
+        <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
         <div class="priceBtns">
-        
         <!--  -->
         </div>    
       </div>     
@@ -69,6 +69,7 @@ class UI {
       <!-- single product ends here -->
       `      
     });
+    
     // productArea.firstElementChild.innerHTML = itemResult;
     electroProductsBox.innerHTML = itemResult;
     // persProductsBox.firstElementChild.innerHTML = itemResult;
