@@ -1,82 +1,71 @@
-// // shop variables
-// const electroSwiper = document.getElementById("electroSwiper-wrapper");
 
-
-// // getting electroproducts implementation below
-// class electroProducts {
-//   async getelectroProducts(){
-//     try {
-//       let result = await fetch("electro.json");
-//       let data = await result.json();
-//       let electroproducts = data.items;
-//       electroproducts = electroproducts.map(item => {
-//         const {title, price, description} = item.fields;
-//         const {id} = item.sys;
-//         const image = item.fields.image.fields.file.url;
-//         return {title, price, description, id, image};
-//       })
-//       return electroproducts;
-//     } catch (error) {
-//       console.log(error);      
-//     }
-//   }
-// }
-
-// // display electroproducts implementation
-// class electroUI {
-//   loadAllelectroproducts(electroproducts){
-//     let itemResult = "";
-//     electroproducts.forEach(product => {
-//       itemResult += `
-//       <!-- single Product -->
-//       <div class="swiper-slide">
-//       <div class="card">
-//       <div class="product">
-//       <img class="itemImage" src=${product.image} />
-//         <div class="description">
-//           <span class="itemTitle">${product.title}</span> 
-//           <h5>${product.description}</h5>         
-//         </div>
-//         <div class="priceBtns">
-        
-//         <!--  -->
-//         </div>    
-//       </div>     
-//       </div> 
-//       </div>  
-//       <!-- single product ends here -->
+async function displayData() {
+  try {
+    const response = await fetch('../../electro.json');
+    const data = await response.json();
+    let products = data.items;
+    products = products.map(item => {
+      const {title, price, description} = item.fields;
+      const {id} = item.sys;
+      const image = item.fields.image.fields.file.url;
+      return {title, price, description, id, image};
+    })
     
-//       <!-- single product ends here -->
-//       `      
+
+    const itemsContainer = document.querySelector('#electroSwiper-wrapper');
+    itemsContainer.innerHTML = '';
+
+    data.items.forEach(item => {
+      const itemElement = document.createElement('div');
+      itemElement.classList.add('swiper-slide"');
+      itemElement.innerHTML = `
+      <!-- single Product -->
+     
+      <div class="card">
+      <div class="product">
+      <img class="itemImage" src=${item.image} />
+        <div class="description">
+          <span class="itemTitle">${item.title}</span> 
+          <h5>${item.description}</h5>         
+        </div>
+        <div class="priceBtns">
+        
+        <!--  -->
+        </div>    
+      </div>     
+      </div> 
+      </div>  
+      <!-- single product ends here -->
+      `;
+      itemsContainer.appendChild(itemElement);
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+
+displayData();
+
+// async function displayData() {
+//   try {
+//     const response = await fetch('data.json');
+//     const data = await response.json();
+
+//     const itemsContainer = document.querySelector('#electroSwiper-wrapper');
+//     itemsContainer.innerHTML = '';
+
+//     data.items.forEach(({ fields: { title, description, image: { fields: { file: { url } } } } }) => {
+//       const itemElement = document.createElement('div');
+//       itemElement.classList.add('item');
+//       itemElement.innerHTML = `
+//         <h2>${title}</h2>
+//         <p>${description}</p>
+//         <img src="${url}" alt="${title}">
+//       `;
+//       itemsContainer.appendChild(itemElement);
 //     });
-//     electroSwiper.innerHTML = itemResult;
+//   } catch (error) {
+//     console.error(error);
 //   }
-
-//   setApplication(){
-//     cartBasket = Storage.getItemsFromCart(); 
-//     this.setCartItemValues(cartBasket);
-//     this.populateCart(cartBasket);
-//     closeCartBtn.addEventListener("click", this.hideCart)
 // }
-  
-//   }
-
-  
- 
-
-
-// // DOM load event 
-// document.addEventListener("DOMContentLoaded", ()=>{
-//   const electroui = new UI();
-//   const electroproducts = new electroProducts();
-//   // application setup
-//   electroui.setApplication();
-//   //get product items
-//   electroproducts.getelectroProducts().then(electroproducts => {
-//     electroui.loadAllelectroproducts(electroproducts);
-//   }).then( () => {
-//     electroui.getAddToCartBtns();
-//     electroui.cartLogic();
-//   });
-// })
-

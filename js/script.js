@@ -260,7 +260,7 @@ const swiper = new Swiper('.newMusicSwiper', {
   slidesPreview: 1,
   spaceBetween: 20,
   autoplay: {
-     delay: 17500,
+     delay: 27500,
      disableOnInteraction: false,
   }, 
 
@@ -302,6 +302,18 @@ const swiper = new Swiper('.newMusicSwiper', {
       spaceBetween: 20,
     },
     1100:{
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    1210:{
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    1300:{
+      slidesPerView: 6,
+      spaceBetween: 20,
+    },
+    1400:{
       slidesPerView: 7,
       spaceBetween: 20,
     }
