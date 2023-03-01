@@ -498,6 +498,7 @@ button.white {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  background-color: rgb(214, 214, 214);
 }
 
 .proBanner .promoBox {
