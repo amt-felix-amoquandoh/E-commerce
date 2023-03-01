@@ -515,20 +515,6 @@ button.white {
   padding: 20px;
 }
 
-.productBanners .bannerBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: center;
-  min-width: 26%;
-  height: 26vh;
-  background-size: cover;
-  background-position: center;
-  padding: 20px;
-}
-
-
 .promo {
   background-image: url("../img/page-backgrounds/access.jpg");
 }
