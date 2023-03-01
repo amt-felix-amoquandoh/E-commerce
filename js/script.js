@@ -28,7 +28,7 @@ function displayCartOverlay(){
 class Products {
   async getProducts(){
     try {
-      let result = await fetch("shop.json");
+      let result = await fetch("indexShop.json");
       let data = await result.json();
       let products = data.items;
       products = products.map(item => {
@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   });
 })
 
-const swiper = new Swiper('.newMusicSwiper', {
+const mainSwiper = new Swiper('.newMusicSwiper', {
   // Optional parameters
   slidesPreview: 1,
   spaceBetween: 20,
@@ -319,6 +319,8 @@ const swiper = new Swiper('.newMusicSwiper', {
     }
   },
 });
+
+
 
 
 
