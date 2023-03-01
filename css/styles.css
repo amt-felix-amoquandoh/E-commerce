@@ -227,12 +227,11 @@ button.white {
   background-size: cover;
   position: relative;
   margin-top: -2rem;
-  margin-bottom: -11rem;
+  margin-bottom: -6rem;
 }
 
 .text-white{
   min-width: 520px;
-  display: none;
 }
 
 
@@ -280,56 +279,7 @@ button.white {
    margin-top: -5px;
 }
 
-.navSearch{
-  min-width: 520px;
-  margin-top: 15px;
-  margin-left: 50px;
-}
 
-
-.navSearch input {
-  height: 3rem;
-  padding: 0 1.25rem;
-  font-size: 1.1rem;
-  width: 100%;
-  border: 2.5px solid transparent;
-  border-radius: 8px;
-  outline: none;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.navSearch button {
-  background-color: teal;
-  color: white;
-  white-space: nowrap;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  height: 3rem;
-}
-
-.navSearch button:hover {
-  background-color: black;
-  color: white;
-  border: 1px solid white;
-}
-
-.navSearch input:focus {
-  border-top: 2.5px solid rgb(218, 83, 34);
-  border-bottom: 2.5px solid rgb(218, 83, 34);
-  border-left: 2.5px solid rgb(218, 83, 34);;
-}
-
-.navSearch .signUpFrom {
-  display: flex;
-  width: 100%;
-}
-
-.navSearch ion-icon{
-   font-size: 26px;
-   color: white;
-   margin-top: -5px;
-}
 
   /* Default height for small devices */
   #intro-example {
@@ -426,7 +376,7 @@ button.white {
   transition: 0.3s ease;
 }
 
-.card .product:active {
+.shopNow:active {
   transform: translateY(5px);
 }
 
@@ -544,7 +494,7 @@ button.white {
   color: whitesmoke;
 }
 
-.proBanner {
+.proBanner, .productBanners {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -556,19 +506,38 @@ button.white {
   justify-content: center;
   align-items: flex-start;
   text-align: center;
-  min-width: 650px;
-  height: 28vh;
+  min-width: 26%;
+  height: 26vh;
   background-size: cover;
   background-position: center;
-  margin: 60px 0;
-  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 20px;
 }
+
+.productBanners .bannerBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  min-width: 26%;
+  height: 26vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
 
 .promo {
   background-image: url("../img/page-backgrounds/access.jpg");
 }
 
 .promo1 {
+  background-image: url("../img/page-backgrounds/banner.jpg");
+}
+
+.promo2 {
   background-image: url("../img/page-backgrounds/banner.jpg");
 }
 
@@ -615,8 +584,8 @@ button.white {
   justify-content: center;
   align-items: flex-start;
   text-align: center;
-  min-width: 30%;
-  height: 20vh;
+  min-width: 26%;
+  height: 26vh;
   background-size: cover;
   background-position: center;
   margin-bottom: 10px;
@@ -627,6 +596,7 @@ button.white {
   background-image: url("../img/page-backgrounds/banner0.jpg");
 }
 .productBanner2 {
+  width: 26%;
   background-image: url("../img/page-backgrounds/banner2.jpg");
 }
 .productBanner3 {
