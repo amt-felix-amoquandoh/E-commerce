@@ -84,7 +84,7 @@ button.white {
   align-items: center;
   justify-content: space-between;
   padding: 10px 80px;
-  background: rgba(121, 120, 120, 0.76);
+  background: rgb(158, 158, 158);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.123);
   z-index: 999;
   position: sticky;
@@ -195,7 +195,7 @@ button.white {
 }
 
 /* Cover section Styling */
-/* .bg-image:before {
+.bg-image:before {
   content: ' ';
   display: block;
   position: absolute;
@@ -204,18 +204,18 @@ button.white {
   width: 100%;
   height: 100%;
   opacity: 0.55;
-  background-image: linear-gradient(
-    98deg,
-    rgba(235, 72, 63, 0.459),
-    rgba(247, 176, 53, 0.5)
-  ),  url('../img/categoreis/electro/camera.jpg');
-  background-repeat: no-repeat;
+  background-color: rgb(214, 214, 214);
   background-position: 50% 0;
   background-size: cover;
-} */
+}
 
 .clothingItems{
   margin-top: -2rem;
+  margin-bottom: -3.2rem;
+}
+
+.homeSwiper{
+  height: 21rem;
 }
 
 .mask {
@@ -226,12 +226,13 @@ button.white {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  margin-top: -2rem;
+  margin-top: -2.5rem;
   margin-bottom: -6rem;
 }
 
 .text-white{
   min-width: 520px;
+  margin-top: 0.2rem;
 }
 
 
@@ -337,9 +338,11 @@ button.white {
 .cards-wrapper {
   position: relative;
   top: 80%;
-  transform: translateY(10%);
+ 
   margin-bottom: 50px;
-  
+  border: 1px solid gold;
+  margin-left: 28px;
+  margin-right: 80px;
 }
 
 .cards {
@@ -367,7 +370,7 @@ button.white {
   position: relative;
   width: 15%;
   min-width: 14rem;
-  height: 21.8rem;
+  height: 18.6rem;
   padding: 10px;
   border: 2px solid rgba(2, 156, 156, 0.014);
   border-radius: 25px;
@@ -386,7 +389,7 @@ button.white {
 
 .card .product img {
   width: 100%;
-  height: 12.5rem;
+  height: 10rem;
   transition: all 1s;
   border-radius: 20px;
   object-fit: cover;
@@ -407,8 +410,7 @@ button.white {
   background-color: rgb(87, 86, 86);
 }
 
-.card .product .description h5 {
-  padding-bottom: 4px;
+.card .product .description h5 {  
   color: #000000;
   font-size: 16px;
   font-weight: lighter;
@@ -426,12 +428,12 @@ button.white {
 }
 
 .card .product .priceBtns h4 {
-  font-size: 18px;
+  font-size: 0.8rem;
   font-weight: 700;
   color: rgb(172, 98, 0);
   position: absolute;
-  bottom: 5px;
-  right: 175px;
+  bottom: 16.5px;
+  right: 130px;
   text-align: start;
 }
 
@@ -458,6 +460,56 @@ button.white {
   color: rgb(172, 98, 0);
   background-color: rgb(214, 214, 214);
 }
+
+.cards-nav {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	height: 80px;
+}
+
+.cards-nav-left,
+.cards-nav-right {
+	position: absolute;
+	background: rgba(255,255,255,.66);
+	cursor: pointer;
+	width: 48px;
+	height: 72px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: .5s ease;
+}
+
+.cards-nav-left,.cards-nav-right:hover {
+  background: white;
+}
+
+.cards-nav-left, .cards-nav-right svg {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 180px;
+  left: 50%;
+  fill: #090956;
+}
+
+.cards-nav-left {
+	left: 0;
+}
+
+.cards-nav-right {
+	right: 0;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.25;
+  
+}
+
 
 /* Banner styles */
 .banner {
@@ -514,6 +566,7 @@ button.white {
   margin-top: 40px;
   margin-bottom: 20px;
   padding: 20px;
+  box-shadow: 0 5px 15px rgba(8, 8, 8, 0.425);
 }
 
 .promo {
@@ -557,14 +610,26 @@ button.white {
   margin: 70px;
 }
 
-/* .swipeButtons{
-  
-}*/
+.swipeButtons{
+  width: 40px;
+  height: 40px;
+}
 
 .swiper-button-next,
 .swiper-button-prev{
-  margin: 0px -0.6rem;
+  background: rgba(255,255,255,.66);
+	cursor: pointer;
+	width: 48px;
+	height: 72px;
+  color: black;
 } 
+
+.swiper-button-next,
+.swiper-button-prev:hover{
+  background: rgba(255, 255, 255, 0.808);
+	
+} 
+
 .productBanners .bannerBox {
   display: flex;
   flex-direction: column;
@@ -577,6 +642,7 @@ button.white {
   background-position: center;
   margin-bottom: 10px;
   padding: 20px;
+  box-shadow: 0 5px 15px rgba(8, 8, 8, 0.425);
 }
 
 .productBanner1 {

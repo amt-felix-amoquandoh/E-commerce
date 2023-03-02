@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   });
 })
 
-const mainSwiper = new Swiper('.newMusicSwiper', {
+const mainSwiper = new Swiper('.homeSwiper', {
   // Optional parameters
   slidesPreview: 1,
   spaceBetween: 20,
