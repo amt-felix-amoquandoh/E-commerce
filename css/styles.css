@@ -70,6 +70,10 @@ button.white {
   margin: 40px 0;
 }
 
+.marginSides{
+  margin: 0 80px;
+}
+
 .cartTransBtn {
   background: transparent;
   border: none;
