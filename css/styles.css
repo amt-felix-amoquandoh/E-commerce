@@ -338,9 +338,8 @@ button.white {
 .cards-wrapper {
   position: relative;
   top: 80%;
- 
+  overflow-x: hidden;
   margin-bottom: 50px;
-  border: 1px solid gold;
   margin-left: 28px;
   margin-right: 80px;
 }
@@ -358,7 +357,7 @@ button.white {
 
 .card {
   width: 17.6rem;
-  height: 25rem;  
+  height: 19rem;  
   display: inline-block;
   position: relative;
   left: 0;
@@ -370,8 +369,8 @@ button.white {
   position: relative;
   width: 15%;
   min-width: 14rem;
-  height: 18.6rem;
-  padding: 10px;
+  height: 17.8rem;
+  padding: 5px;
   border: 2px solid rgba(2, 156, 156, 0.014);
   border-radius: 25px;
   cursor: pointer;
@@ -432,7 +431,7 @@ button.white {
   font-weight: 700;
   color: rgb(172, 98, 0);
   position: absolute;
-  bottom: 16.5px;
+  bottom: 6px;
   right: 130px;
   text-align: start;
 }
@@ -489,15 +488,19 @@ button.white {
 .cards-nav-left, .cards-nav-right svg {
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-20%, -50%);
   width: 50px;
-  height: 180px;
+  height: 80px;
   left: 50%;
   fill: #090956;
 }
 
 .cards-nav-left {
 	left: 0;
+}
+
+.cards-nav-left svg{
+  margin-top: 15px;
 }
 
 .cards-nav-right {
@@ -518,9 +521,10 @@ button.white {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url("../img/page-backgrounds/banner3.jpg");
+  background-image: url("../img/page-backgrounds/new2.jpg");
+  object-fit: contain;
   width: 100%;
-  height: 40vh;
+  height: 26vh;
   background-size: cover;
   background-position: center;
   margin: 30px 0;
@@ -615,6 +619,10 @@ button.white {
   height: 40px;
 }
 
+.swiper-button-prev{
+  margin-left: -0.2rem;
+}
+
 .swiper-button-next,
 .swiper-button-prev{
   background: rgba(255,255,255,.66);
@@ -633,9 +641,9 @@ button.white {
 .productBanners .bannerBox {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: flex-start;
-  text-align: center;
+  text-align: start;
   min-width: 26%;
   height: 26vh;
   background-size: cover;
@@ -644,6 +652,10 @@ button.white {
   padding: 20px;
   box-shadow: 0 5px 15px rgba(8, 8, 8, 0.425);
 }
+
+/* .productBanner1, .productBanner2, .productBanner3::before{
+  opacity: 0.6;
+} */
 
 .productBanner1 {
   background-image: url("../img/page-backgrounds/banner0.jpg");
@@ -659,7 +671,7 @@ button.white {
 .productBanners h2 {
   color: #fff;
   font-weight: 900;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
 }
 
 .productBanners h3 {
