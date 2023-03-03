@@ -1411,6 +1411,10 @@ span.price {
 }
 
 @media (max-width: 1130px) {
+  button.white {
+    font-size: 1rem;
+    padding: 4px 8px;
+  }
   .navItems li a {
     font-size: 1rem;
   }
@@ -1598,8 +1602,16 @@ span.price {
     padding-bottom: -50px;
   }
 
-  .card{
-    margin-bottom: -50px;
+  .homeSwiper{
+    margin: 50px 10px 0px 10px;
+  }
+
+  .cards-wrapper{
+    margin: 8px 30px 8px -25px;
+  }
+
+  .product .card{
+     margin: 0px -5px;
   }
  
   .cards-nav-left, .cards-nav-right {
@@ -1607,15 +1619,14 @@ span.price {
   }
 
   .card .product {
-    margin: 5px;
-    width: 32%;
-    height: 20rem;
+    width: 22%;
+    height: 17rem;
     box-shadow: none;
     border: 2px solid rgba(187, 187, 187, 0.74);
   }
 
   .card .product img {
-    height: 10.5rem;
+    height: 8.5rem;
   }
 
   .card .product .priceBtns .proCart {
@@ -1709,9 +1720,17 @@ span.price {
   .foot {
     margin-bottom: -30px;
   }
+  .swiper-button-next,
+  .swiper-button-prev{
+   display: none;
+  } 
 }
 
 @media (max-device-width: 480px) {
+  .swiper-button-next,
+.swiper-button-prev{
+ display: none;
+} 
   .header {
     padding-top: 10px;
     padding-bottom: 10px;
