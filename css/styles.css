@@ -1490,7 +1490,7 @@ span.price {
   }
 
   .section-p1 {
-    padding: 60px 30px;
+    padding: 30px 30px;
   }
 
   .navItems {
@@ -1595,9 +1595,9 @@ span.price {
 
   .cards-wrapper{
     overflow-wrap: normal;
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden;
-    margin-bottom: 5px;
+   
     scroll-behavior: smooth;
     padding-bottom: -50px;
   }
@@ -1654,6 +1654,7 @@ span.price {
 
   .banner {
     height: 22vh;
+    margin-top: -1rem;
   }
 
   .banner h4 {
@@ -1677,16 +1678,14 @@ span.price {
     height: 5.8rem;
   }
 
-  .proBanner .promoBox {
-    min-width: 100%;
-    height: 30vh;
-    margin-top: -20px;
-    margin-left: 0;
-    margin-right: 0;
+  .proBanner{
+    margin-top: -4.2rem;
   }
 
-  .productBanners {
-    padding: 0 30px;
+  .proBanner .promoBox {
+    
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .productBanners .bannerBox {
