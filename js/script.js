@@ -315,7 +315,7 @@ const mainSwiper = new Swiper('.homeSwiper', {
       spaceBetween: 20,
     },
     1400:{
-      slidesPerView: 5,
+      slidesPerView: 6,
       spaceBetween: 20,
     }
   },
