@@ -525,7 +525,7 @@ button.white {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url("../img/page-backgrounds/online.jpgyoof");
+  background-image: url("../img/page-backgrounds/banner0.jpg");
   object-fit: contain;
   width: 100%;
   height: 26vh;
@@ -554,12 +554,36 @@ button.white {
   color: whitesmoke;
 }
 
-.proBanner, .productBanners {
+.proBanner {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   background-color: rgb(214, 214, 214);
+  margin-top: 1rem;
 }
+
+.proBanner .container-fluid{
+  margin-top: 4rem;
+  margin-bottom: -3rem;
+  background-color: rgb(214, 214, 214);
+}
+
+.proBanner .promoCard{
+  box-shadow: 0 5px 15px rgba(8, 8, 8, 0.425);
+  padding: 0.8rem 1rem;
+  background: white;
+  height: 18rem;
+  width: auto;
+}
+
+.proBanner .promoCard:hover{
+  transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+}
+
 
 .proBanner .promoBox {
   display: flex;
@@ -567,14 +591,10 @@ button.white {
   justify-content: center;
   align-items: flex-start;
   text-align: center;
-  min-width: 26%;
-  height: 26vh;
   background-size: cover;
   background-position: center;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  padding: 20px;
-  box-shadow: 0 5px 15px rgba(8, 8, 8, 0.425);
+  padding: 25px;  
+  height: 12rem;
 }
 
 .promo {
@@ -582,11 +602,15 @@ button.white {
 }
 
 .promo1 {
-  background-image: url("../img/page-backgrounds/banner.jpg");
+  background-image: url("../img/home/saver.png");
 }
 
 .promo2 {
   background-image: url("../img/page-backgrounds/banner.jpg");
+}
+
+.promo3 {
+  background-image: url("../img/home/money.png");
 }
 
 .proBanner h4 {
@@ -596,7 +620,7 @@ button.white {
 }
 
 .proBanner h2 {
-  color: white;
+  color: #977d56;
   font-size: 30px;
   font-weight: 800;
 }
@@ -610,9 +634,63 @@ button.white {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-top: -100px;
+  background-color: rgb(214, 214, 214);
 }
 
+.productBanners .container-fluid{
+ background-color: rgb(214, 214, 214);
+}
+
+.productBanners .promoCard{
+  box-shadow: 0 5px 15px rgba(8, 8, 8, 0.425);
+  padding: 0.8rem 1rem;
+  background: white;
+  height: 18rem;
+}
+
+.productBanners .promoCard:hover{
+ 
+}
+.productBanners h2 {
+  color: #ff3f3f;
+  font-weight: 900;
+  font-size: 2.2rem;
+}
+
+.cardTitle{
+  text-transform: uppercase;
+}
+
+.productBanners h3 {
+  
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+.productBanners .promoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  padding: 25px;  
+  height: 12rem;
+}
+
+.productBanner1 {
+  background-image: url("../img/home/quick.png");
+}
+.productBanner2 {
+  background-image: url("../img/page-backgrounds/bannerOther.jpg");
+}
+.productBanner3 {
+  background-image: url("../img/home/help.png");
+}
+.productBanner4 {
+  background-image: url("../img/page-backgrounds/new2.jpg");
+}
 
 .swiper {
   margin: 70px;
@@ -642,47 +720,7 @@ button.white {
 	
 } 
 
-.productBanners .bannerBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: flex-start;
-  text-align: start;
-  min-width: 26%;
-  height: 26vh;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 10px;
-  padding: 20px;
-  box-shadow: 0 5px 15px rgba(8, 8, 8, 0.425);
-}
 
-/* .productBanner1, .productBanner2, .productBanner3::before{
-  opacity: 0.6;
-} */
-
-.productBanner1 {
-  background-image: url("../img/page-backgrounds/banner0.jpg");
-}
-.productBanner2 {
-  width: 26%;
-  background-image: url("../img/page-backgrounds/banner2.jpg");
-}
-.productBanner3 {
-  background-image: url("../img/page-backgrounds/bannerOther.jpg");
-}
-
-.productBanners h2 {
-  color: #fff;
-  font-weight: 900;
-  font-size: 2.2rem;
-}
-
-.productBanners h3 {
-  color: #ff3f3f;
-  font-weight: 800;
-  font-size: 1.8rem;
-}
 
 .newsletter {
   display: flex;
@@ -1243,6 +1281,7 @@ span.price {
 /* Media queries for standar devices */
 /* Tablet view */
 @media (max-width: 1510px) {
+ 
   .card .product .priceBtns h4 {
     right: 130px;
     bottom: 3px;
@@ -1250,6 +1289,10 @@ span.price {
 }
 
 @media (max-width: 1420px) {
+
+  .productBanners h2 {
+    display: none;
+  }
   .navItems li a {
     font-size: 1.2rem;
   }
@@ -1279,10 +1322,29 @@ span.price {
   }
 }
 
-@media (max-width: 1210px) {
+@media (max-width: 1210px) {  
+  
+  .marginSides{
+    margin: 0 20px;
+  }
+
+
   .bg-image{
     margin-top: -2rem;
     margin-bottom: -8rem;
+  }
+  
+  .proBanner{
+    margin-top: 3rem;
+  }
+
+  .proBanner, .productBanners .promoBox{
+    height: auto;
+    width: auto;
+  }
+  
+  .productBanners h2 {
+    display: none;
   }
   
   .navItems li a {

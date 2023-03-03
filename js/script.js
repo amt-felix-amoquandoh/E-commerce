@@ -291,7 +291,7 @@ const mainSwiper = new Swiper('.homeSwiper', {
       spaceBetween: 10,
     },
     758:{
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 15,
     },
     900:{
@@ -299,11 +299,11 @@ const mainSwiper = new Swiper('.homeSwiper', {
       spaceBetween: 20,
     },
     1020:{
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 20,
     },
     1100:{
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 20,
     },
     1210:{
