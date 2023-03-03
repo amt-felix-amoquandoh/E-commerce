@@ -1289,7 +1289,35 @@ span.price {
 }
 
 @media (max-width: 1420px) {
+  .section-p1{
+    padding: 40px 10px;
+  }
+  .marginSides{
+    margin: 0 8px;
+  }
 
+  .cardTitle{
+    font-size: 1rem;
+  }
+  
+  .proBanner{
+    margin-top: 3rem;
+  }
+
+  .proBanner .promoBox{
+    height: 10rem;
+    width: auto;
+  }
+
+  .productBanners .promoBox{
+    height: 10rem;
+    width: auto;
+  }
+  
+  .productBanners h2 {
+    display: none;
+  }
+  
   .productBanners h2 {
     display: none;
   }
@@ -1323,12 +1351,17 @@ span.price {
 }
 
 @media (max-width: 1210px) {  
-  
+  .section-p1{
+    padding: 40px 10px;
+  }
   .marginSides{
-    margin: 0 20px;
+    margin: 0 8px;
   }
 
-
+  .cardTitle{
+    font-size: 1rem;
+  }
+  
   .bg-image{
     margin-top: -2rem;
     margin-bottom: -8rem;
@@ -1338,8 +1371,13 @@ span.price {
     margin-top: 3rem;
   }
 
-  .proBanner, .productBanners .promoBox{
-    height: auto;
+  .proBanner .promoBox{
+    height: 10rem;
+    width: auto;
+  }
+
+  .productBanners .promoBox{
+    height: 10rem;
     width: auto;
   }
   
@@ -1406,11 +1444,26 @@ span.price {
     margin-top: -2rem;
     margin-bottom: -8rem;
   }
+  .marginSides{
+    margin: 0 10px; 
+  }
+
+  .section-p1{
+    padding: 40px 10px;
+  }
 }
 
-@media (max-width: 830px) {}
+@media (max-width: 930px) {
+  .marginSides{
+    margin: 0 10px; 
+  }
+}
 
 @media (max-width: 830px) {
+  .marginSides{
+    margin: 0 10px; 
+  }
+
   body {
     min-width: 100vw;
     padding: 0;
