@@ -1823,6 +1823,7 @@ span.price {
     width: 13rem;
     height: 17rem;  
     margin: 0px -10px;
+    box-shadow: 0 5px 15px rgba(153, 153, 153, 0.425);
   }
 
   .card .product .description .stars {
@@ -1885,6 +1886,11 @@ span.price {
     margin-top: 30px;
   }
 
+  .swiper-wrapper .card{
+    width: 11.4rem;
+    height: 14rem;  
+  }
+
   .swiper-wrapper .card .product .description{ 
     margin-top: 5px;
   }
@@ -1917,7 +1923,6 @@ span.price {
     min-width: 11rem;
     height: 13.5rem;
     border: none;
-    box-shadow: 0 5px 15px rgba(153, 153, 153, 0.425);
   }
 
   .card .product .priceBtns h4 {

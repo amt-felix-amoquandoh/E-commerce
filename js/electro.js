@@ -24,6 +24,14 @@ function displayCartOverlay(){
 // getting products implementation below
 class Products {
   async getProducts(){
+    // try {
+    //   const result = await fetch("https://jsonplaceholder.typicode.com/photos");
+    //   const data = await result.json();
+    //   console.log(data);
+    //   const products = data.map((item) => {
+    //     const { id, albumId, title, url } = item;
+    //     return { title, price: albumId, description: title, id, image: url };
+    //   });
     try {
       let result = await fetch("electro.json");
       let data = await result.json();
