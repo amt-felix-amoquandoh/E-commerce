@@ -1,12 +1,11 @@
-let shop = document.getElementById("firstRow");
-
+let Indexshop = document.getElementById("secondRow");
 
 
 // getting products implementation below
-class IndexProducts {
+class MoreProducts {
   async getProducts(){
     try {
-      let result = await fetch("health.json");
+      let result = await fetch("footwear.json");
       let data = await result.json();
       let products = data.items;
       products = products.map(item => {
@@ -23,11 +22,11 @@ class IndexProducts {
 }
 
 // display products implementation
-class IndexUI {
-  loadAllIndexProducts(products){
-    let indexItemResult = "";
+class MoreUI {
+  loadAllMoreProducts(products){
+    let moreItemResult = "";
     products.forEach(product => {
-      indexItemResult += `
+      moreItemResult += `
       <!-- single Product -->
       <div class="card">
       <div class="product">
@@ -47,18 +46,18 @@ class IndexUI {
       `      
     });
     
-    shop.innerHTML = indexItemResult;
+    Indexshop.innerHTML = moreItemResult;
   }
 }
 
 // DOM load event 
 document.addEventListener("DOMContentLoaded", ()=>{
-  const ui = new IndexUI();
-  const products = new IndexProducts();
+  const ui = new MoreUI();
+  const products = new MoreProducts();
 
   //get product items
   products.getProducts().then(products => {
-    ui.loadAllIndexProducts(products);
+    ui.loadAllMoreProducts(products);
     Storage.saveCartItems(products);
   })
 })
