@@ -25,7 +25,7 @@ function displayCartOverlay(){
 class Products {
   async getProducts(){
     try {
-      const result = await fetch("http://35.193.69.137:8000")
+      const result = await fetch("http://35.193.69.137:8000/api/suit/")
       const data = await result.json();
       console.log(data);
       const products = data.map((item) => {
