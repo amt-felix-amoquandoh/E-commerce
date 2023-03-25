@@ -24,24 +24,24 @@ function displayCartOverlay(){
 // getting products implementation below
 class Products {
   async getProducts(){
-    try {
-      const result = await fetch("http://35.193.69.137:8000/api/suit/")
-      const data = await result.json();
-      console.log(data);
-      const products = data.map((item) => {
-        const { name, category_id, ratings, description, price, in_cart, image, category, created_at  } = item;
-        return { title: name, price, description, id: category_id, image, ratings };
-      });
     // try {
-    //   let result = await fetch("electro.json");
-    //   let data = await result.json();
-    //   let products = data.items;
-    //   products = products.map(item => {
-    //     const {title, price, description} = item.fields;
-    //     const {id} = item.sys;
-    //     const image = item.fields.image.fields.file.url;
-    //     return {title, price, description, id, image};
-    //   })
+    //   const result = await fetch("http://35.193.69.137:8000/api/suit/")
+    //   const data = await result.json();
+    //   console.log(data);
+    //   const products = data.map((item) => {
+    //     const { name, category_id, ratings, description, price, in_cart, image, category, created_at  } = item;
+    //     return { title: name, price, description, id: category_id, image, ratings };
+    //   });
+    try {
+      let result = await fetch("electro.json");
+      let data = await result.json();
+      let products = data.items;
+      products = products.map(item => {
+        const {title, price, description} = item.fields;
+        const {id} = item.sys;
+        const image = item.fields.image.fields.file.url;
+        return {title, price, description, id, image};
+      })
       return products;
     } catch (error) {
       console.log(error);      
