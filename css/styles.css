@@ -97,6 +97,9 @@ button.white {
   height: 75px;
 }
 
+.flag{
+  margin-right: -50px;
+}
 
 .navBrandBox {
   display: flex;
