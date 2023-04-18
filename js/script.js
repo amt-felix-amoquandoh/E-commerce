@@ -12,22 +12,7 @@ const cartItemsQuantity = document.getElementById("itemsUpdate");
 const mobileItemsQuantity = document.getElementById("mobileItemsUpdate");
 const cartTotal = document.querySelector(".ItemsTotal");
 const overlayCartContent = document.querySelector(".overlayCartContent");
-const showModalBtn = document.querySelector('#show-modal-btn');
-const modalContainer = document.querySelector('.modalContainer');
-const closeModalBtn = document.querySelector('#close-modal-btn');
 
-function displayModalOverlay(){
-  modalContainer.classList.toggle('showModal');
-}
-
-
-// showModalBtn.addEventListener('click', ()=>{
-//     modalContainer.classList.add('show-modal');
-// });
-
-// closeModalBtn.addEventListener('click', ()=>{
-//     modalContainer.classList.remove('show-modal');
-// })
 //cart
 let cartBasket = [];
 
