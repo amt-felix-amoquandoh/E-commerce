@@ -18,6 +18,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
   </head>
   <body>
     <!-- Project starts here-->
@@ -74,7 +75,73 @@
             </a> 
           </li>
           <li class="">
-            <ion-icon size="large" name="person-circle"></ion-icon>
+            <button onclick="displayModalOverlay()" id="show-modal-btn"><ion-icon size="large" name="person-circle"></ion-icon></button>
+
+    <div class="modalContainer ">
+        <div class="loginModal">
+            <div class="modalHeader">
+                <span></span>
+                <h3><i>Happy Shopping</i></h3>
+                <button id="close-modal-btn">
+                    &#10060;
+                </button>
+            </div>
+            <div class="modalDescription">
+                <form  id="create-account-form" action="result.html" method="">
+                    <div class="inputGroup mediaSignIn">
+                        <div class="mainTitle">Login with</div>
+                        <div class="Option1">
+                          <div class="btnGoogle">
+                            <img src="./img/google.png" class="mediaIcons" alt="google" />
+                            Sign Up
+                          </div>
+                        </div>
+            
+                      </div>
+                    <div class="title">
+                        <h2>Create Account</h2>
+                    </div>
+                    <!-- USERNAME -->
+                    <div class="inputGroup">
+                        <label for="username">Name</label>
+                        <input type="text" id="username" placeholder="Name" name="username">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Error Message</p>
+                    </div>
+                    <!-- EMAIL -->
+                    <div class="inputGroup">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Email" name="email">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Error Message</p>
+                    </div>
+                    <!-- PASSWORD -->
+                    <div class="inputGroup">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Password" name="password">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Error Message</p>
+                    </div>
+                    <!-- CONFIRM PASSWORD -->
+                    <div class="inputGroup">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" placeholder="Password" name="confirmpassword">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Error Message</p>
+                    </div>
+                    <!-- <div class="option2">Or</div> -->
+                   
+            
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
           </li>
           <li>
             <button class="cartTransBtn" onclick="displayCartOverlay()">
@@ -519,206 +586,7 @@
 </section>
 <!-- Single products section ends here -->
 
-<section id="products" class="products marginSides" style="margin-top: 5rem;">
-  <div class="cards-wrapper">
-<div class="cards cardRow" id="cards">
-  <div class="">
-    <!-- single Product -->
-    <div class="card">
-      <div class="product">
-      <img class="itemImage" src="./img/categoreis/electro/controller.jpg" />
-        <div class="description">
-          <span class="itemTitle">${product.title}</span> 
-          <h5>${product.description}</h5>         
-        </div>
-        <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
-        <div class="priceBtns">
-        <!--  -->
-        </div>    
-      </div>     
-      </div>   
-<!-- single product ends here -->
-<!-- single Product -->
-<div class="card">
-  <div class="product">
-  <img class="itemImage" src="./img/categoreis/electro/tv.jpg" />
-    <div class="description">
-      <span class="itemTitle">${product.title}</span> 
-      <h5>${product.description}</h5>         
-    </div>
-    <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
-    <div class="priceBtns">
-    <!--  -->
-    </div>    
-  </div>     
-  </div>  
-<!-- single product ends here -->
-<!-- single Product -->
-<div class="card">
-  <div class="product">
-  <img class="itemImage" src="./img/categoreis/electro/vacuum.jpg" />
-    <div class="description">
-      <span class="itemTitle">${product.title}</span> 
-      <h5>${product.description}</h5>         
-    </div>
-    <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
-    <div class="priceBtns">
-    <!--  -->
-    </div>    
-  </div>     
-  </div>    
-<!-- single product ends here -->
-<!-- single Product -->
-<div class="card">
-  <div class="product">
-  <img class="itemImage" src="./img/categoreis/foot/foot9.jpg" />
-    <div class="description">
-      <span class="itemTitle">${product.title}</span> 
-      <h5>${product.description}</h5>         
-    </div>
-    <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
-    <div class="priceBtns">
-    <!--  -->
-    </div>    
-  </div>     
-  </div>  
-<!-- single product ends here -->
-<!-- single Product -->
-<div class="card">
-  <div class="product">
-  <img class="itemImage" src="./img/categoreis/health/pers12.jpg" />
-    <div class="description">
-      <span class="itemTitle">${product.title}</span> 
-      <h5>${product.description}</h5>         
-    </div>
-    <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
-    <div class="priceBtns">
-    <!--  -->
-    </div>    
-  </div>     
-  </div>  
-<!-- single product ends here -->
-<!-- single Product -->
-<div class="card">
-  <div class="product">
-  <img class="itemImage" src="./img/categoreis/foot/foot8.jpg" />
-    <div class="description">
-      <span class="itemTitle">${product.title}</span> 
-      <h5>${product.description}</h5>         
-    </div>
-    <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
-    <div class="priceBtns">
-    <!--  -->
-    </div>    
-  </div>     
-  </div>  
-<!-- single product ends here -->
-<!-- single Product -->
-<div class="card">
-  <div class="product">
-  <img class="itemImage" src="./img/categoreis/electro/earphones.jpg" />
-    <div class="description">
-      <span class="itemTitle">${product.title}</span> 
-      <h5>${product.description}</h5>         
-    </div>
-    <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
-    <div class="priceBtns">
-    <!--  -->
-    </div>    
-  </div>     
-  </div>  
-<!-- single product ends here -->
-<!-- single Product -->
-<div class="card">
-  <div class="product">
-  <img class="itemImage" src="./img/categoreis/electro/earphones.jpg" />
-    <div class="description">
-      <span class="itemTitle">${product.title}</span> 
-      <h5>${product.description}</h5>         
-    </div>
-    <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
-    <div class="priceBtns">
-    <!--  -->
-    </div>    
-  </div>     
-  </div>  
-<!-- single product ends here -->
-<!-- single Product -->
-<div class="card">
-  <div class="product">
-  <img class="itemImage" src="./img/categoreis/electro/earphones.jpg" />
-    <div class="description">
-      <span class="itemTitle">${product.title}</span> 
-      <h5>${product.description}</h5>         
-    </div>
-    <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
-    <div class="priceBtns">
-    <!--  -->
-    </div>    
-  </div>     
-  </div>  
-<!-- single product ends here -->
-<!-- single Product -->
-<div class="card">
-  <div class="product">
-  <img class="itemImage" src="./img/categoreis/electro/earphones.jpg" />
-    <div class="description">
-      <span class="itemTitle">${product.title}</span> 
-      <h5>${product.description}</h5>         
-    </div>
-    <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
-    <div class="priceBtns">
-    <!--  -->
-    </div>    
-  </div>     
-  </div>  
-<!-- single product ends here -->
-<!-- single Product -->
-<div class="card">
-  <div class="product">
-  <img class="itemImage" src="./img/categoreis/electro/earphones.jpg" />
-    <div class="description">
-      <span class="itemTitle">${product.title}</span> 
-      <h5>${product.description}</h5>         
-    </div>
-    <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
-    <div class="priceBtns">
-    <!--  -->
-    </div>    
-  </div>     
-  </div>  
-<!-- single product ends here -->
-<!-- single Product -->
-<div class="card">
-  <div class="product">
-  <img class="itemImage" src="./img/categoreis/electro/earphones.jpg" />
-    <div class="description">
-      <span class="itemTitle">${product.title}</span> 
-      <h5>${product.description}</h5>         
-    </div>
-    <a class="shopNow" onclick="window.location.href='categories.html'">Shop Now</a>
-    <div class="priceBtns">
-    <!--  -->
-    </div>    
-  </div>     
-  </div>  
-<!-- single product ends here -->
-  </div>
-  <div class="cardRow1"></div>
-</div>
-<div class="cards-nav"><span class="cards-nav-left disabled">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
-      <path d="M0 0h24v24H0z" fill="none"></path>
-    </svg></span><span class="cards-nav-right">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-      <path d="M0 0h24v24H0z" fill="none"></path>
-    </svg></span>
-  </div>
-</div>
 
-</section>
 
  <!-- Single products section begins here -->
  <section style="background-color: beige;" id="products" class="products section-p1">
