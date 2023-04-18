@@ -9,6 +9,11 @@ const cartItemsQuantity = document.getElementById("itemsUpdate");
 const mobileItemsQuantity = document.getElementById("mobileItemsUpdate");
 const cartTotal = document.querySelector(".ItemsTotal");
 const overlayCartContent = document.querySelector(".overlayCartContent");
+const userIcon = document.getElementById("userIcon");
+
+userIcon.addEventListener("click", function() {
+    alert("Add Products and Checkout to Login")
+} )
 
 //cart
 let cartBasket = [];

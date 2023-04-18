@@ -12,7 +12,11 @@ const cartItemsQuantity = document.getElementById("itemsUpdate");
 const mobileItemsQuantity = document.getElementById("mobileItemsUpdate");
 const cartTotal = document.querySelector(".ItemsTotal");
 const overlayCartContent = document.querySelector(".overlayCartContent");
+const userIcon = document.getElementById("userIcon");
 
+userIcon.addEventListener("click", function() {
+    alert("Add Products and Checkout to Login")
+} )
 //cart
 let cartBasket = [];
 
@@ -202,7 +206,7 @@ class UI {
     selectedItems.forEach(id => this.removeItem(id));
 
     while (overlayCartContent.children.length > 0) {
-      overlayCartContent.removeChild(overlayCartContent.children[0])      
+      overlayCartContent.removeChild(overlayCartContent.children[0]);    
     }
     this.hideCart();
   } 

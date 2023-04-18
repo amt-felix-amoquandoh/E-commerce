@@ -78,6 +78,12 @@ button.white {
   background: transparent;
   border: none;
   outline: none;
+  margin-right: 0.8rem;
+}
+
+.cartTransBtn ion-icon{
+  color: teal;
+  margin-bottom: -10px;
 }
 
 /* Homepage Styles */
@@ -178,9 +184,14 @@ button.white {
 .shopIcon {
   height: 2rem;
   width: auto;
-  margin-top: -4px;
-  margin-left: -15px;
+  margin-top: -6.5px;
+
   transition: 0.3s ease-out;
+}
+
+#userIcon{
+  margin-left: -25px;
+  color: rgb(2, 34, 34);
 }
 
 .mobileMenuClose {
