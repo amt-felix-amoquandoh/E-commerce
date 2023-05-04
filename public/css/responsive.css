@@ -1,0 +1,753 @@
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+/* Media queries for standar devices */
+/* Tablet view */
+@media (max-width: 1510px) {
+  .card .product .priceBtns h4 {
+    right: 130px;
+    bottom: 3px;
+  }
+}
+
+@media (max-width: 1420px) {
+  .section-p1 {
+    padding: 40px 10px;
+  }
+  .marginSides {
+    margin: 0 8px;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .proBanner {
+    margin-top: 3rem;
+  }
+
+  .proBanner .promoBox {
+    height: 10rem;
+    width: auto;
+  }
+
+  .productBanners .promoBox {
+    height: 10rem;
+    width: auto;
+  }
+
+  .productBanners h2 {
+    display: none;
+  }
+
+  .productBanners h2 {
+    display: none;
+  }
+  .navItems li a {
+    font-size: 1.2rem;
+  }
+
+  .navSearch {
+    display: none;
+  }
+
+  .navBrandBox .navBrandImage {
+    margin-left: -70px;
+    height: 4.6rem;
+  }
+
+  .text-white {
+    display: block;
+  }
+  .card .product {
+    margin: 5px;
+    width: 24%;
+    box-shadow: none;
+    border: 2px solid rgba(187, 187, 187, 0.74);
+  }
+
+  .card .product .priceBtns h4 {
+    right: 220px;
+    bottom: 3px;
+  }
+}
+
+@media (max-width: 1210px) {
+  .cards-wrapper {
+    margin-top: 30px;
+  }
+
+  .section-p1 {
+    padding: 40px 10px;
+  }
+  .marginSides {
+    margin: 0 8px;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .bg-image {
+    margin-top: -2rem;
+    margin-bottom: -8rem;
+  }
+
+  .proBanner {
+    margin-top: 3rem;
+  }
+
+  .proBanner .promoBox {
+    height: 10rem;
+    width: auto;
+  }
+
+  .productBanners .promoBox {
+    height: 10rem;
+    width: auto;
+  }
+
+  .productBanners h2 {
+    display: none;
+  }
+
+  .navItems li a {
+    font-size: 1rem;
+  }
+
+  .navSearch {
+    display: none;
+  }
+
+  .navBrandBox .navBrandImage {
+    margin-left: -70px;
+    height: 4.6rem;
+  }
+
+  .text-white {
+    display: block;
+  }
+
+  .card .product {
+    margin: 5px;
+    width: 24%;
+    box-shadow: none;
+    border: 2px solid rgba(187, 187, 187, 0.74);
+  }
+}
+
+@media (max-width: 1130px) {
+  button.white {
+    font-size: 1rem;
+    padding: 4px 8px;
+  }
+  .navItems li a {
+    font-size: 1rem;
+  }
+
+  .navSearch {
+    display: none;
+  }
+
+  .navBrandBox .navBrandImage {
+    margin-left: -70px;
+    height: 4.6rem;
+  }
+
+  .text-white {
+    display: block;
+  }
+
+  .card .product {
+    margin: 5px;
+    width: 30%;
+    box-shadow: none;
+    border: 2px solid rgba(187, 187, 187, 0.74);
+  }
+
+  .card .product .priceBtns h4 {
+    right: 155px;
+    bottom: 3px;
+  }
+
+  .bg-image {
+    margin-top: -2rem;
+    margin-bottom: -8rem;
+  }
+  .marginSides {
+    margin: 0 10px;
+  }
+
+  .section-p1 {
+    padding: 40px 10px;
+  }
+}
+
+@media (max-width: 930px) {
+  .marginSides {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 830px) {
+  .marginSides {
+    margin: 0 10px;
+  }
+
+  body {
+    min-width: 100vw;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .text-white {
+    min-width: 420px;
+    display: block;
+  }
+
+  .navSearch {
+    display: none;
+  }
+
+  .bg-image {
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+  }
+
+  .section-p1 {
+    padding: 30px 30px;
+  }
+
+  .navItems {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: rgb(147, 147, 147);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 16px;
+    transition: 0.3s;
+  }
+
+  .navItems.active {
+    right: 0px;
+  }
+
+  .navItems.hide {
+    right: -300px;
+  }
+
+  .navBrandBox .navBrandImage {
+    margin-left: -60px;
+    height: 4.6rem;
+  }
+
+  .navBrandBoxMobile .navBrandImage {
+    margin-left: -10px;
+    height: 4.6rem;
+  }
+
+  .navBrandBoxMobile span {
+    font-size: 1.4rem;
+  }
+
+  .navBrandBox span i {
+    font-size: 1.3rem;
+  }
+
+  .mobileCart {
+    position: relative;
+  }
+
+  .navItems li {
+    margin-bottom: 25px;
+  }
+
+  .mobileNav {
+    display: flex;
+    align-items: center;
+    margin-right: -45px;
+  }
+
+  .mobileNav ion-icon {
+    color: black;
+    margin-left: 10px;
+  }
+
+  .mobileMenuClose {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #222;
+    margin-top: -12px;
+  }
+
+  .coverContent {
+    margin-top: 50px;
+    position: relative;
+    padding: 0;
+  }
+
+  .coverContent h3 {
+    color: #f50303;
+    font-weight: bold;
+  }
+
+  .coverContent h2 {
+    font-size: 2.1rem;
+    color: rgb(228, 221, 212);
+  }
+  .coverContent h5 {
+    color: rgb(228, 221, 212);
+    font-size: 1.2rem;
+  }
+  .cover button {
+    padding: 10px 50px 10px 35px;
+  }
+
+  .products .homeCategory {
+    text-align: center;
+    margin-top: 18px;
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: -5px;
+  }
+
+  .cards-wrapper {
+    overflow-wrap: normal;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+    padding-bottom: -50px;
+  }
+
+  .homeSwiper {
+    margin: 50px 10px 0px 10px;
+  }
+
+  .cards-wrapper {
+    margin: 8px 30px 8px -25px;
+  }
+
+  .products {
+    margin-top: 1rem;
+  }
+
+  .product .card {
+    margin: 0px -5px;
+  }
+
+  .cards-nav-left,
+  .cards-nav-right {
+    display: none;
+  }
+
+  .card .product {
+    width: 22%;
+    height: 17rem;
+    box-shadow: none;
+    border: 2px solid rgba(187, 187, 187, 0.74);
+  }
+
+  .card .product img {
+    height: 8.5rem;
+  }
+
+  .card .product .priceBtns .proCart {
+    bottom: 10px;
+    right: 20px;
+    font-size: small;
+  }
+
+  .card .product .description h5 {
+    margin: 5px;
+    color: rgb(75, 73, 73);
+    line-height: 18px;
+    font-size: smaller;
+    text-align: start;
+  }
+
+  .card .product .description span {
+    text-align: start;
+  }
+
+  .card .product .priceBtns h4 {
+    right: 148px;
+    bottom: -4px;
+    text-align: start;
+  }
+
+  .banner {
+    height: 22vh;
+    margin-top: -1rem;
+  }
+
+  .banner h4 {
+    font-size: 1.5rem;
+  }
+
+  .banner h2 {
+    font-size: 2.6rem;
+  }
+
+  footer {
+    padding: 0;
+  }
+
+  footer .navBrandBox {
+    margin-left: 25px;
+    margin-bottom: 15px;
+  }
+
+  footer .navBrandBox .footerBrandImage {
+    height: 5.8rem;
+  }
+
+  .proBanner {
+    margin-top: -4.2rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .proBanner .promoBox {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .productBanners .bannerBox {
+    width: 30%;
+  }
+
+  footer .footCol {
+    margin-bottom: 20px;
+  }
+
+  .installBrandImage {
+    height: 5.5rem;
+    margin: -20px;
+  }
+
+  footer .socialSection ion-icon {
+    color: #202020;
+    display: inline-block;
+
+    font-size: 24px;
+  }
+
+  .section-m1 {
+    margin: 0;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+@media (max-device-width: 480px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+  .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: -20px;
+  }
+
+  .text-white {
+    min-width: 350px;
+    display: block;
+  }
+
+  .navSearch {
+    display: none;
+  }
+
+  .bg-image {
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+  }
+
+  .navBrandBoxMobile {
+    margin-left: 45px;
+  }
+
+  .header .navBrandImage {
+    margin-left: -80px;
+    height: 5rem;
+  }
+
+  .navBrandBox span i {
+    font-size: 1.1rem;
+  }
+
+  .mobileCart {
+    position: relative;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 55px;
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 55px;
+  }
+
+  .shopCover {
+    height: 15vh;
+  }
+
+  .cover h4 {
+    padding-bottom: 0px;
+  }
+
+  .products {
+    padding: 0 5px;
+    margin-top: 62px;
+  }
+
+  .cards-wrapper {
+    overflow-x: scroll;
+    margin-bottom: -55px;
+    margin-top: 30px;
+    margin-left: 5px;
+    padding: 0;
+  }
+
+  .cards {
+    width: 14rem;
+  }
+
+  .card {
+    width: 13rem;
+    height: 17rem;
+    margin: 0px -10px;
+    box-shadow: 0 5px 15px rgba(153, 153, 153, 0.425);
+  }
+
+  .card .product .description .stars {
+    margin-bottom: 3px;
+    margin-top: -2px;
+  }
+
+  .productIntro {
+    margin-top: 8px;
+  }
+
+  .products h2 {
+    margin-bottom: 3px;
+    margin-top: 25px;
+  }
+
+  .card .product .proCart {
+    bottom: 7px;
+    right: 14px;
+    font-size: smaller;
+    padding: 0px 5px;
+  }
+
+  .products .productsBox {
+    margin-bottom: 80px;
+    border-bottom: none;
+  }
+
+  .products .productsBox .card {
+    height: 17rem;
+    width: 14.6rem;
+  }
+
+  .products .productsBox .card .product {
+    height: 16.6rem;
+    width: auto;
+  }
+
+  .products .productsBox .card .product .priceBtns h4 {
+    right: 140px;
+    font-size: large;
+    bottom: 5px;
+  }
+
+  .products .productsBox .card .product .description {
+    margin-top: 5px;
+  }
+
+  .products .productsBox .card .product .description h5 {
+    margin-top: 3px;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .products .productsBox .card .product .shopNow {
+    bottom: 8px;
+  }
+
+  .swiper-wrapper {
+    margin-top: 30px;
+  }
+
+  .swiper-wrapper .card {
+    width: 11.4rem;
+    height: 14rem;
+  }
+
+  .swiper-wrapper .card .product .description {
+    margin-top: 5px;
+  }
+
+  .swiper-wrapper .card .product .description h5 {
+    display: none;
+  }
+
+  .card .product img {
+    height: 8rem;
+  }
+
+  .card .product .description {
+    margin-top: -15px;
+  }
+
+  .card .product .description h5 {
+    text-align: center;
+    margin-top: -1.5px;
+  }
+
+  .card .product .description span {
+    background-color: rgba(255, 255, 255, 0.815);
+    padding-top: 1px;
+    color: #2c2a24;
+  }
+
+  .card .product {
+    width: 22%;
+    min-width: 11rem;
+    height: 13.5rem;
+    border: none;
+  }
+
+  .card .product .priceBtns h4 {
+    right: 98px;
+    bottom: 0px;
+    font-size: small;
+  }
+
+  .banner {
+    height: 40vh;
+  }
+
+  .banner h4 {
+    font-size: 1.4rem;
+    background-color: #1a1a1a;
+    padding: 8px 12px;
+  }
+
+  .banner h2 {
+    font-size: 2rem;
+  }
+
+  .marginSides {
+    margin: 0 10px;
+  }
+
+  .proBanner {
+    display: none;
+  }
+
+  .promoCard {
+    margin: 10px;
+  }
+
+  /*  */
+  .shopCover {
+    margin-bottom: -10px;
+    height: 30vh;
+  }
+
+  .carousel-caption h2,
+  .electroCover h2,
+  .personalCover h2,
+  .footWearCover h2,
+  .aboutCover h2,
+  .clothingCover h2 {
+    font-size: 1.8rem;
+    line-height: 25px;
+  }
+
+  .carousel-caption h5,
+  .electroCover h5,
+  .personalCover h5,
+  .footWearCover h5,
+  .aboutCover h5,
+  .clothingCover h5 {
+    color: rgb(24, 24, 24);
+    font-size: 1rem;
+  }
+
+  .carousel-caption,
+  .aboutCoverContent,
+  .electroCoverContent,
+  .personalCoverContent,
+  .footWearCoverContent,
+  .clothingCoverContent {
+    padding: 10px;
+    background-color: #818181f1;
+  }
+
+  .productDetails {
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+  }
+
+  .productDetails .singleProductImgs {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  #mainProduct {
+    height: 400px;
+  }
+
+  .productDetails .productDesc {
+    width: 100%;
+  }
+
+  .section-m1 {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cart {
+    width: 30vw;
+    min-width: 450px;
+  }
+
+  .closeCart {
+    font-size: 1.7rem;
+    cursor: pointer;
+  }
+
+  .cart h2 {
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-bottom: 2rem;
+  }
+}
