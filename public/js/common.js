@@ -5,6 +5,7 @@ const closeCartBtn = document.querySelector(".closeCart");
 const ClearCartBtn = document.querySelector(".cartFooterButton");
 const cartArea = document.querySelector(".cart");
 const cartOverlay = document.querySelector(".cartOverlay");
+
 const cartItemsQuantity = document.getElementById("itemsUpdate");
 const mobileItemsQuantity = document.getElementById("mobileItemsUpdate");
 const cartTotal = document.querySelector(".ItemsTotal");
@@ -20,148 +21,6 @@ function displayCartOverlay() {
   cartOverlay.classList.toggle("transparentBack");
   cartArea.classList.toggle("showCart");
 }
-
-let durationButton = document.getElementById("durationSortBtn");
-let durationOptions = document.getElementsByClassName("sortOptions")[0];
-
-durationButton.addEventListener("click", () => {
-  durationOptions.classList.toggle("sortOptions_active");
-});
-
-//...
-let newUploads = document.getElementById("newest");
-let lowestPrice = document.getElementById("lowPrice");
-let highestPrice = document.getElementById("highest");
-let clothesOnly = document.getElementById("clothes");
-let accessOnly = document.getElementById("accessories");
-let sportsOnly = document.getElementById("sportwear");
-let lingerie = document.getElementById("lingerie");
-let pillowOnly = document.getElementById("pillow");
-let womenOnly = document.getElementById("women");
-let menOnly = document.getElementById("men");
-let allKids = document.getElementById("allKids");
-
-clothesOnly.addEventListener("click", async () => {
-  clothesOnly.classList.toggle("i_active");
-  clothesOnly.classList.toggle("bi-toggle2-off");
-  clothesOnly.classList.toggle("bi-toggle2-on");
-  // clothesOnly.title = "clothesOff";
-
-  const products = await new Products().getProducts();
-  const ui = new UI();
-  ui.filterProducts(products, "clothes");
-});
-
-accessOnly.addEventListener("click", async () => {
-  accessOnly.classList.toggle("i_active");
-  accessOnly.classList.toggle("bi-toggle2-off");
-  accessOnly.classList.toggle("bi-toggle2-on");
-  // accessOnly.title = "clothesOff";
-
-  const products = await new Products().getProducts();
-  const ui = new UI();
-  ui.filterProducts(products, "accessories");
-});
-
-sportsOnly.addEventListener("click", async () => {
-  sportsOnly.classList.toggle("i_active");
-  sportsOnly.classList.toggle("bi-toggle2-off");
-  sportsOnly.classList.toggle("bi-toggle2-on");
-  // sportsOnly.title = "clothesOff";
-
-  const products = await new Products().getProducts();
-  const ui = new UI();
-  ui.filterProducts(products, "sportswear");
-});
-
-lingerie.addEventListener("click", async () => {
-  lingerie.classList.toggle("i_active");
-  lingerie.classList.toggle("bi-toggle2-off");
-  lingerie.classList.toggle("bi-toggle2-on");
-  // lingerie.title = "clothesOff";
-
-  const products = await new Products().getProducts();
-  const ui = new UI();
-  ui.filterProducts(products, "lingerie");
-});
-
-pillowOnly.addEventListener("click", async () => {
-  pillowOnly.classList.toggle("i_active");
-  pillowOnly.classList.toggle("bi-toggle2-off");
-  pillowOnly.classList.toggle("bi-toggle2-on");
-  // pillowOnly.title = "clothesOff";
-
-  const products = await new Products().getProducts();
-  const ui = new UI();
-  ui.filterProducts(products, "pillow");
-});
-
-womenOnly.addEventListener("click", async () => {
-  womenOnly.classList.toggle("i_active");
-  womenOnly.classList.toggle("bi-toggle2-off");
-  womenOnly.classList.toggle("bi-toggle2-on");
-  // womenOnly.title = "clothesOff";
-
-  const products = await new Products().getProducts();
-  const ui = new UI();
-  ui.filterProducts(products, "women");
-});
-
-menOnly.addEventListener("click", async () => {
-  menOnly.classList.toggle("i_active");
-  menOnly.classList.toggle("bi-toggle2-off");
-  menOnly.classList.toggle("bi-toggle2-on");
-  // menOnly.title = "clothesOff";
-
-  const products = await new Products().getProducts();
-  const ui = new UI();
-  ui.filterProducts(products, "men");
-});
-
-allKids.addEventListener("click", async () => {
-  allKids.classList.toggle("i_active");
-  allKids.classList.toggle("bi-toggle2-off");
-  allKids.classList.toggle("bi-toggle2-on");
-  // allKids.title = "clothesOff";
-
-  const products = await new Products().getProducts();
-  const ui = new UI();
-  ui.filterProducts(products, "kids");
-});
-
-newUploads.addEventListener("click", async () => {
-  durationButton.innerHTML = `
-        <h5>Sort By: Newest</h5>
-        <ion-icon name="chevron-down-outline"></ion-icon>
-       `;
-  durationOptions.classList.toggle("sortOptions_active");
-
-  const products = await new Products().getProducts();
-  const ui = new UI();
-  ui.filterProducts(products, "newest");
-});
-
-lowestPrice.addEventListener("click", async () => {
-  durationButton.innerHTML = `
-        <h5>Sort By: Lowest</h5>
-        <ion-icon name="chevron-down-outline"></ion-icon>
-       `;
-  durationOptions.classList.toggle("sortOptions_active");
-  const products = await new Products().getProducts();
-  const ui = new UI();
-  ui.filterProducts(products, "lowest");
-});
-
-highestPrice.addEventListener("click", async () => {
-  durationButton.innerHTML = `
-        <h5>Sort By: Highest</h5>
-        <ion-icon name="chevron-down-outline"></ion-icon>
-       `;
-  durationOptions.classList.toggle("sortOptions_active");
-  const products = await new Products().getProducts();
-  const ui = new UI();
-  ui.filterProducts(products, "highest");
-});
 
 //...
 // display products implementation
@@ -205,46 +64,6 @@ class Products {
 
 // display products implementation
 class UI {
-  loadAllproducts(products) {
-    let itemResult = "";
-    products.forEach((product) => {
-      itemResult += `
-        <!-- single Product -->
-        <a class="itemCard" data-id="${product.id}">
-          <img src=${product.image} alt="">
-          <h5 class="cardTitle" title="African Print Dress">${product.title}</h5>
-          <p>${product.description}</p>
-          <div class="itemPrice">
-              <h5>$${product.price}</h5>
-          </div>
-          <div class="colorTag">
-          <div class="stars">
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-        </div>
-              <button class="proCart" data-id="${product.id}">Buy</button>
-          </div>
-        </a>
-        <!-- single product ends here -->
-        `;
-      productArea.innerHTML = itemResult;
-    });
-
-    // add event listener to each product item
-    const productCards = document.querySelectorAll(".itemCard");
-    productCards.forEach((card) => {
-      card.addEventListener("click", () => {
-        const productId = card.dataset.id;
-        // retrieve the product object using the ID
-        const product = products.find((p) => p.id === productId);
-        this.displayProductDetails(product);
-      });
-    });
-  }
-
   filterProducts(products, sortBy, category) {
     let sortedProducts = [];
     if (category) {
@@ -509,7 +328,7 @@ class UI {
     cartBasket = Storage.getItemsFromCart();
     this.setCartItemValues(cartBasket);
     this.populateCart(cartBasket);
-    closeCartBtn.addEventListener("click", this.hideCart);
+    // closeCartBtn.addEventListener("click", this.hideCart);
   }
   populateCart(cartBasket) {
     cartBasket.forEach((item) => this.addCartItemToCart(item));
@@ -573,7 +392,7 @@ class UI {
     Storage.saveCart(cartBasket);
     let button = this.getOneButton(id);
     // button.disabled = false;
-    button.innerHTML = `Buy`;
+    // button.innerHTML = `Buy`;
   }
   getOneButton(id) {
     return addButtons.find((button) => button.dataset.id === id);
@@ -612,7 +431,6 @@ document.addEventListener("DOMContentLoaded", () => {
   products
     .getProducts()
     .then((products) => {
-      ui.loadAllproducts(products);
       Storage.saveCartItems(products);
     })
     .then(() => {

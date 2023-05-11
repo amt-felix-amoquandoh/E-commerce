@@ -5,6 +5,7 @@
 @import "./footer.css";
 @import "./products.css";
 @import "./checkout.css";
+@import "./about.css";
 
 * {
   margin: 0;
@@ -18,8 +19,8 @@
   --dark-color: black;
   --darkGrey: #383838;
   --light-color: #fff;
-  --main-color: teal;
-  --secondary-color: Rgb(235, 167, 46);
+  --main-color: rgb(0, 78, 141);
+  --secondary-color: rgb(252, 196, 55);
   --alternate: rgb(223, 192, 163);
   --alternate1: rgb(100, 186, 236);
   --primary-background-color: rgb(2, 42, 102);
@@ -244,7 +245,7 @@ button.white {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url("../img/page-backgrounds/new2.jpg");
+  background-image: url("../img/accessories/7.jpg");
   width: 100%;
   height: 40vh;
   background-size: cover;
@@ -456,6 +457,7 @@ button.white {
   border: none;
   outline: none;
   transition: 0.3s;
+  margin: 10px 1px;
 }
 
 .cartFooterButton:hover {
@@ -499,6 +501,10 @@ button.white {
   .cart {
     width: 25vw;
     min-width: 350px;
+  }
+
+  .checkCart .cart {
+    width: 50vw;
   }
 
   .closeCart {
@@ -941,6 +947,7 @@ button.white {
 
   section .productsBox .mainProArea {
     justify-content: center;
+    margin-top: -30px;
   }
 
   section aside .productsBox {
@@ -1020,25 +1027,21 @@ button.white {
 
   #modal {
     overflow-y: scroll;
-    padding-top: 6.8rem;
+    padding-top: 4.8rem;
   }
 
-  .imageSlider {
-    padding-top: 4rem;
-  }
-
-  .productInfo {
-    width: 100%;
+  #modal .productInfo {
+    width: 90vw;
     flex-wrap: wrap;
     margin: 2rem 3px 1px 1px;
-    padding: 10px;
+    padding: 25px 10px;
   }
 
   .sizeRadioBtn {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 
-    line-height: 50px;
+    line-height: 40px;
 
     font-size: 12px;
   }
@@ -1057,7 +1060,7 @@ button.white {
 
   .imageSlider {
     width: 100%;
-
+    padding-bottom: 0;
     background-position: center;
     margin: 0;
   }
@@ -1065,30 +1068,6 @@ button.white {
   .itemDetails {
     width: 100%;
     margin: 0;
-  }
-
-  /*  */
-  .shopCover h2,
-  .appointCover h2,
-  .aboutCover h2,
-  .ordersCover h2 {
-    margin-bottom: -10px;
-    font-size: 1.5rem;
-  }
-
-  .shopCover h5,
-  .appointCover h5,
-  .aboutCover h5,
-  .ordersCover h5 {
-    color: rgb(24, 24, 24);
-    font-size: 0.8rem;
-  }
-
-  .shopCoverContent,
-  .appointCoverContent,
-  .aboutCoverContent,
-  .ordersCoverContent {
-    padding: 10px;
   }
 
   .productDetails {
@@ -1109,12 +1088,51 @@ button.white {
   .productDetails .productDesc {
     width: 100%;
   }
+
+  #close-modal-btn {
+    position: absolute;
+    top: 80px;
+    right: 25px;
+  }
+
+  .rating img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .cartFooterButton {
+    margin: 10px 1px;
+  }
+  section aside {
+    padding-top: 0px;
+    margin-top: -10px;
+    margin-left: 10px;
+  }
+  section .productsBox section {
+    width: 100%;
+    /* height: 40px; */
+    margin: 0;
+    margin-top: 0spx;
+  }
 }
 
 @media (max-device-width: 380px) {
   #modal .productInfo {
-    padding-top: 15rem;
-    padding-bottom: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    width: 90vw;
+    height: auto;
+  }
+
+  #close-modal-btn {
+    position: absolute;
+    top: 55px;
+    right: 25px;
+    color: #1a1a1a;
+  }
+
+  .rating {
+    font-size: 10px;
   }
 
   .sizeRadioBtn {
@@ -1124,18 +1142,50 @@ button.white {
   }
 
   h2 {
-    font-size: 30px;
+    display: none;
   }
 
   .imageSlider {
-    padding-top: 8rem;
+    padding-top: 6rem;
+    margin-bottom: -30px;
+    height: 300px;
+  }
+
+  .itemPrice {
+    font-size: 20px;
+  }
+
+  .itemDiscount {
+    font-size: 14px;
+  }
+
+  .rating img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .subHeading {
+    font-size: 15px;
   }
 
   .btn {
-    width: 60%;
+    width: 45%;
+    padding: 10px;
+    font-size: 15px;
   }
 
   #modal {
-    margin-top: 3.5rem;
+    margin-top: 2rem;
+  }
+
+  .checkCart {
+    width: 80%;
+  }
+
+  .miniCart h2 {
+    display: block;
+  }
+  .swiper h2 {
+    display: block;
   }
 }
