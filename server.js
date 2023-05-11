@@ -15,14 +15,14 @@ import nodemailer from "nodemailer";
 import cors from "cors";
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyC2LQfXwFv-VOdPSDJOoMmI2YhJZ0MVx-M",
-  authDomain: "kosafrique.firebaseapp.com",
-  projectId: "kosafrique",
-  storageBucket: "kosafrique.appspot.com",
-  messagingSenderId: "1024320135707",
-  appId: "1:1024320135707:web:b1a8ed9ff17a429542cebe",
-};
+// const firebaseConfig = {
+//   apiKey: "AIzaSyC2LQfXwFv-VOdPSDJOoMmI2YhJZ0MVx-M",
+//   authDomain: "kosafrique.firebaseapp.com",
+//   projectId: "kosafrique",
+//   storageBucket: "kosafrique.appspot.com",
+//   messagingSenderId: "1024320135707",
+//   appId: "1:1024320135707:web:b1a8ed9ff17a429542cebe",
+// };
 
 // Initialize Firebase
 const firebase = initializeApp(firebaseConfig);
