@@ -1,5 +1,6 @@
 import express from "express";
 import bcrypt from "bcrypt";
+import dotenv from "dotenv";
 import { initializeApp } from "firebase/app";
 import {
   getFirestore,
@@ -9,7 +10,9 @@ import {
   getDoc,
   updateDoc,
 } from "firebase/firestore";
+import stripe from "stripe";
 import nodemailer from "nodemailer";
+import cors from "cors";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -27,24 +30,25 @@ const db = getFirestore();
 
 //init server
 const app = express();
+app.use(cors());
 
 //middlewares
-app.use(express.static("./"));
+app.use(express.static("public"));
 app.use(express.json());
 
 //routes
 //home
 app.get("/", (req, res) => {
-  res.sendFile("index.html", { root: "./" });
+  res.sendFile("index.html", { root: "public" });
 });
 
-app.listen(2023, () => {
-  console.log("listening on port 2023");
+app.listen(2003, () => {
+  console.log("listening on port 2003");
 });
 
 //signup
 app.get("/signup", (req, res) => {
-  res.sendFile("signup.html", { root: "./" });
+  res.sendFile("signup.html", { root: "public" });
 });
 
 app.post("/signup", (req, res) => {
@@ -91,7 +95,7 @@ app.post("/signup", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-  res.sendFile("login.html", { root: "./" });
+  res.sendFile("login.html", { root: "public" });
 });
 
 app.post("/login", (req, res) => {
@@ -123,22 +127,12 @@ app.post("/login", (req, res) => {
   });
 });
 
-//seller route
-app.get("/search/:key", (req, res) => {
-  res.sendFile("search.html", { root: "./" });
-});
-
-//dashboard route
-app.get("/dashboard", (req, res) => {
-  res.sendFile("dashboard.html", { root: "./" });
-});
-
 //add product
 app.get("/addProduct", (req, res) => {
   res.sendFile("addProduct.html", { root: "public" });
 });
 
-//checkout
+//aboutus
 app.get("/aboutus", (req, res) => {
   res.sendFile("aboutus.html", { root: "public" });
 });
@@ -169,9 +163,38 @@ app.post("/order", (req, res) => {
     });
 });
 
+//stripe
+let stripeGateway = stripe(process.env.stripe_key);
+
+let DOMAIN = process.env.DOMAIN;
+
+app.post("/stripe-checkout", async (req, res) => {
+  const session = await stripeGateway.checkout.sessions.create({
+    payment_method_types: ["card"],
+    mode: "payment",
+    success_url: `${DOMAIN}/success`,
+    cancel_url: `${DOMAIN}/checkout`,
+    line_items: req.body.items.map((item) => {
+      return {
+        price_data: {
+          currency: "usd",
+          product_data: {
+            name: item.title,
+            description: item.brief,
+            images: [item.image],
+          },
+          unit_amount: item.price * 100,
+        },
+        quantity: item.item,
+      };
+    }),
+  });
+  res.json(session.url);
+});
+
 //404 error
 app.get("/404", (req, res) => {
-  res.sendFile("404.html", { root: "./" });
+  res.sendFile("404.html", { root: "public" });
 });
 
 app.use((req, res) => {
