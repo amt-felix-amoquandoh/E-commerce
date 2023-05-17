@@ -33,7 +33,7 @@ submitForm.addEventListener("click", () => {
     } else {
       //submit form
       loading.style.display = "block";
-      sendData("./signup", {
+      sendData("../signup", {
         name: fullName.value,
         email: email.value,
         password: password.value,
@@ -47,7 +47,7 @@ submitForm.addEventListener("click", () => {
     } else {
       //submit form
       loading.style.display = "block";
-      sendData("./login", {
+      sendData("../login", {
         email: email.value,
         password: password.value,
       });
@@ -62,14 +62,22 @@ const showFormError = (err) => {
 };
 
 const sendData = (path, data) => {
-  console.log(data);
   fetch(path, {
     method: "post",
     headers: new Headers({ "Content-Type": "application/json" }),
     body: JSON.stringify(data),
   })
-    .then((res) => res.json())
-    .then((data) => processData(data));
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return res.json();
+    })
+    .then((data) => processData(data))
+    .catch((error) => {
+      console.error("Error:", error);
+      showFormError("An error occurred");
+    });
 };
 
 const processData = (data) => {

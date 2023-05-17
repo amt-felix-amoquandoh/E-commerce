@@ -1,9 +1,13 @@
 {
   "items": [
     {
-      "sys": { "id": "clothes" },
+      "sys": { "id": "clothes1" },
       "fields": {
         "category": "women",
+        "type": "clothes",
+        "image1": "./img/clothes/8.jpg",
+        "image2": "./img/clothes/c2.jpg",
+        "image3": "./img/clothes/c4.png",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
         "title": "African Print Dress",
         "description": "Women Clothing",
@@ -20,9 +24,13 @@
       }
     },
     {
-      "sys": { "id": "accessories" },
+      "sys": { "id": "accessories1" },
       "fields": {
         "category": "men",
+        "type": "accessories",
+        "image1": "./img/accessories/acc3.jpg",
+        "image2": "./img/accessories/acc4.jpg",
+        "image3": "./img/accessories/ac1.jpg",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
         "title": "Ankara Accessories",
         "description": "African Bag with Accessories",
@@ -33,9 +41,13 @@
       }
     },
     {
-      "sys": { "id": "pillow" },
+      "sys": { "id": "pillow1" },
       "fields": {
         "category": "all",
+        "type": "pillow",
+        "image1": "./img/pillow/p6.jpeg",
+        "image2": "./img/pillow/p7.jpeg",
+        "image3": "./img/pillow/p8.jpeg",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
         "title": "African Pillow Cases",
         "description": "Accessory",
@@ -46,9 +58,13 @@
       }
     },
     {
-      "sys": { "id": "sportwear" },
+      "sys": { "id": "sportwear1" },
       "fields": {
         "category": "children",
+        "type": "sportwear",
+        "image1": "./img/sportswear/sp4.jpeg",
+        "image2": "./img/sportswear/sp3.jpeg",
+        "image3": "./img/sportswear/sp6.jpeg",
         "title": "Ankara Active Wear",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
         "description": "African Print Active Sportwear",
@@ -65,9 +81,13 @@
       }
     },
     {
-      "sys": { "id": "lingerie" },
+      "sys": { "id": "lingerie1" },
       "fields": {
         "category": "women",
+        "type": "lingerie",
+        "image1": "./img/lingerie/l9.jpg",
+        "image2": "./img/lingerie/l14.jpg",
+        "image3": "./img/lingerie/l16.jpeg",
         "title": "African sexy outfit",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
         "description": "3pieces bi-materail Mesh",
@@ -84,9 +104,13 @@
       }
     },
     {
-      "sys": { "id": "pillow" },
+      "sys": { "id": "pillow2" },
       "fields": {
         "category": "all",
+        "type": "pillow",
+        "image1": "./img/pillow/p6.jpeg",
+        "image2": "./img/pillow/p7.jpeg",
+        "image3": "./img/pillow/p8.jpeg",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
         "title": "African Pillow Cases",
         "description": "Accessory",
@@ -97,10 +121,14 @@
       }
     },
     {
-      "sys": { "id": "clothes" },
+      "sys": { "id": "clothes2" },
       "fields": {
         "category": "men",
-        "title": "African Print Dress",
+        "type": "clothes",
+        "image1": "./img/clothes/8.jpg",
+        "image2": "./img/clothes/c2.jpg",
+        "image3": "./img/clothes/c4.png",
+        "title": "African Dress",
         "description": "Women Clothing",
         "sizeXsmall": "xs",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
@@ -116,9 +144,13 @@
       }
     },
     {
-      "sys": { "id": "accessories" },
+      "sys": { "id": "accessories2" },
       "fields": {
         "category": "women",
+        "type": "accessories",
+        "image1": "./img/accessories/acc3.jpg",
+        "image2": "./img/accessories/acc4.jpg",
+        "image3": "./img/accessories/ac1.jpg",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
         "title": "Ankara Accessories",
         "description": "African Bag with Accessories",
@@ -129,9 +161,13 @@
       }
     },
     {
-      "sys": { "id": "pillow" },
+      "sys": { "id": "pillow3" },
       "fields": {
         "category": "all",
+        "type": "pillow",
+        "image1": "./img/pillow/p6.jpeg",
+        "image2": "./img/pillow/p7.jpeg",
+        "image3": "./img/pillow/p8.jpeg",
         "title": "African Pillow Cases",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
         "description": "Accessory",
@@ -142,9 +178,13 @@
       }
     },
     {
-      "sys": { "id": "sportwear" },
+      "sys": { "id": "sportwear2" },
       "fields": {
         "category": "children",
+        "type": "sportwear",
+        "image1": "./img/sportswear/sp4.jpeg",
+        "image2": "./img/sportswear/sp3.jpeg",
+        "image3": "./img/sportswear/sp6.jpeg",
         "title": "Ankara Active Wear",
         "description": "African Print Active Sportwear",
         "sizeXsmall": "xs",
@@ -161,9 +201,13 @@
       }
     },
     {
-      "sys": { "id": "lingerie" },
+      "sys": { "id": "lingerie2" },
       "fields": {
         "category": "men",
+        "type": "lingerie",
+        "image1": "./img/lingerie/l9.jpg",
+        "image2": "./img/lingerie/l14.jpg",
+        "image3": "./img/lingerie/l16.jpeg",
         "title": "African sexy outfit",
         "description": "3pieces bi-materail Mesh",
         "sizeXsmall": "xs",
@@ -180,9 +224,13 @@
       }
     },
     {
-      "sys": { "id": "pillow" },
+      "sys": { "id": "pillow4" },
       "fields": {
         "category": "all",
+        "type": "pillow",
+        "image1": "./img/pillow/p6.jpeg",
+        "image2": "./img/pillow/p7.jpeg",
+        "image3": "./img/pillow/p8.jpeg",
         "title": "African Pillow Cases",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
         "description": "Accessory",
@@ -193,10 +241,14 @@
       }
     },
     {
-      "sys": { "id": "clothes" },
+      "sys": { "id": "clothes3" },
       "fields": {
         "category": "children",
-        "title": "African Print Dress",
+        "type": "clothes",
+        "image1": "./img/clothes/8.jpg",
+        "image2": "./img/clothes/c2.jpg",
+        "image3": "./img/clothes/c4.png",
+        "title": "Print Dress",
         "description": "Women Clothing",
         "sizeXsmall": "xs",
         "sizeSmall": "s",
@@ -212,9 +264,13 @@
       }
     },
     {
-      "sys": { "id": "accessories" },
+      "sys": { "id": "accessories3" },
       "fields": {
         "category": "women",
+        "type": "accessories",
+        "image1": "./img/accessories/acc3.jpg",
+        "image2": "./img/accessories/acc4.jpg",
+        "image3": "./img/accessories/ac1.jpg",
         "title": "Ankara Accessories",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
         "description": "African Bag with Accessories",
@@ -225,9 +281,13 @@
       }
     },
     {
-      "sys": { "id": "sportwear" },
+      "sys": { "id": "sportwear3" },
       "fields": {
         "category": "men",
+        "type": "sportwear",
+        "image1": "./img/sportswear/sp4.jpeg",
+        "image2": "./img/sportswear/sp3.jpeg",
+        "image3": "./img/sportswear/sp6.jpeg",
         "title": "Ankara Active Wear",
         "description": "African Print Active Sportwear",
         "sizeXsmall": "xs",
@@ -244,9 +304,13 @@
       }
     },
     {
-      "sys": { "id": "pillow" },
+      "sys": { "id": "pillow5" },
       "fields": {
         "category": "all",
+        "type": "pillow",
+        "image1": "./img/pillow/p6.jpeg",
+        "image2": "./img/pillow/p7.jpeg",
+        "image3": "./img/pillow/p8.jpeg",
         "title": "African Pillow Cases",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
         "description": "Accessory",
@@ -257,9 +321,13 @@
       }
     },
     {
-      "sys": { "id": "lingerie" },
+      "sys": { "id": "lingerie4" },
       "fields": {
         "category": "children",
+        "type": "lingerie",
+        "image1": "./img/lingerie/l9.jpg",
+        "image2": "./img/lingerie/l14.jpg",
+        "image3": "./img/lingerie/l16.jpeg",
         "title": "African sexy outfit",
         "description": "3pieces bi-materail Mesh",
         "sizeXsmall": "xs",
@@ -276,11 +344,15 @@
       }
     },
     {
-      "sys": { "id": "clothes" },
+      "sys": { "id": "clothes4" },
       "fields": {
         "category": "men",
+        "type": "clothes",
+        "image1": "./img/clothes/8.jpg",
+        "image2": "./img/clothes/c2.jpg",
+        "image3": "./img/clothes/c4.png",
         "title": "African Print Dress",
-        "description": "Women Clothing",
+        "description": "Women Print Clothing",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
         "sizeXsmall": "xs",
         "sizeSmall": "s",
@@ -295,9 +367,13 @@
       }
     },
     {
-      "sys": { "id": "pillow" },
+      "sys": { "id": "pillow6" },
       "fields": {
         "category": "all",
+        "type": "pillow",
+        "image1": "./img/pillow/p6.jpeg",
+        "image2": "./img/pillow/p7.jpeg",
+        "image3": "./img/pillow/p8.jpeg",
         "title": "African Pillow Cases",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
         "description": "Accessory",
@@ -308,9 +384,13 @@
       }
     },
     {
-      "sys": { "id": "accessories" },
+      "sys": { "id": "accessories4" },
       "fields": {
         "category": "women",
+        "type": "accessories",
+        "image1": "./img/accessories/acc3.jpg",
+        "image2": "./img/accessories/acc4.jpg",
+        "image3": "./img/accessories/ac1.jpg",
         "title": "Ankara Accessories",
         "description": "African Bag with Accessories",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
@@ -321,9 +401,13 @@
       }
     },
     {
-      "sys": { "id": "sportwear" },
+      "sys": { "id": "sportwear4" },
       "fields": {
         "category": "children",
+        "type": "sportwear",
+        "image1": "./img/sportswear/sp4.jpeg",
+        "image2": "./img/sportswear/sp3.jpeg",
+        "image3": "./img/sportswear/sp6.jpeg",
         "title": "Ankara Active Wear",
         "description": "African Print Active Sportwear",
         "sizeXsmall": "xs",
@@ -340,9 +424,13 @@
       }
     },
     {
-      "sys": { "id": "pillow" },
+      "sys": { "id": "pillow7" },
       "fields": {
         "category": "all",
+        "type": "pillow",
+        "image1": "./img/pillow/p6.jpeg",
+        "image2": "./img/pillow/p7.jpeg",
+        "image3": "./img/pillow/p8.jpeg",
         "title": "African Pillow Cases",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
         "description": "Accessory",
@@ -353,9 +441,13 @@
       }
     },
     {
-      "sys": { "id": "lingerie" },
+      "sys": { "id": "lingerie5" },
       "fields": {
         "category": "men",
+        "type": "lingerie",
+        "image1": "./img/lingerie/l9.jpg",
+        "image2": "./img/lingerie/l14.jpg",
+        "image3": "./img/lingerie/l16.jpeg",
         "title": "African sexy outfit",
         "description": "3pieces bi-materail Mesh",
         "sizeXsmall": "xs",
@@ -372,11 +464,15 @@
       }
     },
     {
-      "sys": { "id": "clothes" },
+      "sys": { "id": "clothes5" },
       "fields": {
         "category": "women",
+        "type": "clothes",
+        "image1": "./img/clothes/8.jpg",
+        "image2": "./img/clothes/c2.jpg",
+        "image3": "./img/clothes/c4.png",
         "title": "African Print Dress",
-        "description": "Women Clothing",
+        "description": "Dress Clothing",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
         "sizeXsmall": "xs",
         "sizeSmall": "s",
@@ -391,9 +487,13 @@
       }
     },
     {
-      "sys": { "id": "accessories" },
+      "sys": { "id": "accessories5" },
       "fields": {
         "category": "men",
+        "type": "accessories",
+        "image1": "./img/accessories/acc3.jpg",
+        "image2": "./img/accessories/acc4.jpg",
+        "image3": "./img/accessories/ac1.jpg",
         "title": "Ankara Accessories",
         "description": "African Bag with Accessories",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
@@ -404,9 +504,13 @@
       }
     },
     {
-      "sys": { "id": "pillow" },
+      "sys": { "id": "pillow8" },
       "fields": {
         "category": "all",
+        "type": "pillow",
+        "image1": "./img/pillow/p6.jpeg",
+        "image2": "./img/pillow/p7.jpeg",
+        "image3": "./img/pillow/p8.jpeg",
         "title": "African Pillow Cases",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
         "description": "Accessory",
@@ -417,9 +521,13 @@
       }
     },
     {
-      "sys": { "id": "sportwear" },
+      "sys": { "id": "sportwear5" },
       "fields": {
         "category": "children",
+        "type": "sportwear",
+        "image1": "./img/sportswear/sp4.jpeg",
+        "image2": "./img/sportswear/sp3.jpeg",
+        "image3": "./img/sportswear/sp6.jpeg",
         "title": "Ankara Active Wear",
         "description": "African Print Active Sportwear",
         "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
@@ -436,9 +544,13 @@
       }
     },
     {
-      "sys": { "id": "lingerie" },
+      "sys": { "id": "lingerie6" },
       "fields": {
         "category": "women",
+        "type": "lingerie",
+        "image1": "./img/lingerie/l9.jpg",
+        "image2": "./img/lingerie/l14.jpg",
+        "image3": "./img/lingerie/l16.jpeg",
         "title": "African sexy outfit",
         "description": "3pieces bi-materail Mesh",
         "sizeXsmall": "xs",
@@ -451,6 +563,46 @@
         "price": 65.44,
         "image": {
           "fields": { "file": { "url": "./img/lingerie/l7.jpeg" } }
+        }
+      }
+    },
+    {
+      "sys": { "id": "clothes6" },
+      "fields": {
+        "category": "men",
+        "type": "clothes",
+        "image1": "./img/clothes/cc1.jpg",
+        "image2": "./img/clothes/cc2.jpg",
+        "image3": "./img/clothes/cc3.jpg",
+        "title": "African Print Dress",
+        "description": "Dress Clothing",
+        "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
+        "sizeXsmall": "xs",
+        "sizeSmall": "s",
+        "sizeMedium": "m",
+        "sizeLarge": "l",
+        "sizeXlarge": "xl",
+        "sizeXxlarge": "xxl",
+        "price": 181.25,
+        "image": {
+          "fields": { "file": { "url": "./img/clothes/ccc.jpg" } }
+        }
+      }
+    },
+    {
+      "sys": { "id": "accessories6" },
+      "fields": {
+        "category": "men",
+        "type": "accessories",
+        "image1": "./img/accessories/9.jpg",
+        "image2": "./img/accessories/acc6.jpg",
+        "image3": "./img/accessories/ac1.jpg",
+        "title": "Ankara Accessories",
+        "description": "African Bag with Accessories",
+        "brief": "lorem ipsum dolor aksd matic sderrfi dd lorem ipsum dolor",
+        "price": 34.33,
+        "image": {
+          "fields": { "file": { "url": "./img/accessories/2.jpg" } }
         }
       }
     }

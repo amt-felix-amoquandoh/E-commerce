@@ -190,10 +190,12 @@ class Products {
           image1,
           image2,
           image3,
+          type,
         } = item.fields;
         const { id } = item.sys;
         const image = item.fields.image.fields.file.url;
         return {
+          category,
           title,
           price,
           description,
@@ -203,6 +205,7 @@ class Products {
           image1,
           image2,
           image3,
+          type,
         };
       });
       return products;
@@ -262,13 +265,13 @@ class UI {
     itemPage.classList.add("productInfo");
 
     itemPage.innerHTML = `
-      <div class="imageSlider">
+      <div class="imageSlider" style="background-image: url(${product.image});">
         <h4 class="selectImage">Select image file below to view</h4>
         <div class="productImages">
           <img src=${product.image} alt="">
-          <img src=${product.image} alt="">         
-          <img src=${product.image} alt="">
-          <img src=${product.image} alt="">
+          <img src=${product.image1} alt="">         
+          <img src=${product.image2} alt="">
+          <img src=${product.image3} alt="">
         </div>
       </div>
       <div class="ItemDetails">
@@ -278,10 +281,10 @@ class UI {
         <span class="itemPrice">$${product.price}</span>
         <span class="itemDiscount">(50% Off)</span>
         <div class="rating">
-          <img src="./img/star-filled.png" class="star" alt="">
-          <img src="./img/star-filled.png" class="star" alt="">
-          <img src="./img/star-filled.png" class="star" alt="">
-          <img src="./img/star-filled.png" class="star" alt="">
+          <img src="../img/star.png" class="star" alt="">
+          <img src="../img/star.png" class="star" alt="">
+          <img src="../img/star.png" class="star" alt="">
+          <img src="../img/star.png" class="star" alt="">
           <img src="./img/star.png" class="star" alt="">
         </div>
         <p class="subHeading">Select Size</p>
@@ -339,9 +342,9 @@ class UI {
       star.addEventListener("click", () => {
         for (let i = 0; i < 5; i++) {
           if (i <= index) {
-            ratingsInput[i].src = `/public/img/star-filled.png`;
+            ratingsInput[i].src = `/img/star-filled.png`;
           } else {
-            ratingsInput[i].src = `/public/img/star.png`;
+            ratingsInput[i].src = `/img/star.png`;
           }
         }
       });
@@ -385,10 +388,10 @@ class UI {
     });
   }
 
-  filterProducts(products, sortBy, category, id) {
+  filterProducts(products, sortBy, category, type) {
     let sortedProducts = [];
-    if (id) {
-      sortedProducts = products.filter((product) => product.id.includes(id));
+    if (type) {
+      sortedProducts = products.filter((product) => product.id.includes(type));
     } else if (category) {
       sortedProducts = products.filter(
         (product) => product.category === category
@@ -413,23 +416,31 @@ class UI {
       });
     } else if (sortBy === "clothes") {
       // filter products by category (clothes only)
-      sortedProducts = products.filter((item) => item.id === "clothes");
+      sortedProducts = products.filter((item) => item.type === "clothes");
     } else if (sortBy === "accessories") {
       // filter products by category (accessories only)
-      sortedProducts = products.filter((item) => item.id === "accessories");
+      sortedProducts = products.filter((item) => item.type === "accessories");
     } else if (sortBy === "sportwear") {
       // filter products by category (sportwear only)
-      sortedProducts = products.filter((item) => item.id === "sportwear");
+      sortedProducts = products.filter((item) => item.type === "sportwear");
     } else if (sortBy === "lingerie") {
       // filter products by category (lingerie only)
-      sortedProducts = products.filter((item) => item.id === "lingerie");
+      sortedProducts = products.filter((item) => item.type === "lingerie");
     } else if (sortBy === "pillow") {
       // filter products by category (pillow only)
-      sortedProducts = products.filter((item) => item.id === "pillow");
+      sortedProducts = products.filter((item) => item.type === "pillow");
     } else if (sortBy === "women") {
       // filter products by category (women only)
       sortedProducts = products.filter(
         (product) => product.category === "women"
+      );
+    } else if (sortBy === "men") {
+      // filter products by category (women only)
+      sortedProducts = products.filter((product) => product.category === "men");
+    } else if (sortBy === "children") {
+      // filter products by category (women only)
+      sortedProducts = products.filter(
+        (product) => product.category === "children" || "all"
       );
     }
     this.loadAllproducts(sortedProducts);

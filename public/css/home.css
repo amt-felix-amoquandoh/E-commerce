@@ -19,8 +19,8 @@
   --dark-color: black;
   --darkGrey: #383838;
   --light-color: #fff;
-  --main-color: teal;
-  --secondary-color: Rgb(235, 167, 46);
+  --main-color: rgb(0, 78, 141);
+  --secondary-color: rgb(252, 196, 55);
   --alternate: rgb(223, 192, 163);
   --alternate1: rgb(100, 186, 236);
   --primary-background-color: rgb(2, 42, 102);
@@ -1114,6 +1114,19 @@ button.white {
     margin: 0;
     margin-top: 0spx;
   }
+  .checkCart {
+    width: 80%;
+  }
+
+  .miniCart h2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -8px;
+    margin-bottom: -18px;
+    font-size: 28px;
+  }
+  
 }
 
 @media (max-device-width: 380px) {
